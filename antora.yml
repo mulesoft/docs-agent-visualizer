@@ -1,5 +1,5 @@
-name: anypoint-code-builder
-title: Anypoint Code Builder
+name: agent-visualizer
+title: Agent Visualizer
 version: 'master'
 nav:
 - modules/ROOT/nav.adoc

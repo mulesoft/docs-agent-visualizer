@@ -1,10 +1,15 @@
 = Agent Network Visualization
 
-When viewing the Agent Visualizer graph, you can:
+Agent Visualizer provides an interactive view of your agent network where you can:
 
 * Zoom in and out. 
 * Click and drag on the canvas to pan the visualization.
 * Search for the name of an asset on the canvas and the nodes that contain your search will be highlighted.
+* Turn on layers to see additional metadata or specific views.
+* Filter the graph by design view (as defined in the broker YAML), environment, or agent type (broker, Agentforce agents, external agents, or MCP servers).
+* Navigate through interactive elements using the Tab key.
+* Navigate between connected and disconnected nodes using arrow keys when the canvas has focus.
+* Cycle focus through edges that are connected to a selected node using the `E` key and display edge metadata (using Enter).
 
 [[nodes]]
 == Nodes
@@ -13,10 +18,10 @@ Nodes are the visual representation of different agentic assets (agents, brokers
 
 • Brokers
 +
-Represent MuleSoft broker groups and enumerate the different broker agents they can communicate with. Broker groups are defined in the broker YAML and published to Anypoint Exchange.
+Represent broker groups and enumerate the different broker agents they can communicate with. Broker groups are defined in the broker YAML and published to Anypoint Exchange.
 • Agents
 +
-These nodes represent agents capable of performing specific functionalities. They can be of different types:
+These nodes represent agents of different types, such as:
 ** Agentforce agents
 +
 Originate from Agentforce 
@@ -30,18 +35,28 @@ Originate from MuleSoft and are referenced in a broker group YAML
 +
 These nodes represent MCP (Model Context Protocol) servers.
 
-In the Agent Visualzier graph, nodes show icons and labels, indicating their type (agent, broker, or MCP server), name, and protection status at a glance. Selecting a node opens the Inspector Panel, which provides detailed information about the node.
+In the Agent Visualzier graph, nodes show icons and labels, indicating their type (agent, broker, or MCP server), name, and protection status at a glance. 
+
+Selecting a node opens the Inspector Panel, which provides detailed information about the node.
 
 
 [[edges]]
 == Edges
 
-Edges represent the relationships and communications between your nodes. You can see two types of edges: 
+Edges represent the relationships and communications among your nodes. 
 
-* Declared edges appear between node instances when there is no runtime information available because there's no registered traffic between them. These are shown as dashed lines on the graph.
-**Runtime edges are shown between nodes when traffic is registered and a Flex Gateway is exists. Runtime edges are displayed as solid lines on the graph.
+You can see two types of edges: 
+
+* Declared edges appear between node instances when there is no runtime information available because there's no registered traffic among them. These are shown as dashed lines on the graph.
+* Runtime edges are shown between nodes when traffic is registered and a Flex Gateway exists. Solid lines on the graph indicate runtime edges.
+
+Hover over edge links to see the source of the edge information (for example,"Observed via Flex trace," or "Broker definition").
 
 [[policy-visualization]]
 == Policy Visualization
 
-The policy visualization enables you to see nodes that are protected by a Flext Gateway at a glance. which policies have been applied to assets. Nodes that are protected by a Flex Gateway are shown with a shield icon. Data about applied policies comes from API Manager.
+The policy visualization enables you to see nodes that are protected by a Flex Gateway at a glance. Nodes that are protected by a Flex Gateway are shown with a shield icon. Data about applied policies comes from API Manager.
+
+You can see the details of applied policies in the Inspector Panel. 
+
+== See Also

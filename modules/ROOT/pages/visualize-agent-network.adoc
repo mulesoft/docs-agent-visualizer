@@ -1,14 +1,15 @@
-= View Agent Details with Nodes and Edges
+= Agent Network Visualization
 
-Agent Visualizer shows your agent network as an interactive graph, composed of nodes and edges.
+When viewing the Agent Visualizer graph, you can:
 
+* Zoom in and out. 
+* Click and drag on the canvas to pan the visualization.
+* Search for the name of an asset on the canvas and the nodes that contain your search will be highlighted.
 
 [[nodes]]
 == Nodes
 
-Nodes are the visual representation of different agentic assets within the agent network. Nodes show you the structure, interactions, health, and governance of distributed agents and servers. They provide a visual interface for you to gain situational awareness and actionability across your agent landscape.
-
-Nodes represent:
+Nodes are the visual representation of different agentic assets (agents, brokers, and MCP servers) within the agent network. Nodes show you the structure, interactions, health, and governance of distributed agents, brokers, and MCP servers. 
 
 • Brokers
 +
@@ -29,7 +30,7 @@ Originate from MuleSoft and are referenced in a broker group YAML
 +
 These nodes represent MCP (Model Context Protocol) servers.
 
-In the Agent Visualzier graph, nodes show recognizable icons and labels, indicating their type (Agent, MCP server) and name.
+In the Agent Visualzier graph, nodes show icons and labels, indicating their type (agent, broker, or MCP server), name, and protection status at a glance. Selecting a node opens the Inspector Panel, which provides detailed information about the node.
 
 
 [[edges]]
@@ -39,3 +40,8 @@ Edges represent the relationships and communications between your nodes. You can
 
 * Declared edges appear between node instances when there is no runtime information available because there's no registered traffic between them. These are shown as dashed lines on the graph.
 **Runtime edges are shown between nodes when traffic is registered and a Flex Gateway is exists. Runtime edges are displayed as solid lines on the graph.
+
+[[policy-visualization]]
+== Policy Visualization
+
+The policy visualization enables you to see nodes that are protected by a Flext Gateway at a glance. which policies have been applied to assets. Nodes that are protected by a Flex Gateway are shown with a shield icon. Data about applied policies comes from API Manager.

@@ -1,0 +1,3 @@
+= View Agent Details with Inspector Panel
+
+

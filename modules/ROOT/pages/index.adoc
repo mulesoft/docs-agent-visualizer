@@ -28,8 +28,6 @@ Visually identify nodes protected by Flex Gateways and see indications of policy
 +
 From the Inspector Panel, you can access links to relevant parts of the platform, such as Runtime Manager for broker or MCP server logs, Agentforce builder for Agentforce agents, or API Manager for instance management and policies. If logs aren't available, you'll be informed
 
-[[nodes-and-edges]]
-
 
 [[before-you-begin]]
 == Before You Begin

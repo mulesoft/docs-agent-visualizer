@@ -1,4 +1,4 @@
 .xref:index.adoc[Agent Visualizer]
 * xref:index.adoc[Overview]
-* xref:work-with-agent-visualizer.adoc[Work with Agent Visualizer]
-* xref:nodes-and-edges.adoc[View Agent Details with Nodes and Edges]
+* xref:visualize-agent-network.adoc[]
+* xref:inspector-panel.adoc[]

@@ -4,12 +4,12 @@ Agent Visualizer provides a detailed visual graph so you can see, understand, an
 
 With Agent Visualizer, you can:
 
-* Get a clear, shared model of how all your agents, clients, and MCP servers are connected and interacting.
+* Get a clear view of how all your agents, clients, and MCP servers are connected and interacting.
 * Understand data movement and dependencies at a glance by seeing which systems are calling your agents and what those agents are calling in turn.
 * Detect potential issues proactively.
 * Fine-tune your agent orchestration to achieve better outcomes.
 
-Agent Visualizer provides an intuitive user interface where you can:
+Agent Visualizer is an intuitive user interface where you can:
 
 * Explore your network
 +
@@ -19,29 +19,22 @@ Zoom in and out, and move around the canvas to focus on specific areas of your g
 Narrow down the displayed data by environments or agent types to keep your network meaningful and avoid a "noisy blob". You can also toggle between views of production and non-production traffic.
 * Access detailed information
 +
-Click on any node or edge to open a detail panel (Inspector Panel). This panel surfaces a 360-degree view, including metadata like node type, name, domain, tags, last activity timestamp, and observability metrics such as the number of conversations, token burnout, and errors. 
+Select any node or edge to open a detail panel (Inspector Panel). This panel surfaces a 360-degree view, including metadata like node type, name, domain, tags, last activity timestamp, and observability metrics such as the number of conversations, token burnout, and errors. 
 For edges, you'll see metrics like conversation count, token consumption, and latency.
 * Understand governance and security 
 +
-Visually identify nodes protected by Flex Gateways and see indications of policy violations. Clicking a policy icon can deep-link you to policy details in API Manager.
+Visually identify nodes protected by Flex Gateways and see indications of policy violations. 
 * Take action directly
 +
 From the Inspector Panel, you can access links to relevant parts of the platform, such as Runtime Manager for broker or MCP server logs, Agentforce builder for Agentforce agents, or API Manager for instance management and policies. If logs aren't available, you'll be informed
 
 [[nodes-and-edges]]
-== Nodes and Edges
 
-Agent Visualizer presents your agent network as an interactive graph, composed of nodes and edges.
-
-* Nodes are individual components in your agent network, including broker and agent nodes (from sources like Agentforce, Bedrock, Boomi, Copilot, Vertex AI, and other external agents) and MCP Servers. Each node features recognizable icons, clear names, and types, making it easy for you to identify them.
-* Edges represent the relationships and communications between your nodes. You can see two types of edges: 
-** Declared edges, which are defined at design-time, often in YAML broker logic. These are shown as dashed lines on the graph.
-** Runtime edges, which are observed communications based on actual traffic flowing between nodes. Runtime edges are displayed as solid lines on the graph.
 
 [[before-you-begin]]
 == Before You Begin
 
-To access Agent Visualizer, you need these Anypoint Platform permissions:
+Access to Agent Visualizer requires these Anypoint Platform permissions:
 
 * Anypoint Monitoring
 * Monitoring: Monitoring Viewer

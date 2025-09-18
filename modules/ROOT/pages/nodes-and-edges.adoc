@@ -1,0 +1,41 @@
+= View Agent Details with Nodes and Edges
+
+Agent Visualizer shows your agent network as an interactive graph, composed of nodes and edges.
+
+
+[[nodes]]
+== Nodes
+
+Nodes are the visual representation of different agentic assets within the agent network. Nodes show you the structure, interactions, health, and governance of distributed agents and servers. They provide a visual interface for you to gain situational awareness and actionability across your agent landscape.
+
+Nodes represent:
+
+• Brokers
++
+Represent MuleSoft broker groups and enumerate the different broker agents they can communicate with. Broker groups are defined in the broker YAML and published to Anypoint Exchange.
+• Agents
++
+These nodes represent agents capable of performing specific functionalities. They can be of different types:
+** Agentforce agents
++
+Originate from Agentforce 
+** External agents
++
+Originate from third-party platforms 
+** Broker agents
++
+Originate from MuleSoft and are referenced in a broker group YAML
+• MCP Servers
++
+These nodes represent MCP (Model Context Protocol) servers.
+
+In the Agent Visualzier graph, nodes show recognizable icons and labels, indicating their type (Agent, MCP server) and name.
+
+
+[[edges]]
+== Edges
+
+Edges represent the relationships and communications between your nodes. You can see two types of edges: 
+
+* Declared edges appear between node instances when there is no runtime information available because there's no registered traffic between them. These are shown as dashed lines on the graph.
+**Runtime edges are shown between nodes when traffic is registered and a Flex Gateway is exists. Runtime edges are displayed as solid lines on the graph.

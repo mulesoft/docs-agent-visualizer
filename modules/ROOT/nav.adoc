@@ -1,4 +1,3 @@
 .xref:index.adoc[Agent Visualizer]
 * xref:index.adoc[Overview]
-* xref:visualize-agent-network.adoc[]
-* xref:inspector-panel.adoc[]
+* xref:agent-visualizer-components.adoc[]

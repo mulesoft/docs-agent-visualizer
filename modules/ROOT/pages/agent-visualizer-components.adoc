@@ -9,7 +9,6 @@ Agent Visualizer provides an interactive view of your agent network where you ca
 * Filter the graph by design view (as defined in the broker YAML), environment, or agent type (broker, Agentforce agents, external agents, or MCP servers).
 * Navigate through interactive elements using the Tab key.
 * Navigate between connected and disconnected nodes using arrow keys when the canvas has focus.
-* Cycle focus through edges that are connected to a selected node using the `E` key and display edge metadata (using Enter).
 
 [[nodes]]
 == Nodes

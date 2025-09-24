@@ -13,7 +13,7 @@ Agent Visualizer is an intuitive user interface where you can:
 * Explore your network
 +
 Zoom in and out, and move around the canvas to focus on specific areas of your graph.
-*Filter your view
+* Filter your view
 +
 Narrow down the displayed data by environments or agent types to keep your network meaningful and avoid a "noisy blob". You can also toggle between views of production and non-production traffic.
 * Access detailed information
@@ -31,7 +31,7 @@ From the Inspector Panel, you can access links to Runtime Manager for broker or 
 [[before-you-begin]]
 == Before You Begin
 
-Access to Agent Visualizer requires these Anypoint Platform permissions:
+You must have these Anypoint Platform permissions to access Agent Visualizer:
 
 * Anypoint Monitoring
 * Monitoring: Monitoring Viewer

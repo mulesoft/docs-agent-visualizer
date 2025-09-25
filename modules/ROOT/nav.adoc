@@ -1,3 +1,6 @@
 .xref:index.adoc[Agent Visualizer]
 * xref:index.adoc[Overview]
 * xref:agent-visualizer-components.adoc[]
+* xref:view-and-navigate-agent-network.adoc[]
+* xref:node-governance.adoc[]
+* xref:troubleshoot-agent-network.adoc[]

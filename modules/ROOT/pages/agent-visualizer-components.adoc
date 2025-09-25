@@ -21,6 +21,7 @@ Represent broker groups and enumerate the different broker agents they can commu
 • Agents
 +
 These nodes represent agents that perform specific functionality and include these types:
++
 ** Agentforce agents
 +
 Agents that originate from Agentforce 
@@ -34,7 +35,7 @@ Brokers originate from MuleSoft and are referenced in the agent network YAML
 +
 These nodes represent MCP (Model Context Protocol) servers.
 
-In the Agent Visualzier graph, nodes show icons and labels, indicating their type (agent, broker, or MCP server), name, and protection status at a glance. 
+In the Agent Visualizer graph, nodes show icons and labels, indicating their type (agent, broker, or MCP server), name, and protection status at a glance. 
 
 Selecting a node opens the Inspector Panel, which provides detailed information about the node.
 
@@ -61,8 +62,6 @@ You can see two types of edges:
 
 * Declared edges appear between node instances when there is no runtime information available because there's no registered traffic among them. These are shown as dashed lines on the graph.
 * Runtime edges are shown between nodes when traffic is registered and a Flex Gateway exists. Solid lines on the graph indicate runtime edges.
-
-Hover over edge links to see the source of the edge information (for example,"Observed via Flex trace," or "Broker definition").
 
 === Edge Metadata
 
@@ -110,7 +109,7 @@ You can filter by:
 * Platform
 
 [[details-card]]
-== Details Card
+== Details Cards
 
 The details card is the primary means for gaining detailed, 360-degree information about a selected node or edge. It includes metadata about the node or edge and links to relevant resources like logs, policies, and more.
 
@@ -123,3 +122,8 @@ The policy visualization enables you to see nodes that are protected by a Flex G
 You can see the details of applied policies in detail card for the selected node. 
 
 == See Also
+
+* xref:index.adoc[]
+* xref:monitoring::index.adoc[]
+* xref:api-manager::index.adoc[]
+* xref:anypoint-exchange::index.adoc[]

@@ -1,4 +1,4 @@
-= Agent Network Visualization
+= Understand Agent Network Components
 
 Agent Visualizer provides an interactive view of your agent network where you can:
 
@@ -11,26 +11,26 @@ Agent Visualizer provides an interactive view of your agent network where you ca
 * Navigate between connected and disconnected nodes using arrow keys when the canvas has focus.
 
 [[nodes]]
-== Nodes
+== Node Types
 
-Nodes are the visual representation of different agentic assets (agents, brokers, and MCP servers) within the agent network. Nodes show you the structure, interactions, health, and governance of distributed agents, brokers, and MCP servers. 
+There are different types of nodes in the agent network to provide a visual representation of different agentic assets (agents, brokers, and MCP servers) within the agent network. Nodes show you the structure, interactions, health, and governance of distributed agents, brokers, and MCP servers. 
 
-• Brokers
+• Broker nodes
 +
 Represent broker groups and enumerate the different broker agents they can communicate with. Broker groups are defined in the broker YAML and published to Anypoint Exchange.
 • Agents
 +
-These nodes represent agents of different types, such as:
+These nodes represent agents that perform specific functionality and include these types:
 ** Agentforce agents
 +
-Originate from Agentforce 
+Agents that originate from Agentforce 
 ** External agents
 +
-Originate from third-party platforms 
-** Broker agents
+Agents that originate from external, non-Salesforce platforms, such as OpenAI, Bedrock, Vertex AI, and so on 
+** Brokers
 +
-Originate from MuleSoft and are referenced in a broker group YAML
-• MCP Servers
+Brokers originate from MuleSoft and are referenced in the agent network YAML
+• MCP servers
 +
 These nodes represent MCP (Model Context Protocol) servers.
 
@@ -38,6 +38,19 @@ In the Agent Visualzier graph, nodes show icons and labels, indicating their typ
 
 Selecting a node opens the Inspector Panel, which provides detailed information about the node.
 
+=== Node Metadata
+
+When you select a node, a detail card opens to provide comprehensive information.
+
+Common metadata for all nodes includes:
+
+[%header,cols="30a,70a"]
+|===
+| Category | Metadata
+| Basic a| Node ID (unique internal identifier), Node Type (for example, broker, agent, MCP server), Name (display name in the agent network), Domain (for example,HR, Sales, Finance), Tags, Last activity timestamp, Platform (for example, Agentforce, MuleSoft, OpenAI)
+| Observability a| Successful Requests, Failed Request Rate, Calls Sent to [Recipient]([Asset Type]), Total Requests
+| Governance a| Flex Gateway status, policies applied
+|===
 
 [[edges]]
 == Edges
@@ -51,11 +64,62 @@ You can see two types of edges:
 
 Hover over edge links to see the source of the edge information (for example,"Observed via Flex trace," or "Broker definition").
 
+=== Edge Metadata
+
+When you click on an edge, the detail panel displays relationship information and metrics.
+
+* Source Node ID
+* Target Node ID
+* Edge type (YAML/Runtime)
+* Call volume (which can be represented visually by thicker or dotted lines)
+* Number of conversations (1 day)
+* Token consumption
+* Policy violations count
+* Errors
+* Latency
+
+=== Edge Drawing Logic
+
+Edges are drawn under specific conditions, primarily when the calling agent is protected by a Flex Gateway at Egress.
+
+* If an agent has an egress Flex Gateway, when it calls another agent, an edge metric is emitted, and the edge is visible.
+* If the requesting agent doesn't have an egress Flex G ateway, no edge metric is generated, and the edge isn't shown.
+* Broker agents route outbound calls through an egress Flex Gateway, allowing requests between broker agents, or from a broker agent to an external agent, to appear in the agent network visualization.
+
+[[layers]]
+== Layers
+
+Layers are used to group nodes in the agent network visualization. They help you highlight specific types of nodes in the visualization.
+
+* Base Layer
++
+This is the default view. It shows all agentic assets that are published in Anypoint Exchange, declared edges (design-time relationships), and production traffic (live connections).
+* Non-Production Traffic Layer    
++
+You can choose to turn on the non-production traffic layer to see non-production traffic (test and sandbox connections). When this view is active, traffic between nodes in development or sandbox environments is shown as solid edges, and edges representing production traffic disappear. Only one type of traffic layer (production or non-production) is visible at one time.
+
+[[filters]]
+== Filters
+
+Filters help you narrow the data set that's shown, helping you focus on the most relevant information.
+
+You can filter by: 
+
+* Environment
+* Agent type
+* Platform
+
+[[details-card]]
+== Details Card
+
+The details card is the primary means for gaining detailed, 360-degree information about a selected node or edge. It includes metadata about the node or edge and links to relevant resources like logs, policies, and more.
+
+
 [[policy-visualization]]
 == Policy Visualization
 
 The policy visualization enables you to see nodes that are protected by a Flex Gateway at a glance. Nodes that are protected by a Flex Gateway are shown with a shield icon. Data about applied policies comes from API Manager.
 
-You can see the details of applied policies in the Inspector Panel. 
+You can see the details of applied policies in detail card for the selected node. 
 
 == See Also

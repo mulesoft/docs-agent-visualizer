@@ -7,25 +7,33 @@ With Agent Visualizer, you can:
 * Get a clear view of connections and interactions among all your agents, clients, and Model Context Protocol (MCP) servers.
 * Understand data movement and dependencies at a glance by seeing which systems are calling your agents and what those agents are calling in turn.
 * Detect potential issues proactively.
+* Optimize agent orchestration for performance, trust, and scale. 
 
-Agent Visualizer is an intuitive user interface where you can:
+Agent Visualizer is an intuitive user interface that helps you:
 
-* Explore your network
+ * Find blind spots in your agent network by showing all connected agents in one network map, with clear relationships and direction of calls, gaining complete situational awareness of your Agentic ecosystem. 
+ * See unclear interaction patterns by showing realtime or historical transaction volume overlays on network edges. This helps you understand key pathways and identify under or overused connections. 
+ * See governance gaps. You can see which agents are protected by Flex Gateways and policies. 
+ * Understand node purpose and origin. You gain full understanding of each asset in your agent network and any active running instances when you select a node. 
+ * Easily view product and non-production traffic. 
+ 
+[[use-cases]]
+== Use Cases
+
+Use Agent Visualizer to gain clarity and control over your agent ecosystem.
+
+* Understand inventory and dependencies
 +
-Zoom in and out, and move around the canvas to focus on specific areas of your graph.
-* Filter your view
+View a network graph of your enterprise agents to understand dependencies and troubleshoot failures. This provides the full inventory needed for system design and helps you avoid shadow IT.
+* Validate agent consumption
 +
-Narrow down the displayed data by environments or agent types to keep your network meaningful and avoid a "noisy blob". You can also toggle between views of production and non-production traffic.
-* Access detailed information
+Developers can validate how their agent is actually being consumed by viewing real-time transaction volume overlays.
+* Assess security and compliance
 +
-Select any node or edge to open a detail panel (Inspector Panel). This panel surfaces a 360-degree view, including metadata like node type, name, domain, tags, last activity timestamp, and observability metrics such as the number of conversations, token burnout, and errors. 
-For edges, you'll see metrics like conversation count, token consumption, and latency.
-* Understand governance and security 
+Security and compliance personnel can visualize active policies in the agent network to validate coverage and instantly spot vulnerabilities.
+* Troubleshoot failures
 +
-Visually identify nodes protected by Flex Gateways and see indications of policy violations. 
-* Take action directly
-+
-From the Inspector Panel, you can access links to Runtime Manager for broker or MCP server logs, Anypoint Exchange, or API Manager for instance management and policies. 
+Developers can deep-link from the visualization directly into the underlying service logs for quick diagnostics
 
 
 [[before-you-begin]]
@@ -37,9 +45,6 @@ You must have these Anypoint Platform permissions to access Agent Visualizer:
 * Monitoring: Monitoring Viewer
 * Exchange Viewer
 * API Manager View: View API Configuration, View Policies
-
-[[use-cases]]
-== Use Cases
 
 
 == See Also

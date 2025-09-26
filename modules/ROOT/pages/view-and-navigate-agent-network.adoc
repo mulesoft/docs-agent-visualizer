@@ -1,0 +1,75 @@
+= View and Navigate Your Agent Network
+
+== Navigating the Agent Network
+
+Agent Visualizer provides an interactive view of your agent network where you can:
+
+* Zoom in and out. 
+* Click and drag on the canvas to pan the visualization.
+* Search for the name of an asset on the canvas to highlight the nodes that contain your search terms.
+* Turn on layers to see additional metadata or specific views.
+* Filter the graph by design view (as defined in the broker YAML), environment, or agent type (broker, Agentforce agents, external agents, or MCP servers).
+* Navigate through interactive elements using the Tab key.
+* Navigate between connected and disconnected nodes using arrow keys when the canvas has focus.
+
+== Accessing Agent Visualizer
+
+You need these Anypoint Platform permissions to access Agent Visualizer:
+
+* Anypoint Monitoring
+* Monitoring: Monitoring Viewer
+* Exchange Viewer
+* API Manager View: View API Configuration, View Policies
+
+. Log in Anypoint Platform.
+. Select *Agent Visualizer*.
+
+== Viewing the Agent Network
+
+When you land on the Agent Visualizer page, you see the agent network map showing all discovered agentic assets nodes and their relationships (edges).
+
+=== Identifying Nodes
+
+Recognize the type (Agent, Broker, MCP server), name, and source of discovery for each node.
+
+=== Viewing Relationships
+
+Examine the edges (solid or dashed lines) to understand the connections and dependencies among agents.
+
+== Filtering the Agent Network
+
+You can filter the data set to focus your view.
+
+. Select the filter option.
+. Choose the filter criteria such as Agent type (broker, internal agents, external agents) or specific platforms (for example,Agentforce).
+. Choose an environment view to narrow the graph to nodes deployed in that environment.
+
+== Toggling Traffic Layers
+
+Switch the view to analyze different traffic contexts.
+
+. Use the controls to switch between the default view of production traffic and the view of non-production traffic (development/sandbox traffic).
+. Activate overlays or additional metadata layers to highlight specific data like policies or high-volume indicators.
+
+
+== Viewing Node Details
+
+The details card  provides a 360-degree view of the selected node.
+
+. Select a Node: Click on any node in the graph (or press Enter/Spacebar after focusing the node with arrow keys) to display its detail panel.
+. Review Metadata: Review the common metadata (Node ID, Node Type, Name, Domain/Group, Tags, and Last activity timestamp).
+. Examine node-specific information:
+* For broker nodes, you see basic metadata, connected agents and MCP servers, enabled capabilities, and LLM details.
+* For agent nodes, you see the asset name, image, description, platform, provider, version, and lifecycle state.
+* For MCP server nodes, you see the asset name, image, description, provider, asset type, tools list, and connection status.
+
+== Viewing Edge Details
+
+. Select an edge to open its detail panel.
+. Examine the metrics that are shown, such as number of conversations, token consumption, policy violations, errors, and latency, to analyze the health and governance of the connection. 
+
+== See Also
+
+* xref:index.adoc[]
+* xref:agent-visualizer-components.adoc[]
+* xref:node-governance.adoc[]

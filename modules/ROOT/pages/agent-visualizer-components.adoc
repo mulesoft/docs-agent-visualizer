@@ -1,14 +1,6 @@
 = Understand Agent Network Components
 
-Agent Visualizer provides an interactive view of your agent network where you can:
 
-* Zoom in and out. 
-* Click and drag on the canvas to pan the visualization.
-* Search for the name of an asset on the canvas and the nodes that contain your search will be highlighted.
-* Turn on layers to see additional metadata or specific views.
-* Filter the graph by design view (as defined in the broker YAML), environment, or agent type (broker, Agentforce agents, external agents, or MCP servers).
-* Navigate through interactive elements using the Tab key.
-* Navigate between connected and disconnected nodes using arrow keys when the canvas has focus.
 
 [[nodes]]
 == Node Types
@@ -113,7 +105,6 @@ You can filter by:
 
 The details card is the primary means for gaining detailed, 360-degree information about a selected node or edge. It includes metadata about the node or edge and links to relevant resources like logs, policies, and more.
 
-
 [[policy-visualization]]
 == Policy Visualization
 
@@ -124,6 +115,7 @@ You can see the details of applied policies in detail card for the selected node
 == See Also
 
 * xref:index.adoc[]
+* xref:view-and-navigate-agent-network.adoc[]
 * xref:monitoring::index.adoc[]
 * xref:api-manager::index.adoc[]
 * xref:anypoint-exchange::index.adoc[]

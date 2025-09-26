@@ -16,7 +16,7 @@ Agent Visualizer is an intuitive user interface that helps you:
  * See governance gaps. You can see which agents are protected by Flex Gateways and policies. 
  * Understand node purpose and origin. You gain full understanding of each asset in your agent network and any active running instances when you select a node. 
  * Easily view product and non-production traffic. 
- 
+
 [[use-cases]]
 == Use Cases
 
@@ -39,7 +39,7 @@ Developers can deep-link from the visualization directly into the underlying ser
 [[before-you-begin]]
 == Before You Begin
 
-You must have these Anypoint Platform permissions to access Agent Visualizer:
+You need these Anypoint Platform permissions to access Agent Visualizer:
 
 * Anypoint Monitoring
 * Monitoring: Monitoring Viewer

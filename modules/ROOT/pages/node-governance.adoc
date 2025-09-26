@@ -1,6 +1,6 @@
 = Node Governance
 
-You can use the visual indicators on the graph to assess the security and compliance status of your agents.
+You can use the visual indicators in the agent network visualization to assess the security and compliance status of your agents.
 
 == Identifying Policy-Protected Nodes
 

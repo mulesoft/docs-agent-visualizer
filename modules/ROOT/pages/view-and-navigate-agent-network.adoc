@@ -1,5 +1,21 @@
 = View and Navigate Your Agent Network
 
+== Accessing Agent Visualizer
+
+You need these Anypoint Platform permissions to access Agent Visualizer:
+
+* Anypoint Monitoring
+* Monitoring: Monitoring Viewer
+* Exchange Viewer
+* API Manager View: View API Configuration, View Policies
+
+. Log in Anypoint Platform.
+. On the Anypoint Platform home page, click *Open Agent Visualizer*.
++
+If you don't see the agent network architecture, it's because there are no discoverable agentic assets in Anypoint Exchange. 
+
+For more information about creating an agent network project and publishing assets to Exchange, see xref:anypoint-code-builder::index.adoc[].
+
 == Navigating the Agent Network
 
 Agent Visualizer provides an interactive view of your agent network where you can:
@@ -12,17 +28,7 @@ Agent Visualizer provides an interactive view of your agent network where you ca
 * Navigate through interactive elements using the Tab key.
 * Navigate between connected and disconnected nodes using arrow keys when the canvas has focus.
 
-== Accessing Agent Visualizer
 
-You need these Anypoint Platform permissions to access Agent Visualizer:
-
-* Anypoint Monitoring
-* Monitoring: Monitoring Viewer
-* Exchange Viewer
-* API Manager View: View API Configuration, View Policies
-
-. Log in Anypoint Platform.
-. Select *Agent Visualizer*.
 
 == Viewing the Agent Network
 

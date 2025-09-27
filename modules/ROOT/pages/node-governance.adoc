@@ -2,19 +2,26 @@
 
 You can use the visual indicators in the agent network visualization to assess the security and compliance status of your agents.
 
-== Identifying Policy-Protected Nodes
+[[viewing-node-policies]]
+== Viewing Node Policies
 
-. Look for the shield icon within a node shape to see which nodes are secured by Flex Gateways.
+. Look for the shield icon on nodes to see which nodes are secured by Flex Gateways.
+. Click the node to open the detail card and see the policies that are applied to the node.
+. Click *View Policies* to view the policies for this instance in API Manager.
++
+Policies are listed by category on the left and applied policies are listed on the right. 
 
-== Reviewing Node Policies
-
-. Select the node or edge to open the detail card, where policies appear as overlays or icons.
-
-. Click the policy icon to view the policy details in API Manager.
-
-== Adding Policies
-
-
+[[adding-a-flex-gateway]]
 == Adding a Flex Gateway
 
-. Click on a node and add a Flex Gateway to it. (Note: The scope of this specific functionality for the general availability release is to be determined).
+. Click the node to open the detail card and see the policies that are applied to the node.
+. Click *Add Flex Gateway*. 
+. In API Manager, add an instance of the asset (MCP server, broker, or agent) to protect.
++
+For information about adding an MCP server instance, see xref:flex-gateway::create-instance-task-mcp[]. For information adding an A2A instance, see xref:flex-gateway::create-instance-task-a2a[].
+
+== See Also
+
+* xref:index.adoc[]
+* xref:view-and-navigate-agent-network.adoc[]
+* xref:flex-gateway::index.adoc[]

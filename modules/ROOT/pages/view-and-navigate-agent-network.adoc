@@ -11,7 +11,7 @@ You need these Anypoint Platform permissions to access Agent Visualizer:
 * Exchange Viewer
 * API Manager View: View API Configuration, View Policies
 
-. Log in Anypoint Platform.
+. Log in to Anypoint Platform.
 . On the Anypoint Platform home page, click *Open Agent Visualizer*.
 +
 If you don't see the agent network architecture, it's because there are no discoverable agentic assets in Anypoint Exchange. 
@@ -75,9 +75,10 @@ Broker metadata is defined in the agent network YAML. For more information about
 |Provider | Provider of the asset.
 | Platform | Platform of the asset, for example, Agentforce or MuleSoft.
 | LLM | LLM provider (for example, `openai` or `einstein`).
+| Skills | List of skills that are supported by the agent. Skills are concrete, callable operations within a capability, with defined input and output. For example,`lookupOrder`, `createCase`, `updateAddress`.
 | Linked Agents | List of agents that are linked to the broker. 
 |MCP Servers and Tools | List of MCP servers and tools that are connected to the broker.
-| Enabled Capabilities | Lists the capabilities that are supportted by the agent. 
+| Enabled Capabilities | Lists the capabilities that are supportted by the agent. Capabilities are high-level areas of what an agent can do (domains it supports, for example customer support, knowledge search). 
 | Instance Name | Instance name as it appears in API Manager.
 | Environment Type | Lists the environments the instance is deployed to, for example, `sandbox` or `production`.
 | Based on Asset Version | The version of the instance. 
@@ -108,13 +109,13 @@ This metric is shown for MCP servers. This is the total number of messages sent 
 When you selectan edge, the detail panel displays relationship information and metrics. Metrics are aggragated for all instances that exist between nodes. 
 
 . Select an edge to open its detail panel.
-. Examine the metrics that are shown.
+. Examine the metrics.
 +
 * Source Node ID
 * Target Node ID
-* Edge type (YAML/Runtime)
-* Call volume (which can be represented visually by thicker or dotted lines)
-* Number of conversations (1 day)
+* Edge type (declared or runtime)
+* Call volume 
+* Number of conversations (past 24 hours)
 * Token consumption
 * Policy violations count
 * Errors

@@ -1,6 +1,6 @@
 = Understand the Agent Visualizer Components
 
-Agent Visualizer shows how your agent network is structured. Explore node types such as brokers, agents, and Model Context Protocol (MCP) servers, and edges that show declared and runtime relationships and traffic. Use layers and filters to focus your view, and detail cards to see metadata and metrics.
+Agent Visualizer shows the architectural structure of your agent network. Explore node types such as brokers, agents, and Model Context Protocol (MCP) servers, and edges that show declared and runtime relationships and traffic. Use layers and filters to focus your view, and detail cards to see metadata and metrics.
 
 [[node-types]]
 == Node Types
@@ -12,20 +12,20 @@ There are different types of nodes in the agent network to provide a visual repr
 Represent broker groups and enumerate the different broker agents they can communicate with. Broker groups are defined in the broker YAML and published to Anypoint Exchange.
 • Agents
 +
-These nodes represent agents that perform specific functionality and include these types:
+An agent is an autonomous software component that uses goals, context, and available tools (often via an LLM) to decide and execute actions on behalf of a user or system. The agent nodes include:
 +
 ** Agentforce agents
 +
-Agents that originate from Agentforce 
+Agents that originate from Agentforce. 
 ** External agents
 +
-Agents that originate from external, non-Salesforce platforms, such as OpenAI, Bedrock, Vertex AI, and so on 
+Agents that originate from external, non-Salesforce platforms, such as OpenAI, Bedrock, Vertex AI, and so on. 
 ** Brokers
 +
-Brokers originate from MuleSoft and are referenced in the agent network YAML
+A broker is an intelligent routing service that coordinates task delegation across specialized agents in your enterprise. Brokers originate from MuleSoft and are referenced in the agent network YAML. 
 • MCP servers
 +
-These nodes represent MCP (Model Context Protocol) servers.
+These nodes represent MCP servers. An MCP server is a service that implements the Model Context Protocol to expose tools and data to AI clients, enabling LLMs to invoke external capabilities through a standard interface.
 
 In the Agent Visualizer graph, nodes show icons and labels, indicating their type (agent, broker, or MCP server), name, and protection status at a glance. 
 
@@ -65,7 +65,7 @@ For more information, see xref:view-and-navigate-agent-network.adoc#viewing-data
 [[filters]]
 == Filters
 
-Filters help you narrow the data set that's shown, helping you focus on the most relevant information.
+Filters help you narrow the dataset that's shown, helping you focus on the most relevant information.
 
 You can filter by: 
 

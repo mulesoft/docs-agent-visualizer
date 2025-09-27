@@ -1,2 +1,28 @@
 = Troubleshoot Your Agent Network
 
+Agent Visualizer gives you quick access to tools to troubleshoot your agent network.
+
+
+== Accessing Logs
+
+On US and EU Clouds, Anypoint Monitoring aggregates log files so you can manage, search for, filter, and analyze your logs. You can use aggregated logs in conjunction with monitoring to help identify issues and investigate failures quickly. 
+
+. Click the node to open the detail card.
+. Click *View Logs* to access the logs for the node.
++
+You are taken to Anypoint Monitoring where you can view the logs for the asset instance.
+
+
+== Accessing Traces
+
+Use Traces in Anypoint Monitoring to track the flow of requests that travel through service pipelines. Examine traces in Open Telementry (OTEL) spans to troubleshoot requests that have errors or slow response times, optimize your resource allocation, and track requests end-to-end. Find and view the course of a specific transaction through the services it travels to monitor its performance.
+
+. Click the node to open the detail card.
+. Click *View Traces* to access the traces for the node.
++
+You are taken to Anypoint Monitoring where you can view the *Traces Details* page for the asset instance. 
+
+== See Also
+
+* xref:monitoring::logs.adoc[]
+* xref:monitoring::traces.adoc[]

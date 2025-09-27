@@ -67,7 +67,13 @@ Edges represent the relationships and communications among your nodes.
 You can see two types of edges: 
 
 * Declared edges appear between node instances when there is no runtime information available because there's no registered traffic among them. These are shown as dashed lines on the graph.
-* Runtime edges are shown between nodes when traffic is registered and a Flex Gateway exists. Solid lines on the graph indicate runtime edges.
+* Runtime edges are shown between nodes when traffic is registered and a Flex Gateway exists. Solid lines on the graph indicate runtime edges. Clicking on a runtime edge opens the detail panel and shows the relevant metrics.
+
+Edges are drawn under specific conditions, primarily when the calling agent is protected by a Flex Gateway at egress.
+
+* If an agent has an egress Flex Gateway, when it calls another agent the edge is visible.
+* If the requesting agent doesn't have an egress Flex Gateway, no edge metric is generated and the edge isn't shown.
+* Broker agents that route outbound calls through an egress Flex Gateway, allowing requests between broker agents, or from a broker agent to an external agent, appear in the agent network visualization.
 
 === Edge Metadata
 
@@ -83,25 +89,16 @@ When you click on an edge, the detail panel displays relationship information an
 * Errors
 * Latency
 
-=== Edge Drawing Logic
+== Data Flow Layers
 
-Edges are drawn under specific conditions, primarily when the calling agent is protected by a Flex Gateway at Egress.
+Data flow layers are used to group nodes in the agent network visualization. They help you highlight specific types of nodes in the visualization.
 
-* If an agent has an egress Flex Gateway, when it calls another agent and the edge is visible.
-* If the requesting agent doesn't have an egress Flex Gateway, no edge metric is generated and the edge isn't shown.
-* Broker agents that route outbound calls through an egress Flex Gateway, allowing requests between broker agents, or from a broker agent to an external agent, appear in the agent network visualization.
-
-[[layers]]
-== Layers
-
-Layers are used to group nodes in the agent network visualization. They help you highlight specific types of nodes in the visualization.
-
-* Base Layer
+* Production Data Flow Layer
 +
 This is the default view. It shows all agentic assets that are published in Anypoint Exchange, declared edges (design-time relationships), and production traffic (live connections).
 * Non-Production Traffic Layer    
 +
-You can choose to turn on the non-production traffic layer to see non-production traffic (test and sandbox connections). When this view is active, traffic between nodes in development or sandbox environments is shown as solid edges, and edges representing production traffic disappear. Only one type of traffic layer (production or non-production) is visible at one time.
+You can choose to turn on the non-production traffic layer to see non-production traffic (test and sandbox connections). 
 
 [[filters]]
 == Filters

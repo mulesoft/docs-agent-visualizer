@@ -1,8 +1,8 @@
 = Understand the Agent Visualizer Components
 
-Agent Visualizer shows how your agent network is structured. Explore node types such as brokers, agents, and MCP servers, and edges that show declared and runtime relationships and traffic. Use layers and filters to focus your view, and detail cards to see metadata and metrics.
+Agent Visualizer shows how your agent network is structured. Explore node types such as brokers, agents, and Model Context Protocol (MCP) servers, and edges that show declared and runtime relationships and traffic. Use layers and filters to focus your view, and detail cards to see metadata and metrics.
 
-[[nodes]]
+[[node-types]]
 == Node Types
 
 There are different types of nodes in the agent network to provide a visual representation of different agentic assets (agents, brokers, and MCP servers) within the agent network. Nodes show you the structure, interactions, health, and governance of distributed agents, brokers, and MCP servers. 
@@ -29,35 +29,7 @@ These nodes represent MCP (Model Context Protocol) servers.
 
 In the Agent Visualizer graph, nodes show icons and labels, indicating their type (agent, broker, or MCP server), name, and protection status at a glance. 
 
-Selecting a node opens the Inspector Panel, which provides detailed information about the node.
-
-=== Node Details
-
-When you select a node, a detail card opens to provide comprehensive information for the asset.
-
-[NOTE]
-Broker metadata is defined in the agent network YAML. For more information about creating an agent network project, see xref:anypoint-code-builder::index.adoc[].
-
-[%header,cols="30a,70a"]
-|===
-| Field | Description
-| Name | Name of the asset. 
-| Description | Description of the asset.
-|Provider | Provider of the asset.
-| Platform | Platform of the asset, for example, Agentforce or MuleSoft.
-| LLM | LLM provider (for example, `openai` or `einstein`).
-| Linked Agents | List of agents that are linked to the broker. 
-|MCP Servers and Tools | List of MCP servers and tools that are connected to the broker.
-| Enabled Capabilities | Lists the capabilities that are supportted by the agent. 
-| Instance Name | Instance name as it appears in API Manager.
-| Environment Type | Lists the environments the instance is deployed to, for example, `sandbox` or `production`.
-| Based on Asset Version | The version of the instance. 
-| Policies | Lists the policies that are applied to the instance.
-| Governance and Security | Shows whether the asset is protected by a Flex Gateway.
-| Performance and Health | Shows the performance and health metrics for the instance.
-| Monitoring | Provides links to logs and traces for quick access to troubleshooting tools. 
-| Tags| All the tags associated with the asset in Exchange.
-|===
+Selecting a node opens the Inspector Panel, which provides detailed information about the node. For more information, see xref:view-and-navigate-agent-network.adoc#viewing-node-details[Viewing Node Details].
 
 [[edges]]
 == Edges
@@ -75,19 +47,7 @@ Edges are drawn under specific conditions, primarily when the calling agent is p
 * If the requesting agent doesn't have an egress Flex Gateway, no edge metric is generated and the edge isn't shown.
 * Broker agents that route outbound calls through an egress Flex Gateway, allowing requests between broker agents, or from a broker agent to an external agent, appear in the agent network visualization.
 
-=== Edge Metadata
-
-When you click on an edge, the detail panel displays relationship information and metrics.
-
-* Source Node ID
-* Target Node ID
-* Edge type (YAML/Runtime)
-* Call volume (which can be represented visually by thicker or dotted lines)
-* Number of conversations (1 day)
-* Token consumption
-* Policy violations count
-* Errors
-* Latency
+Selecting an edge opens the detail panel, which displays relationship information and metrics. For more information, see xref:view-and-navigate-agent-network.adoc#viewing-edge-details[Viewing Edge Details].
 
 == Data Flow Layers
 
@@ -99,6 +59,8 @@ This is the default view. It shows all agentic assets that are published in Anyp
 * Non-Production Traffic Layer    
 +
 You can choose to turn on the non-production traffic layer to see non-production traffic (test and sandbox connections). 
+
+For more information, see xref:view-and-navigate-agent-network.adoc#viewing-data-flow-layers[Viewing Data Flow Layers].
 
 [[filters]]
 == Filters

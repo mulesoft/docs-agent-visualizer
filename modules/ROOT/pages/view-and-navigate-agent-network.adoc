@@ -1,6 +1,6 @@
 = View and Navigate Your Agent Network
 
-Explore an interactive map of agents, brokers, and MCP servers. Pan and zoom, search and filter by environment or type, toggle layers, and select nodes or edges to view detailed metadata, metrics, and links for deeper investigation.
+Explore an interactive map of agents, brokers, and Model Context Protocol (MCP) servers. Pan and zoom, search and filter by environment or type, toggle layers, and select nodes or edges to view detailed metadata, metrics, and links for deeper investigation.
 
 == Accessing Agent Visualizer
 
@@ -34,25 +34,19 @@ Agent Visualizer provides an interactive view of your agent network where you ca
 
 When you land on the Agent Visualizer page, you see the agent network map showing all discovered agentic assets nodes and their relationships (edges).
 
+If the page is empty, it means there are no discoverable agentic assets in Anypoint Exchange. For more information about creating an agent network project and publishing assets to Exchange, see xref:anypoint-code-builder::index.adoc[].
+
 === Viewing Data Flow Layers
 
 Data flow (traffic) layers are used to group nodes in the agent network visualization to show production or non-production traffic. Only one type of traffic layer (production or non-production) is visible at one time.
 
 By default, the production data flow layer is shown. 
 
-You can switch to view non-production traffic by toggling the Data Flows switch. 
+Use the toggle to switch between the default view of production traffic and the view of non-production traffic (development/sandbox traffic).
 
 image::agent-visualizer-layers-toggle.png[Data Flows toggle is turned to view the Production Environments layer]
 
 When the non-production data flow layer is active, traffic between nodes in development or sandbox environments is shown as solid edges, and edges representing production traffic disappear. 
-
-=== Identifying Nodes
-
-Recognize the type (Agent, Broker, MCP server), name, and source of discovery for each node.
-
-=== Viewing Relationships
-
-Examine the edges (solid or dashed lines) to understand the connections and dependencies among agents.
 
 == Filtering the Agent Network
 
@@ -62,29 +56,69 @@ You can filter the data set to focus your view.
 . Choose the filter criteria such as Agent type (broker, internal agents, external agents) or specific platforms (for example,Agentforce).
 . Choose an environment view to narrow the graph to nodes deployed in that environment.
 
-== Toggling Traffic Layers
-
-Switch the view to analyze different traffic contexts.
-
-. Use the controls to switch between the default view of production traffic and the view of non-production traffic (development/sandbox traffic).
-. Activate overlays or additional metadata layers to highlight specific data like policies or high-volume indicators.
-
-
+[[viewing-node-details]]
 == Viewing Node Details
 
-The details card  provides a 360-degree view of the selected node.
+When you select a node, a detail card opens to provide comprehensive information for the asset.
 
-. Select a Node: Click on any node in the graph (or press Enter/Spacebar after focusing the node with arrow keys) to display its detail panel.
-. Review Metadata: Review the common metadata (Node ID, Node Type, Name, Domain/Group, Tags, and Last activity timestamp).
-. Examine node-specific information:
-* For broker nodes, you see basic metadata, connected agents and MCP servers, enabled capabilities, and LLM details.
-* For agent nodes, you see the asset name, image, description, platform, provider, version, and lifecycle state.
-* For MCP server nodes, you see the asset name, image, description, provider, asset type, tools list, and connection status.
+. Select any node in the agent network (or press Enter/Spacebar after focusing the node with arrow keys) to display its detail panel.
+. Review the node details.
++
+[NOTE]
+Broker metadata is defined in the agent network YAML. For more information about creating an agent network project, see xref:anypoint-code-builder::index.adoc[].
++
+[%header,cols="30a,70a"]
+|===
+| Field | Description
+| Name | Name of the asset. 
+| Description | Description of the asset.
+|Provider | Provider of the asset.
+| Platform | Platform of the asset, for example, Agentforce or MuleSoft.
+| LLM | LLM provider (for example, `openai` or `einstein`).
+| Linked Agents | List of agents that are linked to the broker. 
+|MCP Servers and Tools | List of MCP servers and tools that are connected to the broker.
+| Enabled Capabilities | Lists the capabilities that are supportted by the agent. 
+| Instance Name | Instance name as it appears in API Manager.
+| Environment Type | Lists the environments the instance is deployed to, for example, `sandbox` or `production`.
+| Based on Asset Version | The version of the instance. 
+| Policies | Lists the policies that are applied to the instance.
+| Governance and Security | Shows whether the asset is protected by a Flex Gateway.
+| Performance and Health a| Shows the performance and health metrics for the instance including:
 
+* Successful Requests
++
+This metric is shown for brokers, agents, and MCP servers. This is the total number of requests received successfully in the last 24 hours. 
+* Failed Request Rate
++
+This metric is shown for brokers, agents, and MCP servers. This is the percentage of requests that failed in the last 24 hours. 
+* A2A Calls Sent
++
+This metric is shown for brokers. This is the total number of messages sent to agents using the Agent2Agent (A2A) protocol in the last 24 hours. 
+* MCP Calls Sent
++
+This metric is shown for MCP servers. This is the total number of messages sent to  MCP servers in the last 24 hours. 
+
+| Monitoring | Provides links to logs and traces for quick access to troubleshooting tools. 
+| Tags| All the tags associated with the asset in Exchange.
+|===
+
+[[viewing-edge-details]]
 == Viewing Edge Details
 
+When you selectan edge, the detail panel displays relationship information and metrics. Metrics are aggragated for all instances that exist between nodes. 
+
 . Select an edge to open its detail panel.
-. Examine the metrics that are shown, such as number of conversations, token consumption, policy violations, errors, and latency, to analyze the health and governance of the connection. 
+. Examine the metrics that are shown.
++
+* Source Node ID
+* Target Node ID
+* Edge type (YAML/Runtime)
+* Call volume (which can be represented visually by thicker or dotted lines)
+* Number of conversations (1 day)
+* Token consumption
+* Policy violations count
+* Errors
+* Latency
 
 == See Also
 

@@ -1,6 +1,6 @@
 = Node Governance
 
-You can use the visual indicators in the agent network visualization to assess the security and compliance status of your agents.
+Node governance surfaces the security and compliance posture of each agent, broker, and Model Context Protocol (MCP) server in the agent network. View Flex Gateway protection and applied policies and follow links to API Manager to view policies.
 
 [[viewing-node-policies]]
 == Viewing Node Policies

@@ -12,7 +12,7 @@ Node governance surfaces the security and compliance posture of each agent, brok
 Policies are listed by category on the left and applied policies are listed on the right. 
 
 [[adding-a-flex-gateway]]
-== Adding a Flex Gateway
+== Add a Flex Gateway
 
 . Click the node to open the detail card and see the policies that are applied to the node.
 . Click *Add Flex Gateway*. 

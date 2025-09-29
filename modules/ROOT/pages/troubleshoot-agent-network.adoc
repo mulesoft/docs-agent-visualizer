@@ -20,7 +20,7 @@ This metric, shown for brokers, is the total number of messages sent to agents u
 +
 This metric is shown for MCP servers. This is the total number of messages sent to  MCP servers in the last 24 hours. For more information, see xref:monitoring::anypoint-insights-agentic.adoc[].
 
-== Accessing Logs
+== Access Logs
 
 On US and EU Clouds, Anypoint Monitoring aggregates log files so you can manage, search for, filter, and analyze your logs. You can use aggregated logs in conjunction with monitoring to help identify issues and investigate failures quickly. 
 

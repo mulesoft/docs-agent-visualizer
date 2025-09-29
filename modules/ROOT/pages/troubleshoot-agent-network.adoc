@@ -1,4 +1,4 @@
-= Troubleshoot Your Agent Network
+= Troubleshooting Your Agent Network
 
 Agent Visualizer gives you quick access to tools to troubleshoot your agent network.
 

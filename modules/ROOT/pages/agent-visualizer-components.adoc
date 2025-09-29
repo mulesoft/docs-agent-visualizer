@@ -34,7 +34,7 @@ Selecting a node opens the Inspector Panel, which provides detailed information 
 [[edges]]
 == Edges
 
-Edges represent the relationships and communications among your nodes. 
+Edges represent the relationships and communications among your nodes:
 
 
 * Declared edges appear between node instances when there is no runtime information available because there's no registered traffic among them. These are shown as dashed lines on the graph.

@@ -37,7 +37,7 @@ Selecting a node opens the Inspector Panel, which provides detailed information 
 Edges represent the relationships and communications among your nodes:
 
 
-* Declared edges appear between node instances when there is no runtime information available because there's no registered traffic among them. These are shown as dashed lines on the graph.
+* Declared edges appear between node instances when no runtime information is available because there's no registered traffic between them. Dashed lines on the graph indicate declared edges.
 * Runtime edges are shown between nodes when traffic is registered and a Flex Gateway exists. Solid lines on the graph indicate runtime edges. Clicking on a runtime edge opens the detail panel and shows the relevant metrics.
 
 Edges are drawn under specific conditions, primarily when the calling agent is protected by a Flex Gateway at egress.

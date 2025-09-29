@@ -75,7 +75,7 @@ You can filter by:
 [[details-card]]
 == Details Cards
 
-The details card is the primary means for gaining detailed, 360-degree information about a selected node or edge. It includes metadata about the node or edge and links to relevant resources like logs, policies, and more.
+The details card is the primary means for gaining detailed, 360-degree information about a selected node or edge. It includes metadata and links to relevant resources like logs, policies, and more.
 
 [[policy-visualization]]
 == Policy Visualization

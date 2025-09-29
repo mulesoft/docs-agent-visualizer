@@ -1,4 +1,4 @@
-= View and Navigate Your Agent Network
+= Viewing and Navigating Your Agent Network
 
 Explore an interactive map of agents, brokers, and Model Context Protocol (MCP) servers. Pan and zoom, search and filter by environment or type, toggle layers, and select nodes or edges to view detailed metadata, metrics, and links for deeper investigation.
 

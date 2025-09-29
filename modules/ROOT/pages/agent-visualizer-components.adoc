@@ -54,7 +54,7 @@ Data flow layers are used to group nodes in the agent network visualization. The
 
 * Production Data Flow Layer
 +
-This is the default view. It shows all agentic assets that are published in Anypoint Exchange, declared edges (design-time relationships), and production traffic (live connections).
+The default view, Production Data Flow Layer, shows all agentic assets that are published in Exchange, declared edges (design-time relationships), and production traffic (live connections).
 * Non-Production Traffic Layer    
 +
 You can choose to turn on the non-production traffic layer to see non-production traffic (test and sandbox connections). 

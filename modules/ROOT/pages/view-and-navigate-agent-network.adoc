@@ -38,7 +38,7 @@ If the page is empty, it means there are no discoverable agentic assets in Anypo
 
 === Viewing Data Flow Layers
 
-Data flow (traffic) layers are used to group nodes in the agent network visualization to show production or non-production traffic. Only one type of traffic layer (production or non-production) is visible at one time.
+Data flow (traffic) layers are used to group nodes in the agent network visualization to show production or nonproduction traffic. Only one type of traffic layer (production or nonproduction) is visible at one time.
 
 By default, the production data flow layer is shown. 
 

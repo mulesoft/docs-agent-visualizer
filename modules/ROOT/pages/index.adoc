@@ -27,7 +27,7 @@ Use Agent Visualizer to gain clarity and control over your agent ecosystem.
 * Understand inventory and dependencies.
 +
 View a network graph of your enterprise agents to understand dependencies and troubleshoot failures. This provides the full inventory needed for system design and helps you avoid shadow IT.
-* Validate agent consumption
+* Validate agent consumption.
 +
 Developers can validate how their agent is being consumed by viewing real-time transaction traffic volume overlays.
 * Assess security and compliance

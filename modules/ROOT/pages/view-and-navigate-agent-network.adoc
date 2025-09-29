@@ -42,7 +42,7 @@ Data flow (traffic) layers are used to group nodes in the agent network visualiz
 
 By default, the production data flow layer is shown. 
 
-Use the toggle to switch between the default view of production traffic and the view of non-production traffic (development/sandbox traffic).
+Use the toggle to switch between the default view of production traffic and the view of nonproduction traffic (development/sandbox traffic).
 
 image::agent-visualizer-layers-toggle.png[Data Flows toggle is turned to view the Production Environments layer]
 

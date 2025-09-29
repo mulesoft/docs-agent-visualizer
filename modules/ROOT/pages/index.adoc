@@ -14,7 +14,9 @@ Agent Visualizer is an intuitive user interface that helps you:
  * Gain complete situational awareness of your agentic ecosystem with a view of all connected agents in your agent network on one map, including clear relationships and direction of calls.
  * See unclear interaction patterns by showing real time or historical transaction volume overlays on network edges. This helps you understand key pathways and identify under- or overused connections. 
  * See governance gaps with a view of which agents are protected by Flex Gateways and policies. 
- * Understand node purpose and origin. You gain full understanding of each asset in your agent network and any active running instances when you select a node. 
+ * Understand node purpose and origin.
+ + 
+ You gain full understanding of each asset in your agent network and any active running instances when you select a node. 
  * Easily view production and nonproduction traffic. 
 
 [[use-cases]]

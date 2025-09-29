@@ -57,7 +57,7 @@ To filter the dataset to focus your view:
 . Select an environment view to narrow the graph to nodes deployed in that environment.
 
 [[viewing-node-details]]
-== Viewing Node Details
+== View Node Details
 
 When you select a node, a detail card opens to provide comprehensive information for the asset.
 

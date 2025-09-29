@@ -30,7 +30,7 @@ Agent Visualizer provides an interactive view of your agent network where you ca
 * Navigate through interactive elements using the Tab key.
 * Navigate between connected and disconnected nodes using arrow keys when the canvas has focus.
 
-== Viewing the Agent Network
+== View the Agent Network
 
 When you land on the Agent Visualizer page, you see the agent network map showing all discovered agentic assets nodes and their relationships (edges).
 

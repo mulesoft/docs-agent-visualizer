@@ -29,7 +29,7 @@ On US and EU Clouds, Anypoint Monitoring aggregates log files so you can manage,
 +
 You are taken to Anypoint Monitoring where you can view the logs for the asset instance. For more information see xref:monitoring::logs-us-eu.adoc#search-agentic[Get Agent, Broker, and MCP Server Logs].
 
-== Accessing Traces
+== Access Traces
 
 Use Traces in Anypoint Monitoring to track the flow of requests that travel through service pipelines. Examine traces in Open Telemetry (OTEL) spans to troubleshoot requests that have errors or slow response times, optimize your resource allocation, and track requests end-to-end. 
 

@@ -61,7 +61,7 @@ You can filter the data set to focus your view.
 
 When you select a node, a detail card opens to provide comprehensive information for the asset.
 
-. Select any node in the agent network (or press Enter/Spacebar after focusing the node with arrow keys) to display its detail panel.
+. Select any node in the agent network (or press Enter or Spacebar after focusing the node with arrow keys) to show its detail panel.
 . Review the node details.
 +
 [NOTE]

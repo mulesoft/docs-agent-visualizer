@@ -99,7 +99,7 @@ This metric is shown for brokers. This is the total number of messages sent to a
 +
 This metric is shown for MCP servers. This is the total number of messages sent to  MCP servers in the last 24 hours. 
 
-| Monitoring | Provides links to logs and traces for quick access to troubleshooting tools. 
+| Monitoring | Links to logs and traces for quick access to troubleshooting tools. 
 | Tags| All the tags associated with the asset in Exchange.
 |===
 

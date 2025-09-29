@@ -80,7 +80,7 @@ The details card is the primary means for gaining detailed, 360-degree informati
 [[policy-visualization]]
 == Policy Visualization
 
-The policy visualization enables you to see nodes that are protected by a Flex Gateway at a glance. Nodes that are protected by a Flex Gateway are shown with a shield icon. Data about applied policies comes from API Manager.
+The policy visualization shows nodes that are protected by a Flex Gateway indicated by a shield icon. Data about applied policies comes from API Manager.
 
 You can see the details of applied policies in detail card for the selected node. 
 

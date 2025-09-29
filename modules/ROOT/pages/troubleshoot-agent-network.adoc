@@ -2,7 +2,7 @@
 
 Agent Visualizer gives you quick access to tools to troubleshoot your agent network.
 
-== Viewing Metrics
+== View Metrics
 
 . Select a node to open the detail card.
 . In *Performance and Health*, click *View metrics* to access the metrics for the node:

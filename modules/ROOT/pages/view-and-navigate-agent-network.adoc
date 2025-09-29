@@ -48,7 +48,7 @@ image::agent-visualizer-layers-toggle.png[Data Flows toggle is turned to view th
 
 When the nonproduction data flow layer is active, traffic between nodes in development or sandbox environments is shown as solid edges, and edges representing production traffic disappear. 
 
-== Filtering the Agent Network
+== Filter the Agent Network
 
 You can filter the data set to focus your view.
 

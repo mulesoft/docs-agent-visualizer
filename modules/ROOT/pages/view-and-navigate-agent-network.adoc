@@ -104,7 +104,7 @@ This metric is shown for MCP servers. This is the total number of messages sent 
 |===
 
 [[viewing-edge-details]]
-== Viewing Edge Details
+== View Edge Details
 
 When you select an edge, the detail panel displays relationship information and metrics. Metrics are aggregated for all instances that exist between nodes. 
 

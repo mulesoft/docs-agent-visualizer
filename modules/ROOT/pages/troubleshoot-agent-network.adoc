@@ -36,7 +36,7 @@ Use Traces in Anypoint Monitoring to track the flow of requests that travel thro
 . Click the node to open the detail card.
 . Click *View Traces* to access the traces for the node.
 +
-You are taken to Anypoint Monitoring where you can view the *Traces Details* page for the asset instance. 
+Anypoint Monitoring opens and you can view the *Traces Details* page for the asset instance. 
 
 == See Also
 

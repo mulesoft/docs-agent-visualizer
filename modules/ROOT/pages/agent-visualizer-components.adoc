@@ -1,4 +1,4 @@
-= Understand the Agent Visualizer Components
+= Agent Visualizer Components
 
 Agent Visualizer shows the architectural structure of your agent network. Explore node types such as brokers, agents, and Model Context Protocol (MCP) servers, and edges that show declared and runtime relationships and traffic. Use layers and filters to focus your view, and detail cards to see metadata and metrics.
 

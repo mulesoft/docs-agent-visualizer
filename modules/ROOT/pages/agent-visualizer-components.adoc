@@ -64,7 +64,7 @@ For more information, see xref:view-and-navigate-agent-network.adoc#viewing-data
 [[filters]]
 == Filters
 
-Filters help you narrow the dataset that's shown, helping you focus on the most relevant information.
+Use filters to narrow the dataset that's shown, helping you focus on the most relevant information.
 
 You can filter by: 
 

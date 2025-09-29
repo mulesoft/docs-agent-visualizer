@@ -109,7 +109,7 @@ This metric is shown for MCP servers. This is the total number of messages sent 
 When you select an edge, the detail panel displays relationship information and metrics. Metrics are aggregated for all instances that exist between nodes. 
 
 . Select an edge to open its detail panel.
-. Examine the metrics.
+. Examine the metrics:
 +
 * Source Node ID
 * Target Node ID

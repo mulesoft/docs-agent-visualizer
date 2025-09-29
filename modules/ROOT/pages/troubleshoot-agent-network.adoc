@@ -9,7 +9,7 @@ Agent Visualizer gives you quick access to tools to troubleshoot your agent netw
 +
 * Successful Requests
 +
-This metric is shown for brokers, agents, and MCP servers. This is the total number of requests received successfully in the last 24 hours. 
+This metric, shown for brokers, agents, and MCP servers, is the total number of requests received successfully in the last 24 hours. 
 * Failed Request Rate
 +
 This metric is shown for brokers, agents, and MCP servers. This is the percentage of requests that failed in the last 24 hours. 

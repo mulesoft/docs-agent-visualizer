@@ -30,7 +30,7 @@ View a network graph of your enterprise agents to understand dependencies and tr
 * Validate agent consumption.
 +
 Developers can validate how their agent is being consumed by viewing real-time transaction traffic volume overlays.
-* Assess security and compliance
+* Assess security and compliance.
 +
 Security and compliance personnel can visualize active policies in the agent network to validate coverage and instantly spot vulnerabilities.
 * Troubleshoot failures

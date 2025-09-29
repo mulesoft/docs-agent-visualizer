@@ -2,7 +2,7 @@
 
 Explore an interactive map of agents, brokers, and Model Context Protocol (MCP) servers. Pan and zoom, search and filter by environment or type, toggle layers, and select nodes or edges to view detailed metadata, metrics, and links for deeper investigation.
 
-== Accessing Agent Visualizer
+== Access Agent Visualizer
 
 You need these Anypoint Platform permissions to access Agent Visualizer:
 

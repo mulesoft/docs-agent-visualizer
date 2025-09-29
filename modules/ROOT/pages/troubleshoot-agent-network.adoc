@@ -18,7 +18,7 @@ This metric is shown for brokers, agents, and MCP servers. This is the percentag
 This metric is shown for brokers. This is the total number of messages sent to agents using the Agent2Agent (A2A) protocol in the last 24 hours. 
 * MCP Calls Sent
 +
-This metric is shown for MCP servers. This is the total number of messages sent to  MCP servers in the last 24 hours. 
+This metric is shown for MCP servers. This is the total number of messages sent to  MCP servers in the last 24 hours. For more information, see xref:monitoring::anypoint-insights-agentic.adoc[].
 
 == Accessing Logs
 
@@ -27,7 +27,7 @@ On US and EU Clouds, Anypoint Monitoring aggregates log files so you can manage,
 . Click the node to open the detail card.
 . Click *View Logs* to access the logs for the node.
 +
-You are taken to Anypoint Monitoring where you can view the logs for the asset instance.
+You are taken to Anypoint Monitoring where you can view the logs for the asset instance. For more information see xref:monitoring::logs-us-eu.adoc#search-agentic[Get Agent, Broker, and MCP Server Logs].
 
 == Accessing Traces
 

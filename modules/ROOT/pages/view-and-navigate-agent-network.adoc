@@ -74,7 +74,7 @@ Broker metadata is defined in the agent network YAML. For more information about
 | Description | Description of the asset.
 |Provider | Provider of the asset.
 | Platform | Platform of the asset, for example, Agentforce or MuleSoft.
-| LLM | LLM provider (for example, `openai` or `einstein`).
+| LLM | LLM provider (for example, `OpenAI`).
 | Skills | List of skills that are supported by the agent. Skills are concrete, callable operations within a capability, with defined input and output. For example,`lookupOrder`, `createCase`, `updateAddress`.
 | Linked Agents | List of agents that are linked to the broker. 
 |MCP Servers and Tools | List of MCP servers and tools that are connected to the broker.
@@ -106,7 +106,7 @@ This metric is shown for MCP servers. This is the total number of messages sent 
 [[viewing-edge-details]]
 == Viewing Edge Details
 
-When you selectan edge, the detail panel displays relationship information and metrics. Metrics are aggragated for all instances that exist between nodes. 
+When you select an edge, the detail panel displays relationship information and metrics. Metrics are aggregated for all instances that exist between nodes. 
 
 . Select an edge to open its detail panel.
 . Examine the metrics.

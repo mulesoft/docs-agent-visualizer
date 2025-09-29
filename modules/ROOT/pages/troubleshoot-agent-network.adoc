@@ -2,6 +2,24 @@
 
 Agent Visualizer gives you quick access to tools to troubleshoot your agent network.
 
+== Viewing Metrics
+
+. Select a node to open the detail card.
+. In *Performance and Health*, click *View metrics* to access the metrics for the node:
++
+* Successful Requests
++
+This metric is shown for brokers, agents, and MCP servers. This is the total number of requests received successfully in the last 24 hours. 
+* Failed Request Rate
++
+This metric is shown for brokers, agents, and MCP servers. This is the percentage of requests that failed in the last 24 hours. 
+* A2A Calls Sent
++
+This metric is shown for brokers. This is the total number of messages sent to agents using the Agent2Agent (A2A) protocol in the last 24 hours. 
+* MCP Calls Sent
++
+This metric is shown for MCP servers. This is the total number of messages sent to  MCP servers in the last 24 hours. 
+
 == Accessing Logs
 
 On US and EU Clouds, Anypoint Monitoring aggregates log files so you can manage, search for, filter, and analyze your logs. You can use aggregated logs in conjunction with monitoring to help identify issues and investigate failures quickly. 
@@ -13,7 +31,7 @@ You are taken to Anypoint Monitoring where you can view the logs for the asset i
 
 == Accessing Traces
 
-Use Traces in Anypoint Monitoring to track the flow of requests that travel through service pipelines. Examine traces in Open Telementry (OTEL) spans to troubleshoot requests that have errors or slow response times, optimize your resource allocation, and track requests end-to-end. Find and view the course of a specific transaction through the services it travels to monitor its performance.
+Use Traces in Anypoint Monitoring to track the flow of requests that travel through service pipelines. Examine traces in Open Telemetry (OTEL) spans to troubleshoot requests that have errors or slow response times, optimize your resource allocation, and track requests end-to-end. 
 
 . Click the node to open the detail card.
 . Click *View Traces* to access the traces for the node.

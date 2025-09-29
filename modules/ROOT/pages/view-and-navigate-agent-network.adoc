@@ -82,7 +82,7 @@ Broker metadata is defined in the agent network YAML. For more information about
 | Instance Name | Instance name as it appears in API Manager.
 | Environment Type | Environments the instance is deployed to, for example, `sandbox` or `production`.
 | Based on Asset Version | The version of the instance. 
-| Policies | Lists the policies that are applied to the instance.
+| Policies | Policies that are applied to the instance.
 | Governance and Security | Shows whether the asset is protected by a Flex Gateway.
 | Performance and Health a| Shows the performance and health metrics for the instance including:
 

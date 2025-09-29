@@ -77,7 +77,7 @@ Broker metadata is defined in the agent network YAML. For more information about
 | LLM | LLM provider (for example, `OpenAI`).
 | Skills | List of skills that are supported by the agent. Skills are concrete, callable operations within a capability, with defined input and output. For example,`lookupOrder`, `createCase`, `updateAddress`.
 | Linked Agents | Agents that are linked to the broker. 
-|MCP Servers and Tools | List of MCP servers and tools that are connected to the broker.
+|MCP Servers and Tools | MCP servers and tools that are connected to the broker.
 | Enabled Capabilities | Capabilities that are supported by the agent. Capabilities are high-level areas of what an agent can do (domains it supports, for example, customer support or knowledge search). 
 | Instance Name | Instance name as it appears in API Manager.
 | Environment Type | Environments the instance is deployed to, for example, `sandbox` or `production`.

@@ -50,7 +50,7 @@ When the nonproduction data flow layer is active, traffic between nodes in devel
 
 == Filter the Agent Network
 
-You can filter the data set to focus your view.
+To filter the dataset to focus your view:
 
 . Select the filter option.
 . Select the filter criteria, such as agent type (broker, internal agents, external agents) or specific platforms (for example, Agentforce).

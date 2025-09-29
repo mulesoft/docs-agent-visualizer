@@ -5,7 +5,7 @@ Agent Visualizer shows the architectural structure of your agent network. Explor
 [[node-types]]
 == Node Types
 
-There are different types of nodes in the agent network to provide a visual representation of different agentic assets (agents, brokers, and MCP servers) within the agent network. Nodes show you the structure, interactions, health, and governance of distributed agents, brokers, and MCP servers. 
+Different types of nodes in the agent network provide a visual representation of the agentic assets (agents, brokers, and MCP servers) within the agent network. Nodes show you the structure, interactions, health, and governance of distributed agents, brokers, and MCP servers. 
 
 • Broker nodes
 +

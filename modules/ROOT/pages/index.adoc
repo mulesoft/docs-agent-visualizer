@@ -4,7 +4,7 @@ Agent Visualizer provides a detailed visual graph so you can see, understand, an
 
 With Agent Visualizer, you can:
 
-* Get a clear view of connections and interactions among all your agents, clients, and Model Context Protocol (MCP) servers.
+* Get a clear view of connections and interactions among your agents, clients, and MCP servers.
 * Understand data movement and dependencies at a glance by seeing which systems are calling your agents and what those agents are calling in turn.
 * Detect potential issues proactively.
 * Optimize agent orchestration for performance, trust, and scale. 

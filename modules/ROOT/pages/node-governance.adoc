@@ -3,7 +3,7 @@
 Node governance surfaces the security and compliance posture of each agent, broker, and Model Context Protocol (MCP) server in the agent network. View Flex Gateway protection and applied policies and follow links to API Manager to view policies.
 
 [[viewing-node-policies]]
-== Viewing Node Policies
+== View Node Policies
 
 . Look for the shield icon on nodes to see which nodes are secured by Flex Gateways.
 . Click the node to open the detail card and see the policies that are applied to the node.

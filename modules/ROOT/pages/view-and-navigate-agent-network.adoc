@@ -80,7 +80,7 @@ Broker metadata is defined in the agent network YAML. For more information about
 |MCP Servers and Tools | List of MCP servers and tools that are connected to the broker.
 | Enabled Capabilities | Lists the capabilities that are supportted by the agent. Capabilities are high-level areas of what an agent can do (domains it supports, for example customer support, knowledge search). 
 | Instance Name | Instance name as it appears in API Manager.
-| Environment Type | Lists the environments the instance is deployed to, for example, `sandbox` or `production`.
+| Environment Type | Environments the instance is deployed to, for example, `sandbox` or `production`.
 | Based on Asset Version | The version of the instance. 
 | Policies | Lists the policies that are applied to the instance.
 | Governance and Security | Shows whether the asset is protected by a Flex Gateway.

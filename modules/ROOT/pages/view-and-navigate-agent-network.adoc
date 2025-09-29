@@ -53,7 +53,7 @@ When the nonproduction data flow layer is active, traffic between nodes in devel
 You can filter the data set to focus your view.
 
 . Select the filter option.
-. Choose the filter criteria such as Agent type (broker, internal agents, external agents) or specific platforms (for example,Agentforce).
+. Select the filter criteria, such as agent type (broker, internal agents, external agents) or specific platforms (for example, Agentforce).
 . Choose an environment view to narrow the graph to nodes deployed in that environment.
 
 [[viewing-node-details]]

@@ -25,7 +25,7 @@ An agent that originates from external, non-Salesforce platforms, such as OpenAI
 Managed Flex Gateway::
 A Flex Gateway that is managed by Anypoint Platform.
 +
-For more information, see xref:gateway::index.adoc#managed[].
+For more information, see xref:gateway::index.adoc#managed[Managed Flex Gateway].
 
 [[mcp-server]]
 MCP Server::
@@ -34,4 +34,3 @@ A service that implements the Model Context Protocol (MCP) to expose tools and d
 == See Also
 
 * xref:index.adoc[]
-

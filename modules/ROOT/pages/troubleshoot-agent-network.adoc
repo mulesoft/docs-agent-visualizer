@@ -5,6 +5,8 @@ Use Agent Visualizer with Anypoint Monitoring to diagnose issues across agents a
 [[view-metrics]]
 == View Metrics
 
+The detail card for a node includes a *Performance and Health* section with metrics. You can also view additional metrics in Anypoint Monitoring. 
+
 . Select a node to open the detail card.
 . In *Performance and Health*, click *View metrics* to view additional metrics in Anypoint Monitoring. 
 
@@ -13,7 +15,7 @@ For more information, see xref:monitoring::anypoint-insights-agentic.adoc[].
 [[access-logs]]
 == Access Logs
 
-On US and EU Clouds, Anypoint Monitoring aggregates log files so you can manage, search for, filter, and analyze your logs. You can use aggregated logs in conjunction with monitoring to help identify issues and investigate failures quickly. 
+You can access and view logs for an asset instance in Anypoint Monitoring or API Manager, depending on your organization's Anypoint Platform subscription. 
 
 . Click the node to open the detail card.
 . Click *View Logs* to access the logs for the node.

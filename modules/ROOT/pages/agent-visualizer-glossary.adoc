@@ -15,12 +15,23 @@ For information, see https://www.salesforce.com/agentforce/[Agentforce].
 Broker::
 An intelligent routing service that coordinates task delegation across specialized agents in your enterprise. Brokers originate from MuleSoft and are referenced in the agent network YAML.
 +
-For more information, see xref:anypoint-code-builder::define-your-agent-network-specification.adoc[]
+For more information, see xref:anypoint-code-builder::af-define-your-agent-network-specification.adoc[]
 
 [[external-agent]]
 External Agent::
 An agent that originates from external, non-Salesforce platforms, such as OpenAI, Bedrock, Vertex AI, and so on.
 
+[[managed-flex-gateway]]
+Managed Flex Gateway::
+A Flex Gateway that is managed by Anypoint Platform.
++
+For more information, see xref:gateway::index.adoc#managed[].
+
 [[mcp-server]]
 MCP Server::
 A service that implements the Model Context Protocol (MCP) to expose tools and data to AI clients, enabling LLMs to invoke external capabilities through a standard interface.
+
+== See Also
+
+* xref:index.adoc[]
+

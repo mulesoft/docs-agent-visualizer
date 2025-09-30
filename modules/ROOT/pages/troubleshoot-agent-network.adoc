@@ -2,24 +2,15 @@
 
 Agent Visualizer gives you quick access to tools to troubleshoot your agent network.
 
+[[view-metrics]]
 == View Metrics
 
 . Select a node to open the detail card.
-. In *Performance and Health*, click *View metrics* to access the metrics for the node:
-+
-* Successful Requests
-+
-This metric, shown for brokers, agents, and MCP servers, is the total number of requests received successfully in the last 24 hours. 
-* Failed Request Rate
-+
-This metric, shown for brokers, agents, and MCP servers, is the percentage of requests that failed in the last 24 hours. 
-* A2A Calls Sent
-+
-This metric, shown for brokers, is the total number of messages sent to agents using the Agent2Agent (A2A) protocol in the last 24 hours. 
-* MCP Calls Sent
-+
-This metric is shown for MCP servers. This is the total number of messages sent to  MCP servers in the last 24 hours. For more information, see xref:monitoring::anypoint-insights-agentic.adoc[].
+. In *Performance and Health*, click *View metrics* to view additional metrics in Anypoint Monitoring. 
 
+For more information, see xref:monitoring::anypoint-insights-agentic.adoc[].
+
+[[access-logs]]
 == Access Logs
 
 On US and EU Clouds, Anypoint Monitoring aggregates log files so you can manage, search for, filter, and analyze your logs. You can use aggregated logs in conjunction with monitoring to help identify issues and investigate failures quickly. 
@@ -29,6 +20,7 @@ On US and EU Clouds, Anypoint Monitoring aggregates log files so you can manage,
 +
 You are taken to Anypoint Monitoring where you can view the logs for the asset instance. For more information see xref:monitoring::logs-us-eu.adoc#search-agentic[Get Agent, Broker, and MCP Server Logs].
 
+[[access-traces]]
 == Access Traces
 
 Use Traces in Anypoint Monitoring to track the flow of requests that travel through service pipelines. Examine traces in Open Telemetry (OTEL) spans to troubleshoot requests that have errors or slow response times, optimize your resource allocation, and track requests end-to-end. 

@@ -1,42 +1,26 @@
 = Viewing and Navigating Your Agent Network
 
-Explore an interactive map of agents, brokers, and Model Context Protocol (MCP) servers. Pan and zoom, search and filter by environment or type, toggle layers, and select nodes or edges to view detailed metadata, metrics, and links for deeper investigation.
+Explore an interactive map of agents, brokers, and Model Context Protocol (MCP) servers. Pan and zoom, filter by environment, toggle layers, and select nodes or edges to view detailed metadata, metrics, and links for deeper investigation.
 
+[[access-agent-visualizer]]
 == Access Agent Visualizer
 
-You need these Anypoint Platform permissions to access Agent Visualizer:
-
-* Anypoint Monitoring
-* Monitoring: Monitoring Viewer
-* Exchange Viewer
-* API Manager View: View API Configuration, View Policies
+xref::partial$partial-agent-visualizer.adoc[tag=agent-visualizer-permissions]
 
 . Log in to Anypoint Platform.
 . On the Anypoint Platform home page, click *Open Agent Visualizer*.
 +
-If you don't see the agent network architecture, it's because there are no discoverable agentic assets in Anypoint Exchange. 
-
-For more information about creating an agent network project and publishing assets to Exchange, see xref:anypoint-code-builder::index.adoc[].
-
-== Navigate the Agent Network
-
-Agent Visualizer provides an interactive view of your agent network where you can:
-
-* Zoom in and out. 
-* Click and drag on the canvas to pan the visualization.
-* Search for the name of an asset on the canvas to highlight the nodes that contain your search terms.
-* Turn on layers to see additional metadata or specific views.
-* Filter the graph by design view (as defined in the broker YAML), environment, or agent type (broker, Agentforce agents, external agents, or MCP servers).
-* Navigate through interactive elements using the Tab key.
-* Navigate between connected and disconnected nodes using arrow keys when the canvas has focus.
-
-== View the Agent Network
-
 When you land on the Agent Visualizer page, you see the agent network map showing all discovered agentic assets nodes and their relationships (edges).
 
-If the page is empty, there are no discoverable agentic assets in Anypoint Exchange. For more information about creating an agent network project and publishing assets to Exchange, see xref:anypoint-code-builder::index.adoc[].
+If the page is empty, there are no discoverable agentic assets in Anypoint Exchange. For more information about creating an agent network project and publishing assets to Exchange, see xref:anypoint-code-builder::af-create-agent-network.adoc[].
 
-=== View Data Flow Layers
+[[navigate-agent-network]]
+== Navigate the Agent Network
+
+Agent Visualizer provides an interactive view of your agent network where you can zoom in and out, click and drag on the canvas to pan the visualization, and turn on environment layers (production or nonproduction) to see additional views.
+
+[[view-data-flow-layers]]
+== View Data Flow Layers
 
 Data flow (traffic) layers are used to group nodes in the agent network visualization to show production or nonproduction traffic. Only one type of traffic layer (production or nonproduction) is visible at one time.
 
@@ -44,10 +28,11 @@ By default, the production data flow layer is shown.
 
 Use the toggle to switch between the default view of production traffic and the view of nonproduction traffic (development/sandbox traffic).
 
-image::agent-visualizer-layers-toggle.png[Data Flows toggle is turned to view the Production Environments layer]
+image::agent-visualizer-layers-toggle.png[Data Flows toggle is turned on to view the production environments layer]
 
 When the nonproduction data flow layer is active, traffic between nodes in development or sandbox environments is shown as solid edges, and edges representing production traffic disappear. 
 
+//// ////
 == Filter the Agent Network
 
 To filter the dataset to focus your view:
@@ -55,8 +40,9 @@ To filter the dataset to focus your view:
 . Select the filter option.
 . Select the filter criteria, such as agent type (broker, internal agents, external agents) or specific platforms (for example, Agentforce).
 . Select an environment view to narrow the graph to nodes deployed in that environment.
+//// ////
 
-[[viewing-node-details]]
+[[view-node-details]]
 == View Node Details
 
 When you select a node, a detail card opens to provide comprehensive information for the asset.
@@ -65,7 +51,7 @@ When you select a node, a detail card opens to provide comprehensive information
 . Review the node details.
 +
 [NOTE]
-Broker metadata is defined in the agent network YAML. For more information about creating an agent network project, see xref:anypoint-code-builder::index.adoc[].
+Broker metadata is defined in the agent network YAML. For more information about the agent network YAML, see xref:anypoint-code-builder::define-your-agent-network-specification.adoc[].
 +
 [%header,cols="30a,70a"]
 |===
@@ -103,7 +89,7 @@ This metric is shown for MCP servers. This is the total number of messages sent 
 | Tags| All tags associated with the asset in Exchange.
 |===
 
-[[viewing-edge-details]]
+[[view-edge-details]]
 == View Edge Details
 
 When you select an edge, the detail panel displays relationship information and metrics. Metrics are aggregated for all instances that exist between nodes. 
@@ -126,3 +112,5 @@ When you select an edge, the detail panel displays relationship information and 
 * xref:index.adoc[]
 * xref:agent-visualizer-components.adoc[]
 * xref:node-governance.adoc[]
+* xref:anypoint-code-builder::af-get-started.adoc[]
+* xref:anypoint-code-builder::af-create-agent-network.adoc[]

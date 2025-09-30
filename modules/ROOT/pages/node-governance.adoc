@@ -1,8 +1,8 @@
 = Governing Nodes
 
-Node governance surfaces the security and compliance posture of each agent, broker, and Model Context Protocol (MCP) server in the agent network. View Flex Gateway protection and applied policies and follow links to API Manager to view policies.
+See which nodes in your agent network are protected and which policies are applied. Open the asset in API Manager to review more details about its policies. If a node isn’t protected, you can add a managed Flex Gateway and create the appropriate instance to enforce policies.
 
-[[viewing-node-policies]]
+[[view-node-policies]]
 == View Node Policies
 
 . Look for the shield icon on nodes to see which nodes are secured by Flex Gateways.
@@ -11,8 +11,10 @@ Node governance surfaces the security and compliance posture of each agent, brok
 +
 Policies are listed by category on the left and applied policies are listed on the right. 
 
-[[adding-a-flex-gateway]]
+[[add-a-flex-gateway]]
 == Add a Flex Gateway
+
+Add a managed Flex Gateway to the node to enforce authentication, rate limits, and other policies at ingress and egress, and to emit telemetry for monitoring and visualization.
 
 . Click the node to open the detail card and see the policies that are applied to the node.
 . Click *Add Flex Gateway*. 

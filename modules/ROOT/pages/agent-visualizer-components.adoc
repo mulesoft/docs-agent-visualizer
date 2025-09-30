@@ -1,11 +1,11 @@
 = Agent Visualizer Components
 
-Agent Visualizer shows the architectural structure of your agent network. Explore node types such as brokers, agents, and Model Context Protocol (MCP) servers, and edges that show declared and runtime relationships and traffic. Use layers and filters to focus your view, and detail cards to see metadata and metrics.
+Agent Visualizer shows the architectural structure of your agent network. Explore node agents and Model Context Protocol (MCP) servers and edges that show declared and runtime relationships and traffic. Use layers and filters to focus your view, and detail cards to see metadata and metrics.
 
 [[node-types]]
 == Node Types
 
-Different types of nodes in the agent network provide a visual representation of the agentic assets (agents, brokers, and MCP servers) within the agent network. Nodes show you the structure, interactions, health, and governance of distributed agents, brokers, and MCP servers. 
+Different types of nodes in the agent network provide a visual representation of the agentic assets (agents and MCP servers) within the agent network. Nodes show you the structure, interactions, health, and governance of distributed agents, brokers, and MCP servers. 
 
 • Broker nodes
 +
@@ -27,7 +27,7 @@ A broker is an intelligent routing service that coordinates task delegation acro
 +
 These nodes represent MCP servers. An MCP server is a service that implements the Model Context Protocol to expose tools and data to AI clients, enabling LLMs to invoke external capabilities through a standard interface.
 
-In the Agent Visualizer graph, nodes show icons and labels, indicating their type (agent, broker, or MCP server), name, and protection status at a glance. 
+In the Agent Visualizer graph, nodes show icons and labels, indicating their type (agent or MCP server), name, and protection status at a glance. 
 
 Selecting a node opens the Inspector Panel, which provides detailed information about the node. For more information, see xref:view-and-navigate-agent-network.adoc#viewing-node-details[Viewing Node Details].
 
@@ -36,18 +36,18 @@ Selecting a node opens the Inspector Panel, which provides detailed information 
 
 Edges represent the relationships and communications among your nodes:
 
-
 * Declared edges appear between node instances when no runtime information is available because there's no registered traffic between them. Dashed lines on the graph indicate declared edges.
 * Runtime edges appear between nodes when traffic is registered and a Flex Gateway exists. Solid lines on the graph indicate runtime edges. Clicking on a runtime edge opens the detail panel and shows the relevant metrics.
 
-Edges are drawn under specific conditions, primarily when the calling agent is protected by a Flex Gateway at egress.
+Edges are drawn under specific conditions, primarily when the calling agent is protected by a managed Flex Gateway at egress. For more information, see xref:gateway::index.adoc[].
 
-* If an agent has an egress Flex Gateway, when it calls another agent the edge is visible.
+* If an agent has an egress managed Flex Gateway, when it calls another agent the edge is visible.
 * If the requesting agent doesn't have an egress Flex Gateway, no edge metric is generated and the edge isn't shown.
 * Broker agents that route outbound calls through an egress Flex Gateway, allowing requests between broker agents, or from a broker agent to an external agent, appear in the agent network visualization.
 
 Selecting an edge opens the detail panel, which displays relationship information and metrics. For more information, see xref:view-and-navigate-agent-network.adoc#viewing-edge-details[Viewing Edge Details].
 
+[[data-flow-layers]]
 == Data Flow Layers
 
 Data flow layers are used to group nodes in the agent network visualization. They help you highlight specific types of nodes in the visualization.
@@ -61,6 +61,7 @@ You can turn on the nonproduction traffic layer to see nonproduction traffic (te
 
 For more information, see xref:view-and-navigate-agent-network.adoc#viewing-data-flow-layers[Viewing Data Flow Layers].
 
+//// ////
 [[filters]]
 == Filters
 
@@ -71,6 +72,7 @@ You can filter by:
 * Environment
 * Agent type
 * Platform
+//// ////
 
 [[details-card]]
 == Details Cards
@@ -88,6 +90,7 @@ You can see the details of applied policies in detail card for the selected node
 
 * xref:index.adoc[]
 * xref:view-and-navigate-agent-network.adoc[]
+* xref:anypoint-code-builder::af-get-started.adoc[]
 * xref:monitoring::index.adoc[]
 * xref:api-manager::index.adoc[]
 * xref:anypoint-exchange::index.adoc[]

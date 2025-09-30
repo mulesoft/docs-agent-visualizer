@@ -2,17 +2,11 @@
 
 Agent Visualizer provides a detailed visual graph so you can see, understand, and interact with your enterprise's evolving network of agents, Model Context Protocol (MCP) servers, and LLMs. Agent Visualizer gives you insight into hidden agent interactions, governance gaps, and performance bottlenecks. Agent Visualizer offers complete situational awareness of your agentic ecosystem. 
 
-With Agent Visualizer, you can:
-
-* Get a clear view of connections and interactions among your agents, clients, and MCP servers.
-* Understand data movement and dependencies at a glance by seeing which systems are calling your agents and what those agents are calling in turn.
-* Detect potential issues proactively.
-* Optimize agent orchestration for performance, trust, and scale. 
 
 Agent Visualizer is an intuitive user interface that helps you:
 
  * Gain complete situational awareness of your agentic ecosystem with a view of all connected agents in your agent network on one map, including clear relationships and direction of calls.
- * See unclear interaction patterns by showing real time or historical transaction volume overlays on network edges. This helps you understand key pathways and identify under- or overused connections. 
+ * See unclear interaction patterns by showing real-time transaction volume overlays for the past 24 hours. This helps you understand key pathways and identify under- or overused connections. 
  * See governance gaps with a view of which agents are protected by Flex Gateways and policies. 
  * Understand node purpose and origin.
  + 
@@ -24,29 +18,27 @@ Agent Visualizer is an intuitive user interface that helps you:
 
 Use Agent Visualizer to gain clarity and control over your agent ecosystem.
 
-* Understand inventory and dependencies.
+* Discover your agent landscape.
 +
-View a network graph of your enterprise agents to understand dependencies and troubleshoot failures. This provides the full inventory needed for system design and helps you avoid shadow IT.
-* Validate agent consumption.
+Architects and platform teams can view a complete network graph of enterprise agents to map dependencies, plan integrations, and eliminate shadow IT.
+* Monitor real-time usage.
 +
-Developers can validate how their agent is being consumed by viewing real-time transaction traffic volume overlays.
-* Assess security and compliance.
+Developers can validate adoption and consumption patterns by overlaying real-time transaction traffic, helping them optimize performance and capacity.
+* Assess security and compliance coverage.
 +
-Security and compliance personnel can visualize active policies in the agent network to validate coverage and instantly spot vulnerabilities.
-* Troubleshoot failures.
+Security teams can visualize active policies across the network to verify enforcement, spot vulnerabilities, and ensure regulatory compliance.
+* Troubleshoot failures faster.
 +
-Developers can deep-link from the visualization directly into the underlying service logs for quick diagnostics.
+Security teams can visualize active policies across the network to verify enforcement, spot vulnerabilities, and ensure regulatory compliance.
+* Troubleshoot failures faster.
++
+Operators can trace dependencies, isolate failing nodes, and deep-link into service logs for rapid incident response and root cause analysis.
 
 
 [[before-you-begin]]
 == Before You Begin
 
-You need these Anypoint Platform permissions to access Agent Visualizer:
-
-* Anypoint Monitoring
-* Monitoring: Monitoring Viewer
-* Exchange Viewer
-* API Manager View: View API Configuration, View Policies
+xref::partial$partial-agent-visualizer.adoc[tag=agent-visualizer-permissions]
 
 
 == See Also

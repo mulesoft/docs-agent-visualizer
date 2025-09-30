@@ -13,10 +13,10 @@ Use Agent Visualizer to identify the parts of your agent network and see how the
 
 Nodes in the agent network provide a visual representation of the agents and MCP servers within your agent network including:  
 
-* xref:glossary.adoc#agentforce-agent[Agentforce agents] (Salesforce) 
-* xref:glossary.adoc#external-agent[External agents] (non-Salesforce)
-* xref:glossary.adoc#broker[Brokers] (MuleSoft)
-* xref:glossary.adoc#mcp-server[MCP servers] (any source)
+* xref:glossary.adoc#agentforce-agent[Agentforce agents] 
+* xref:glossary.adoc#agent[Agents]
+* xref:glossary.adoc#broker[Brokers]
+* xref:glossary.adoc#mcp-server[MCP servers]
 
 For more information, see xref:view-and-navigate-agent-network.adoc#viewing-node-details[Viewing Node Details].
 

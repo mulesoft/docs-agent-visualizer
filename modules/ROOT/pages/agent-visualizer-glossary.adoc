@@ -17,10 +17,6 @@ An intelligent routing service that coordinates task delegation across specializ
 +
 For more information, see xref:anypoint-code-builder::af-define-your-agent-network-specification.adoc[]
 
-[[external-agent]]
-External Agent::
-An agent that originates from external, non-Salesforce platforms, such as OpenAI, Bedrock, Vertex AI, and so on.
-
 [[managed-flex-gateway]]
 Managed Flex Gateway::
 A Flex Gateway that is managed by Anypoint Platform.

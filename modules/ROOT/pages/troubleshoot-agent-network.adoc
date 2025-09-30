@@ -1,12 +1,12 @@
 = Troubleshooting Your Agent Network
 
-Agent Visualizer gives you quick access to tools to troubleshoot your agent network.
+Use Agent Visualizer with Anypoint Monitoring to diagnose issues across agents and MCP servers. Open a node’s detail card to see associated metrics and access logs and traces in Anypoint Monitoring.
 
 [[view-metrics]]
 == View Metrics
 
 . Select a node to open the detail card.
-. In *Performance and Health*, click *View metrics* to view additional metrics in Anypoint Monitoring. 
+. In *Performance and Health*, click *View metrics* to view additional metrics in Anypoint Monitoring Insights. 
 
 For more information, see xref:monitoring::anypoint-insights-agentic.adoc[].
 
@@ -18,12 +18,17 @@ On US and EU Clouds, Anypoint Monitoring aggregates log files so you can manage,
 . Click the node to open the detail card.
 . Click *View Logs* to access the logs for the node.
 +
-You are taken to Anypoint Monitoring where you can view the logs for the asset instance. For more information see xref:monitoring::logs-us-eu.adoc#search-agentic[Get Agent, Broker, and MCP Server Logs].
+If your organization has the Anypoint Integration Advanced package or a Titanium subscription to Anypoint Platform, you can view the logs for the asset instance in Anypoint Monitoring. For more information, see xref:monitoring::logs-us-eu.adoc#search-agentic[Get Agent, Broker, and MCP Server Logs].
++
+If your organization doesn't have the Anypoint Integration Advanced package or a Titanium subscription to Anypoint Platform, you can view the logs for the asset instance in API Manager. For more information, see xref:gateway::flex-managed-view-logs-in-monitoring.adoc[].
 
 [[access-traces]]
 == Access Traces
 
-Use Traces in Anypoint Monitoring to track the flow of requests that travel through service pipelines. Examine traces in Open Telemetry (OTEL) spans to troubleshoot requests that have errors or slow response times, optimize your resource allocation, and track requests end-to-end. 
+[NOTE]
+This feature is available only if your organization has the Anypoint Integration Advanced package or a Titanium subscription to Anypoint Platform.
+
+For more information, see xref:monitoring::traces.adoc[].
 
 . Click the node to open the detail card.
 . Click *View Traces* to access the traces for the node.

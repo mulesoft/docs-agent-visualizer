@@ -7,10 +7,10 @@ Agent Visualizer shows the architectural structure of your agent network. Explor
 
 Different types of nodes in the agent network provide a visual representation of the agentic assets (agents and MCP servers) within the agent network. Nodes show you the structure, interactions, health, and governance of distributed agents, brokers, and MCP servers. 
 
-• Broker nodes
+* Broker nodes
 +
 Represent broker groups and enumerate the different broker agents they can communicate with. Broker groups are defined in the broker YAML and published to Anypoint Exchange.
-• Agents
+* Agents
 +
 An agent is an autonomous software component that uses goals, context, and available tools (often via an LLM) to decide and execute actions on behalf of a user or system. The agent nodes include:
 +
@@ -23,7 +23,7 @@ Agents that originate from external, non-Salesforce platforms, such as OpenAI, B
 ** Brokers
 +
 A broker is an intelligent routing service that coordinates task delegation across specialized agents in your enterprise. Brokers originate from MuleSoft and are referenced in the agent network YAML. 
-• MCP servers
+* MCP servers
 +
 These nodes represent MCP servers. An MCP server is a service that implements the Model Context Protocol to expose tools and data to AI clients, enabling LLMs to invoke external capabilities through a standard interface.
 

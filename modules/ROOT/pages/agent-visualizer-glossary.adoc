@@ -1,0 +1,26 @@
+= Agent Visualizer Glossary
+
+
+[[agent]]
+Agent::
+An autonomous software component that uses goals, context, and available tools, often via a large language model (LLM), to decide and execute actions on behalf of a user or system. 
+
+[[agentforce-agent]]
+Agentforce Agent::
+An agent that originates from Agentforce.
++
+For information, see https://www.salesforce.com/agentforce/[Agentforce].
+
+[[broker]]
+Broker::
+An intelligent routing service that coordinates task delegation across specialized agents in your enterprise. Brokers originate from MuleSoft and are referenced in the agent network YAML.
++
+For more information, see xref:anypoint-code-builder::define-your-agent-network-specification.adoc[]
+
+[[external-agent]]
+External Agent::
+An agent that originates from external, non-Salesforce platforms, such as OpenAI, Bedrock, Vertex AI, and so on.
+
+[[mcp-server]]
+MCP Server::
+A service that implements the Model Context Protocol (MCP) to expose tools and data to AI clients, enabling LLMs to invoke external capabilities through a standard interface.

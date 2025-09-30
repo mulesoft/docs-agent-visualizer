@@ -6,7 +6,7 @@ Use Agent Visualizer with Anypoint Monitoring to diagnose issues across agents a
 == View Metrics
 
 . Select a node to open the detail card.
-. In *Performance and Health*, click *View metrics* to view additional metrics in Anypoint Monitoring Insights. 
+. In *Performance and Health*, click *View metrics* to view additional metrics in Anypoint Monitoring. 
 
 For more information, see xref:monitoring::anypoint-insights-agentic.adoc[].
 

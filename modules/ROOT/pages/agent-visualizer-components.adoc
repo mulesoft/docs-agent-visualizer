@@ -48,7 +48,7 @@ The default view, Production Data Flow Layer, shows all agentic assets that are 
 +
 You can turn on the nonproduction traffic layer to see nonproduction traffic (test and sandbox connections). 
 
-For more information, see xref:view-and-navigate-agent-network.adoc#viewing-data-flow-layers[Viewing Data Flow Layers].
+For more information, see xref:view-and-navigate-agent-network.adoc#view-data-flow-layers[View Data Flow Layers].
 
 
 [[details-card]]

@@ -28,7 +28,7 @@ If your organization doesn't have the Anypoint Integration Advanced package or a
 == Access Traces
 
 [NOTE]
-This feature is available only if your organization has the Anypoint Integration Advanced package or a Titanium subscription to Anypoint Platform.
+This beta feature is available only if your organization has the Anypoint Integration Advanced package or a Titanium subscription to Anypoint Platform.
 
 For more information, see xref:monitoring::traces.adoc[].
 

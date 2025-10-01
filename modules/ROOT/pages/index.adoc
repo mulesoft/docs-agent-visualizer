@@ -13,7 +13,7 @@ Agent Visualizer is an intuitive user interface that helps you:
  You gain full understanding of each asset in your agent network and any active running instances when you select a node. 
  * Easily view production and nonproduction traffic. 
 
- image::agent-visualizer.png[Agent Visualizer graph showing a network of agents, brokers, and MCP servers and the detail card for a highlighted node]
+image::agent-visualizer.png[Agent Visualizer graph showing a network of agents, brokers, and MCP servers and the detail card for a highlighted node]
 
 [[use-cases]]
 == Use Cases

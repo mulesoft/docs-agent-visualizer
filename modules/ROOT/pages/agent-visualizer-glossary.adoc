@@ -5,17 +5,29 @@
 Agent::
 An autonomous software component that uses goals, context, and available tools, often via a large language model (LLM), to decide and execute actions on behalf of a user or system. 
 
+[[agent-network]]
+Agent network::
+An agent network is a collection of agents, brokers, LLMs, and MCP servers that are connected to each other.
++
+For more information, see xref:anypoint-code-builder::af-agent-networks.adoc[].
+
 [[agentforce-agent]]
-Agentforce Agent::
+Agentforce agent::
 An agent that originates from Agentforce.
 +
-For information, see https://www.salesforce.com/agentforce/[Agentforce].
+For more information, see https://www.salesforce.com/agentforce/[Agentforce].
 
 [[broker]]
 Broker::
 An intelligent routing service that coordinates task delegation across specialized agents in your enterprise. Brokers originate from MuleSoft and are referenced in the agent network YAML.
 +
 For more information, see xref:anypoint-code-builder::af-define-your-agent-network-specification.adoc[]
+
+[[declared-edge]]
+Declared edge::
+A design‑time relationship between two nodes (from the agent network YAML or Exchange metadata) indicating an intended connection when no runtime traffic is observed; it’s rendered as a dashed line.
++
+For more information, see xref:agent-visualizer-components.adoc#edges[Edges].
 
 [[managed-flex-gateway]]
 Managed Flex Gateway::
@@ -26,6 +38,12 @@ For more information, see xref:gateway::index.adoc#managed[Managed Flex Gateway]
 [[mcp-server]]
 MCP Server::
 A service that implements the Model Context Protocol (MCP) to expose tools and data to AI clients, enabling LLMs to invoke external capabilities through a standard interface.
+
+[[runtime-edge]]
+Runtime edge::
+A live relationship that's drawn when actual traffic is observed between two nodes (from Flex Gateway or Monitoring telemetry). It’s rendered as a solid line in the agent network.
++
+For more information, see xref:agent-visualizer-components.adoc#edges[Edges].
 
 == See Also
 

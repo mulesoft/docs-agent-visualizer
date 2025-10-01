@@ -5,7 +5,7 @@ Explore an interactive map of agents, brokers, and Model Context Protocol (MCP) 
 [[access-agent-visualizer]]
 == Access Agent Visualizer
 
-xref::partial$partial-agent-visualizer.adoc[tag=agent-visualizer-permissions]
+include::partial$partial-agent-visualizer.adoc[tag=agent-visualizer-permissions]
 
 . Log in to Anypoint Platform.
 . On the Anypoint Platform home page, click *Open Agent Visualizer*.
@@ -32,15 +32,6 @@ image::agent-visualizer-layers-toggle.png[Data Flows toggle is turned on to view
 
 When the nonproduction data flow layer is active, traffic between nodes in development or sandbox environments is shown as solid edges, and edges representing production traffic disappear. 
 
-//// ////
-== Filter the Agent Network
-
-To filter the dataset to focus your view:
-
-. Select the filter option.
-. Select the filter criteria, such as agent type (broker, internal agents, external agents) or specific platforms (for example, Agentforce).
-. Select an environment view to narrow the graph to nodes deployed in that environment.
-//// ////
 
 [[view-node-details]]
 == View Node Details
@@ -51,7 +42,7 @@ When you select a node, a detail card opens to provide comprehensive information
 . Review the node details.
 +
 [NOTE]
-Broker metadata is defined in the agent network YAML. For more information about the agent network YAML, see xref:anypoint-code-builder::define-your-agent-network-specification.adoc[].
+Broker metadata is defined in the agent network YAML. For more information about the agent network YAML, see xref:anypoint-code-builder::af-define-your-agent-network-specification.adoc[].
 +
 [%header,cols="30a,70a"]
 |===

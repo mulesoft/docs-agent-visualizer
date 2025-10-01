@@ -20,7 +20,7 @@ Add a managed Flex Gateway to the node to enforce authentication, rate limits, a
 . Click *Add Flex Gateway*. 
 . In API Manager, add an instance of the asset (MCP server or agent) to protect.
 +
-For information about adding an MCP server or agent instance, see xref:gateway::create-instance-task-agent-tool.adoc[]. 
+For information about adding an MCP server or agent instance, see xref:gateway::create-instance-task-agent-tool.adoc[Add a Flex Gateway Agent or Tool Instance].
 
 == See Also
 

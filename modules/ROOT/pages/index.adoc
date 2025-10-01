@@ -40,7 +40,7 @@ Operators can trace dependencies, isolate failing nodes, and deep-link into serv
 [[before-you-begin]]
 == Before You Begin
 
-xref::partial$partial-agent-visualizer.adoc[tag=agent-visualizer-permissions]
+include::partial$partial-agent-visualizer.adoc[tag=agent-visualizer-permissions]
 
 
 == See Also

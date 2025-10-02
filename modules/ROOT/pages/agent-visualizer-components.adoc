@@ -3,7 +3,7 @@
 Use Agent Visualizer to identify the parts of your agent network and see how they work together. 
 
 * Distinguish node types (agents and MCP servers).
-* View edges to see declared and runtime interactions
+* View edges to see declared and runtime interactions.
 * Use layers to focus views on specific environments
 * Open detail cards to inspect metadata and metrics for nodes and access logs and traces
 * Review governance indicators such as Flex Gateway protection and applied policies.

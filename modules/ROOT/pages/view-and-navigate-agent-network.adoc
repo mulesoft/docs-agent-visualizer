@@ -10,7 +10,7 @@ include::partial$partial-agent-visualizer.adoc[tag=agent-visualizer-permissions]
 . Log in to Anypoint Platform.
 . On the Anypoint Platform home page, click *Open Agent Visualizer*.
 +
-When you land on the Agent Visualizer page, you see the agent network map showing all discovered agentic assets nodes and their relationships (edges).
+On the Agent Visualizer page, you see the agent network map showing all discovered agentic assets, nodes and their relationships (edges).
 
 If the page is empty, there are no discoverable agentic assets in Anypoint Exchange. For more information about creating an agent network project and publishing assets to Exchange, see xref:anypoint-code-builder::af-create-agent-network.adoc[].
 

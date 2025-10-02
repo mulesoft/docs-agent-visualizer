@@ -74,7 +74,7 @@ This metric is shown for brokers, agents, and MCP servers. This is the percentag
 This metric is shown for brokers. This is the total number of messages sent to agents using the Agent2Agent (A2A) protocol in the last 24 hours. 
 * MCP Calls Sent
 +
-This metric is shown for MCP servers. This is the total number of messages sent to  MCP servers in the last 24 hours. 
+This metric is shown for MCP servers. This is the total number of messages sent to MCP servers in the last 24 hours. 
 
 | Monitoring | Links to logs and traces for quick access to troubleshooting tools. 
 | Tags| All tags associated with the asset in Exchange.

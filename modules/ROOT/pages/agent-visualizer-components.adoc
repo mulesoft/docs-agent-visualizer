@@ -5,7 +5,7 @@ Use Agent Visualizer to identify the parts of your agent network and see how the
 * Distinguish node types (agents and MCP servers).
 * View edges to see declared and runtime interactions.
 * Use layers to focus views on specific environments
-* Open detail cards to inspect metadata and metrics for nodes and access logs and traces
+* Open details cards to inspect metadata and metrics for nodes and access logs and traces
 * Review governance indicators such as Flex Gateway protection and applied policies.
 
 [[node-types]]
@@ -26,7 +26,7 @@ For more information, see xref:view-and-navigate-agent-network.adoc#viewing-node
 Edges represent the relationships and communications among your nodes:
 
 * Declared edges appear between node instances when no runtime information is available because there's no registered traffic between them. Dashed lines on the graph indicate declared edges.
-* Runtime edges appear between nodes when traffic is registered and a Flex Gateway exists. Solid lines on the graph indicate runtime edges. Clicking on a runtime edge opens the detail panel and shows the relevant metrics.
+* Runtime edges appear between nodes when traffic is registered and a Flex Gateway exists. Solid lines on the graph indicate runtime edges. Clicking on a runtime edge opens the details card and shows the relevant metrics.
 +
 Edges are drawn under specific conditions, primarily when the calling agent is protected by a managed Flex Gateway at egress. For more information, see xref:gateway::flex-gateway-managed-ingress-egress.adoc[].
 
@@ -34,7 +34,7 @@ Edges are drawn under specific conditions, primarily when the calling agent is p
 * If the requesting agent doesn't have an egress Flex Gateway, no edge metric is generated and the edge isn't shown.
 * Broker agents that route outbound calls through an egress Flex Gateway, allowing requests between broker agents, or from a broker agent to an external agent, appear in the agent network visualization.
 
-Selecting an edge opens the detail panel, which displays relationship information and metrics. For more information, see xref:view-and-navigate-agent-network.adoc#view-edge-details[View Edge Details].
+Selecting an edge opens the details card, which displays relationship information and metrics. For more information, see xref:view-and-navigate-agent-network.adoc#view-edge-details[View Edge Details].
 
 [[data-flow-layers]]
 == Data Flow Layers

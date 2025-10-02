@@ -8,7 +8,7 @@ Explore an interactive map of agents, brokers, and Model Context Protocol (MCP) 
 include::partial$partial-agent-visualizer.adoc[tag=agent-visualizer-permissions]
 
 . Log in to Anypoint Platform.
-. On the Anypoint Platform home page, click *Open Agent Visualizer*.
+. Click *Get Started*.
 +
 On the Agent Visualizer page, you see the agent network map showing all discovered agentic assets, nodes and their relationships (edges).
 
@@ -36,9 +36,9 @@ When the nonproduction data flow layer is active, traffic between nodes in devel
 [[view-node-details]]
 == View Node Details
 
-When you select a node, a detail card opens to provide comprehensive information for the asset.
+When you select a node, a details card opens to provide comprehensive information for the asset.
 
-. Select any node in the agent network (or press Enter or Spacebar after focusing the node with arrow keys) to show its detail panel.
+. Select any node in the agent network (or press Enter or Spacebar after focusing the node with arrow keys) to show its details card.
 . Review the node details.
 +
 [NOTE]
@@ -85,9 +85,9 @@ This metric is shown for MCP servers. This is the total number of messages sent 
 
 The edge is shown as a solid line if traffic is observed between the nodes in the last 24 hours. The edge is shown as a dashed line if traffic is not observed between the nodes in the last 24 hours. See xref:agent-visualizer-components.adoc#edges[Edges] for more information.
 
-When you select an edge, the detail panel displays relationship information and metrics. Metrics are aggregated for all instances that exist between nodes. 
+When you select an edge, the details card displays relationship information and metrics. Metrics are aggregated for all instances that exist between nodes. 
 
-. Select an edge to open its detail panel.
+. Select an edge to open its details card.
 . Examine the traffic throughput per hour. 
 
 == See Also

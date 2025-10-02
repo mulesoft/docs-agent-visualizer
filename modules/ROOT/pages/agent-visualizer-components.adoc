@@ -30,7 +30,7 @@ Edges represent the relationships and communications among your nodes:
 +
 Edges are drawn under specific conditions, primarily when the calling agent is protected by a managed Flex Gateway at egress. For more information, see xref:gateway::flex-gateway-managed-ingress-egress.adoc[].
 
-* If an agent has an egress managed Flex Gateway, when it calls another agent the edge is visible.
+* If an agent has an egress managed Flex Gateway, when it calls another agent, the edge is visible.
 * If the requesting agent doesn't have an egress Flex Gateway, no edge metric is generated and the edge isn't shown.
 * Broker agents that route outbound calls through an egress Flex Gateway, allowing requests between broker agents, or from a broker agent to an external agent, appear in the agent network visualization.
 

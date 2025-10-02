@@ -1,6 +1,6 @@
 = Troubleshooting Your Agent Network
 
-Use Agent Visualizer with Anypoint Monitoring to diagnose issues across agents and MCP servers. Open a node’s detail card to see associated metrics and access logs and traces in Anypoint Monitoring.
+Use Agent Visualizer with Anypoint Monitoring to diagnose issues across agents and MCP servers. Open a node’s details card to see associated metrics and access logs and traces in Anypoint Monitoring.
 
 [[view-metrics]]
 == View Metrics

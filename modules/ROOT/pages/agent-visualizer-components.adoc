@@ -63,7 +63,7 @@ image::agent-visualizer-details-card.png[Agent Visualizer details card showing m
 
 The policy visualization shows nodes that are protected by a Flex Gateway indicated by a shield icon. Data about applied policies comes from API Manager.
 
-You can see the details of applied policies in detail card for the selected node. 
+You can see the details of applied policies in the details card for the selected node. 
 
 == See Also
 

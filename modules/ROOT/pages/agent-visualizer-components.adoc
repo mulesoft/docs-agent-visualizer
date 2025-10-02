@@ -5,7 +5,7 @@ Use Agent Visualizer to identify the parts of your agent network and see how the
 * Distinguish node types (agents and MCP servers)
 * View edges to see declared and runtime interactions
 * Use layers to focus views on specific environments
-* Open detail cards to inspect metadata and metrics for nodes
+* Open detail cards to inspect metadata and metrics for nodes and access logs and traces
 * Review governance indicators such as Flex Gateway protection and applied policies.
 
 [[node-types]]
@@ -28,7 +28,7 @@ Edges represent the relationships and communications among your nodes:
 * Declared edges appear between node instances when no runtime information is available because there's no registered traffic between them. Dashed lines on the graph indicate declared edges.
 * Runtime edges appear between nodes when traffic is registered and a Flex Gateway exists. Solid lines on the graph indicate runtime edges. Clicking on a runtime edge opens the detail panel and shows the relevant metrics.
 +
-Edges are drawn under specific conditions, primarily when the calling agent is protected by a managed Flex Gateway at egress. For more information, see xref:gateway::index.adoc#managed[Managed Flex Gateway].
+Edges are drawn under specific conditions, primarily when the calling agent is protected by a managed Flex Gateway at egress. For more information, see xref:gateway::flex-gateway-managed-ingress-egress.adoc[].
 
 * If an agent has an egress managed Flex Gateway, when it calls another agent the edge is visible.
 * If the requesting agent doesn't have an egress Flex Gateway, no edge metric is generated and the edge isn't shown.

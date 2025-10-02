@@ -5,13 +5,13 @@ Agent Visualizer provides a detailed visual graph so you can see, understand, an
 
 Agent Visualizer is an intuitive user interface that helps you:
 
- * Gain complete situational awareness of your agentic ecosystem with a view of all connected agents in your agent network on one map, including clear relationships and direction of calls.
- * See unclear interaction patterns by showing real-time transaction volume overlays for the past 24 hours. This helps you understand key pathways and identify under- or overused connections. 
- * See governance gaps with a view of which agents are protected by Flex Gateways and policies. 
- * Understand node purpose and origin.
- + 
- You gain full understanding of each asset in your agent network and any active running instances when you select a node. 
- * Easily view production and nonproduction traffic. 
+* Gain complete situational awareness of your agentic ecosystem with a view of all connected agents in your agent network on one map, including clear relationships and direction of calls.
+* See unclear interaction patterns by showing real-time call volume overlays for the past 24 hours. This helps you understand key pathways and identify under- or overused connections. 
+* See governance gaps with a view of which agents are protected by Flex Gateways and policies. 
+* Understand node purpose and origin.
++ 
+You gain full understanding of each asset in your agent network and any active running instances when you select a node. 
+* Easily view production and nonproduction traffic. 
 
 image::agent-visualizer.png[Agent Visualizer graph showing a network of agents, brokers, and MCP servers and the detail card for a highlighted node]
 

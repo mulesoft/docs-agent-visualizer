@@ -83,20 +83,12 @@ This metric is shown for MCP servers. This is the total number of messages sent 
 [[view-edge-details]]
 == View Edge Details
 
+The edge is shown as a solid line if traffic is observed between the nodes in the last 24 hours. The edge is shown as a dashed line if traffic is not observed between the nodes in the last 24 hours. See xref:agent-visualizer-components.adoc#edges[Edges] for more information.
+
 When you select an edge, the detail panel displays relationship information and metrics. Metrics are aggregated for all instances that exist between nodes. 
 
 . Select an edge to open its detail panel.
-. Examine the metrics:
-+
-* Source Node ID
-* Target Node ID
-* Edge type (declared or runtime)
-* Call volume 
-* Number of conversations (past 24 hours)
-* Token consumption
-* Policy violations count
-* Errors
-* Latency
+. Examine the traffic throughput per hour. 
 
 == See Also
 

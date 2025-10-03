@@ -33,6 +33,8 @@ Production instances and their metrics appear on the existing nodes and edges.
 +
 Sandbox instances and their metrics appear on the same nodes and edges. When viewing sandbox, production traffic lines are hidden and sandbox traffic lines are shown as solid edges.
 
+For more information about the data flow layers, see xref:agent-visualizer-components.adoc#data-flow-layers[Data Flow Layers].
+
 [[view-node-details]]
 == View Node Details
 

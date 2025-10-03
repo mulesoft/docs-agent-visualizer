@@ -26,4 +26,4 @@ For information about adding an MCP server or agent instance, see xref:api-manag
 
 * xref:index.adoc[]
 * xref:view-and-navigate-agent-network.adoc[]
-* xref:flex-gateway::index.adoc[]
+* xref:gateway::index.adoc[]

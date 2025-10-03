@@ -20,18 +20,18 @@ If the page is empty, there are no discoverable agentic assets in Anypoint Excha
 Agent Visualizer provides an interactive view of your agent network where you can zoom in and out, click and drag on the canvas to pan the visualization, and turn on environment layers (production or nonproduction) to see additional views.
 
 [[view-data-flow-layers]]
-== View Data Flow Layers
+== View and Toggle Data Flow Layers
 
-Data flow (traffic) layers are used to group nodes in the agent network visualization to show production or nonproduction traffic. Only one type of traffic layer (production or nonproduction) is visible at one time.
+Use data flow layers to switch the runtime view between production and sandbox environments. The base graph (assets and design‑time relationships from Exchange and broker definitions) stays the same; only instance‑level metrics change.
 
-By default, the production data flow layer is shown. 
-
-Use the toggle to switch between the default view of production traffic and the view of nonproduction traffic (development/sandbox traffic).
-
-image::agent-visualizer-layers-toggle.png[Data Flows toggle is turned on to view the production environments layer]
-
-When the nonproduction data flow layer is active, traffic between nodes in development or sandbox environments is shown as solid edges, and edges representing production traffic disappear. 
-
+. Leave the toggle on *Production environments* (default).
++
+image::agent-visualizer-layers-toggle.png[Toggle set to production environments]
++
+Production instances and their metrics appear on the existing nodes and edges.
+. Switch the toggle to *Sandbox environments*.
++
+Sandbox instances and their metrics appear on the same nodes and edges. When viewing sandbox, production traffic lines are hidden and sandbox traffic lines are shown as solid edges.
 
 [[view-node-details]]
 == View Node Details
@@ -40,45 +40,8 @@ When you select a node, a details card opens to provide comprehensive informatio
 
 . Select any node in the agent network (or press Enter or Spacebar after focusing the node with arrow keys) to show its details card.
 . Review the node details.
-+
-[NOTE]
-Broker metadata is defined in the agent network YAML. For more information about the agent network YAML, see xref:anypoint-code-builder::af-define-your-agent-network-specification.adoc[].
-+
-[%header,cols="30a,70a"]
-|===
-| Field | Description
-| Name | Name of the asset. 
-| Description | Description of the asset.
-|Provider | Provider of the asset.
-| Platform | Platform of the asset, for example, Agentforce or MuleSoft.
-| LLM | LLM provider (for example, `OpenAI`).
-| Skills | Skills that are supported by the agent. Skills are concrete, callable operations within a capability, with defined input and output. For example,`lookupOrder`, `createCase`, `updateAddress`.
-| Linked Agents | Agents that are linked to the broker. 
-|MCP Servers and Tools | MCP servers and tools that are connected to the broker.
-| Enabled Capabilities | Capabilities that are supported by the agent. Capabilities are high-level areas of what an agent can do (domains it supports, for example, customer support or knowledge search). 
-| Instance Name | Instance name as it appears in API Manager.
-| Environment Type | Environments the instance is deployed to, for example, `sandbox` or `production`.
-| Based on Asset Version | Version of the instance. 
-| Policies | Policies that are applied to the instance.
-| Governance and Security | Whether the asset is protected by a Flex Gateway.
-| Performance and Health a| Performance and health metrics for the instance including:
 
-* Successful Requests
-+
-This metric is shown for brokers, agents, and MCP servers. This is the total number of requests received successfully in the last 24 hours. 
-* Failed Request Rate
-+
-This metric is shown for brokers, agents, and MCP servers. This is the percentage of requests that failed in the last 24 hours. 
-* A2A Calls Sent
-+
-This metric is shown for brokers. This is the total number of messages sent to agents using the Agent2Agent (A2A) protocol in the last 24 hours. 
-* MCP Calls Sent
-+
-This metric is shown for MCP servers. This is the total number of messages sent to MCP servers in the last 24 hours. 
-
-| Monitoring | Links to logs and traces for quick access to troubleshooting tools. 
-| Tags| All tags associated with the asset in Exchange.
-|===
+For more information about the metadata you see for a node, see xref:agent-visualizer-components.adoc#details-card[Node Details].
 
 [[view-edge-details]]
 == View Edge Details

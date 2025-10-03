@@ -39,16 +39,20 @@ Selecting an edge opens the details card, which displays relationship informatio
 [[data-flow-layers]]
 == Data Flow Layers
 
-Data flow layers are used to group nodes in the agent network visualization. They help you highlight specific types of nodes in the visualization.
+Agent Visualizer provides a single, consistent architectural view of all assets defined in Exchange. The base graph doesn't change when toggling between production and non-production environments. 
 
-* Production Data Flow Layer
-+
-The default view, Production Data Flow Layer, shows all agentic assets that are published in Exchange, declared edges (design-time relationships), and production traffic (live connections).
-* Non-Production Traffic Layer    
-+
-You can turn on the nonproduction traffic layer to see nonproduction traffic (test and sandbox connections). 
+* Base graph
+** Always visible
+** Shows all assets defined in Exchange (agents and MCP servers) and their design‑time relationships from broker definitions
+** Topology and layout do not change when switching layers
+* Production layer
+** Overlays production instances and metrics on existing nodes and edges
+** Hides sandbox traffic lines
+* Sandbox layer
+** Overlays sandbox instances (if they exist) and metrics on existing nodes and edges
+** Shows sandbox traffic as solid edges and hides production traffic lines
 
-For more information, see xref:view-and-navigate-agent-network.adoc#view-data-flow-layers[View Data Flow Layers].
+For more information about switching between production and sandbox environment layers, see xref:view-and-navigate-agent-network.adoc#view-data-flow-layers[View Data Flow Layers].
 
 
 [[details-card]]
@@ -57,6 +61,67 @@ For more information, see xref:view-and-navigate-agent-network.adoc#view-data-fl
 The details card is the primary means for gaining detailed, 360-degree information about a selected node or edge. It includes metadata and links to relevant resources like logs, policies, and more.
 
 image::agent-visualizer-details-card.png[Agent Visualizer details card showing metadata and links to relevant resources]
+
+For more information, see xref:view-and-navigate-agent-network.adoc#view-node-details[View Node Details].
+
+=== Node Metadata
+
+When you select a node, the details card shows metadata for that asset, including: 
+
+[%header,cols="30a,70a"]
+|===
+| Field | Description
+| Name | Name of the asset. 
+| Description | Description of the asset.
+|Provider | Provider of the asset.
+| Platform | Platform of the asset, for example, Agentforce or MuleSoft.
+| LLM | LLM provider (for example, `OpenAI`).
+| Skills | Skills that are supported by the agent. Skills are concrete, callable operations within a capability, with defined input and output. For example,`lookupOrder`, `createCase`, `updateAddress`.
+| Linked Agents | Agents that are linked to the broker. 
+|MCP Servers and Tools | MCP servers and tools that are connected to the broker.
+| Enabled Capabilities | Capabilities that are supported by the agent. Capabilities are high-level areas of what an agent can do (domains it supports, for example, customer support or knowledge search). 
+| Instance Name | Instance name as it appears in API Manager.
+| Environment Type | Environments the instance is deployed to, for example, `sandbox` or `production`.
+| Based on Asset Version | Version of the instance. 
+| Policies | Policies that are applied to the instance.
+| Governance and Security | Whether the asset is protected by a Flex Gateway.
+| Performance and Health a| Performance and health metrics for the instance including:
+
+* Successful Requests
++
+This metric is shown for brokers, agents, and MCP servers. This is the total number of requests received successfully in the last 24 hours. 
+* Failed Request Rate
++
+This metric is shown for brokers, agents, and MCP servers. This is the percentage of requests that failed in the last 24 hours. 
+* A2A Calls Sent
++
+This metric is shown for brokers. This is the total number of messages sent to agents using the Agent2Agent (A2A) protocol in the last 24 hours. 
+* MCP Calls Sent
++
+This metric is shown for MCP servers. This is the total number of messages sent to MCP servers in the last 24 hours. 
+
+| Monitoring | Links to logs and traces for quick access to troubleshooting tools. 
+| Tags| All tags associated with the asset in Exchange.
+|===
+
+[NOTE]
+Broker metadata is defined in the agent network YAML. For more information about the agent network YAML, see xref:anypoint-code-builder::af-define-your-agent-network-specification.adoc[].
+
+=== Instance Information for an Agent
+
+When you select an agent node, the details card shows environment-specific instance details for that asset, including: 
+
+* Latest asset version
++
+The details card always shows the most recent (latest) asset version (highlighted) first, along with its corresponding instances in the selected environment (Production or Sandbox).
+* All earlier versions
++
+All previous (earlier) instance versions are shown under the latest version.
++
+Each instance entry includes the asset version number, so you can easily distinguish between versions.
+* Descending order of asset versions
++
+Instances are ordered from the most recent (latest) to least recent (earliest) asset version, making it easy to track version history over time.
 
 [[policy-visualization]]
 == Policy Visualization

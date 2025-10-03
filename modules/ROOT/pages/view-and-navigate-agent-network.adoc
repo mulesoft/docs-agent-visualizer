@@ -1,0 +1,64 @@
+= Viewing and Navigating Your Agent Network
+
+Explore an interactive map of agents, brokers, and Model Context Protocol (MCP) servers. Pan and zoom, filter by environment, toggle layers, and select nodes or edges to view detailed metadata, metrics, and links for deeper investigation.
+
+[[access-agent-visualizer]]
+== Access Agent Visualizer
+
+include::partial$partial-agent-visualizer.adoc[tag=agent-visualizer-permissions]
+
+. Log in to Anypoint Platform.
+. Click *Get Started*.
++
+On the Agent Visualizer page, you see the agent network map showing all discovered agentic assets, nodes and their relationships (edges).
+
+If the page is empty, there are no discoverable agentic assets in Anypoint Exchange. For more information about creating an agent network project and publishing assets to Exchange, see xref:anypoint-code-builder::af-create-agent-network.adoc[].
+
+[[navigate-agent-network]]
+== Navigate the Agent Network
+
+Agent Visualizer provides an interactive view of your agent network where you can zoom in and out, click and drag on the canvas to pan the visualization, and turn on environment layers (production or nonproduction) to see additional views.
+
+[[view-data-flow-layers]]
+== View and Toggle Data Flow Layers
+
+Use data flow layers to switch the runtime view between production and sandbox environments. The base graph (assets and design‑time relationships from Exchange and broker definitions) stays the same; only instance‑level metrics change.
+
+. Leave the toggle on *Production environments* (default).
++
+image::agent-visualizer-layers-toggle.png[Toggle set to production environments]
++
+Production instances and their metrics appear on the existing nodes and edges.
+. Switch the toggle to *Sandbox environments*.
++
+Sandbox instances and their metrics appear on the same nodes and edges. When viewing sandbox, production traffic lines are hidden and sandbox traffic lines are shown as solid edges.
+
+For more information about the data flow layers, see xref:agent-visualizer-components.adoc#data-flow-layers[Data Flow Layers].
+
+[[view-node-details]]
+== View Node Details
+
+When you select a node, a details card opens to provide comprehensive information for the asset.
+
+. Select any node in the agent network (or press Enter or Spacebar after focusing the node with arrow keys) to show its details card.
+. Review the node details.
+
+For more information about the metadata you see for a node, see xref:agent-visualizer-components.adoc#details-card[Node Details].
+
+[[view-edge-details]]
+== View Edge Details
+
+The edge is shown as a solid line if traffic is observed between the nodes in the last 24 hours. The edge is shown as a dashed line if traffic is not observed between the nodes in the last 24 hours. See xref:agent-visualizer-components.adoc#edges[Edges] for more information.
+
+When you select an edge, the details card displays relationship information and metrics. Metrics are aggregated for all instances that exist between nodes. 
+
+. Select an edge to open its details card.
+. Examine the traffic throughput per hour. 
+
+== See Also
+
+* xref:index.adoc[]
+* xref:agent-visualizer-components.adoc[]
+* xref:node-governance.adoc[]
+* xref:anypoint-code-builder::af-get-started.adoc[]
+* xref:anypoint-code-builder::af-create-agent-network.adoc[]

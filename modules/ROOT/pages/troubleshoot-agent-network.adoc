@@ -1,0 +1,45 @@
+= Troubleshooting Your Agent Network
+
+Use Agent Visualizer with Anypoint Monitoring to diagnose issues across agents and MCP servers. Open a node’s details card to see associated metrics and access logs and traces in Anypoint Monitoring.
+
+[[view-metrics]]
+== View Metrics
+
+The details card for a node includes a *Performance and Health* section with metrics. You can also view additional metrics in Anypoint Monitoring. 
+
+. Select a node to open the details card.
+. In *Performance and Health*, click *View Metrics* to view additional metrics in Anypoint Monitoring. 
+
+For more information, see xref:monitoring::anypoint-insights-agentic.adoc[].
+
+[[access-logs]]
+== Access Logs
+
+You can access and view logs for an asset instance in Anypoint Monitoring or API Manager, depending on your organization's Anypoint Platform subscription. 
+
+. Click the node to open the details card.
+. Click *View Logs* to access the logs for the node.
++
+Instance-specific logs for the agent or MCP server are shown.
++
+If your organization has the Anypoint Integration Advanced package or a Titanium subscription to Anypoint Platform, you can view the logs for the asset instance in Anypoint Monitoring. For more information, see xref:monitoring::logs-us-eu.adoc#search-agentic[Get Agent, Broker, and MCP Server Logs].
++
+If your organization doesn't have the Anypoint Integration Advanced package or a Titanium subscription to Anypoint Platform, you can view the logs for the asset instance in API Manager. For more information, see xref:gateway::flex-managed-view-logs-in-monitoring.adoc[].
+
+[[access-traces]]
+== Access Traces
+
+[NOTE]
+This beta feature is available only if your organization has the Anypoint Integration Advanced package or a Titanium subscription to Anypoint Platform.
+
+For more information, see xref:monitoring::traces.adoc[].
+
+. Click the node to open the details card.
+. Click *View Traces* to access the traces for the node.
++
+Anypoint Monitoring opens and you can view the *Traces Details* page for the asset instance. 
+
+== See Also
+
+* xref:monitoring::logs.adoc[]
+* xref:monitoring::traces.adoc[]

@@ -1,0 +1,141 @@
+= Agent Visualizer Components
+
+Use Agent Visualizer to identify the parts of your agent network and see how they work together. 
+
+* Distinguish node types (agents and MCP servers).
+* View edges to see declared and runtime interactions.
+* Use layers to focus views on specific environments
+* Open details cards to inspect metadata and metrics for nodes and access logs and traces
+* Review governance indicators such as Flex Gateway protection and applied policies.
+
+[[node-types]]
+== Node Types
+
+Nodes in the agent network provide a visual representation of the agents and MCP servers within your agent network including:  
+
+* xref:agent-visualizer-glossary.adoc#agentforce-agent[Agentforce agents] 
+* xref:agent-visualizer-glossary.adoc#agent[Agents]
+* xref:agent-visualizer-glossary.adoc#broker[Brokers]
+* xref:agent-visualizer-glossary.adoc#mcp-server[MCP servers]
+
+For more information, see xref:view-and-navigate-agent-network.adoc#viewing-node-details[Viewing Node Details].
+
+[[edges]]
+== Edges
+
+Edges represent the relationships and communications among your nodes:
+
+* Declared edges appear between node instances when no runtime information is available because there's no registered traffic between them. Dashed lines on the graph indicate declared edges.
+* Runtime edges appear between nodes when traffic is registered and a Flex Gateway exists. Solid lines on the graph indicate runtime edges. Clicking on a runtime edge opens the details card and shows the relevant metrics.
++
+Edges are drawn under specific conditions, primarily when the calling agent is protected by a managed Flex Gateway at egress. For more information, see xref:gateway::flex-gateway-managed-ingress-egress.adoc[].
+
+* If an agent has an egress managed Flex Gateway, when it calls another agent, the edge is visible.
+* If the requesting agent doesn't have an egress Flex Gateway, no edge metric is generated and the edge isn't shown.
+* Broker agents that route outbound calls through an egress Flex Gateway, allowing requests between broker agents, or from a broker agent to an external agent, appear in the agent network visualization.
+
+Selecting an edge opens the details card, which displays relationship information and metrics. For more information, see xref:view-and-navigate-agent-network.adoc#view-edge-details[View Edge Details].
+
+[[data-flow-layers]]
+== Data Flow Layers
+
+Agent Visualizer provides a single, consistent architectural view of all assets defined in Exchange. The base graph doesn't change when toggling between production and non-production environments. 
+
+* Base graph
+** Always visible
+** Shows all assets defined in Exchange (agents and MCP servers) and their design‑time relationships from broker definitions
+** Topology and layout do not change when switching layers
+* Production layer
+** Overlays production instances and metrics on existing nodes and edges
+** Hides sandbox traffic lines
+* Sandbox layer
+** Overlays sandbox instances (if they exist) and metrics on existing nodes and edges
+** Shows sandbox traffic as solid edges and hides production traffic lines
+
+For more information about switching between production and sandbox environment layers, see xref:view-and-navigate-agent-network.adoc#view-data-flow-layers[View Data Flow Layers].
+
+
+[[details-card]]
+== Details Cards
+
+The details card is the primary means for gaining detailed, 360-degree information about a selected node or edge. It includes metadata and links to relevant resources like logs, policies, and more.
+
+image::agent-visualizer-details-card.png[Agent Visualizer details card showing metadata and links to relevant resources]
+
+For more information, see xref:view-and-navigate-agent-network.adoc#view-node-details[View Node Details].
+
+=== Node Metadata
+
+When you select a node, the details card shows metadata for that asset, including: 
+
+[%header,cols="30a,70a"]
+|===
+| Field | Description
+| Name | Name of the asset. 
+| Description | Description of the asset.
+|Provider | Provider of the asset.
+| Platform | Platform of the asset, for example, Agentforce or MuleSoft.
+| LLM | LLM provider (for example, `OpenAI`).
+| Skills | Skills that are supported by the agent. Skills are concrete, callable operations within a capability, with defined input and output. For example,`lookupOrder`, `createCase`, `updateAddress`.
+| Linked Agents | Agents that are linked to the broker. 
+|MCP Servers and Tools | MCP servers and tools that are connected to the broker.
+| Enabled Capabilities | Capabilities that are supported by the agent. Capabilities are high-level areas of what an agent can do (domains it supports, for example, customer support or knowledge search). 
+| Instance Name | Instance name as it appears in API Manager.
+| Environment Type | Environments the instance is deployed to, for example, `sandbox` or `production`.
+| Based on Asset Version | Version of the instance. 
+| Policies | Policies that are applied to the instance.
+| Governance and Security | Whether the asset is protected by a Flex Gateway.
+| Performance and Health a| Performance and health metrics for the instance including:
+
+* Successful Requests
++
+This metric is shown for brokers, agents, and MCP servers. This is the total number of requests received successfully in the last 24 hours. 
+* Failed Request Rate
++
+This metric is shown for brokers, agents, and MCP servers. This is the percentage of requests that failed in the last 24 hours. 
+* A2A Calls Sent
++
+This metric is shown for brokers. This is the total number of messages sent to agents using the Agent2Agent (A2A) protocol in the last 24 hours. 
+* MCP Calls Sent
++
+This metric is shown for MCP servers. This is the total number of messages sent to MCP servers in the last 24 hours. 
+
+| Monitoring | Links to logs and traces for quick access to troubleshooting tools. 
+| Tags| All tags associated with the asset in Exchange.
+|===
+
+[NOTE]
+Broker metadata is defined in the agent network YAML. For more information about the agent network YAML, see xref:anypoint-code-builder::af-define-your-agent-network-specification.adoc[].
+
+=== Instance Information for an Agent
+
+When you select an agent node, the details card shows environment-specific instance details for that asset, including: 
+
+* Latest asset version
++
+The details card always shows the most recent (latest) asset version (highlighted) first, along with its corresponding instances in the selected environment (Production or Sandbox).
+* All earlier versions
++
+All previous (earlier) instance versions are shown under the latest version.
++
+Each instance entry includes the asset version number, so you can easily distinguish between versions.
+* Descending order of asset versions
++
+Instances are ordered from the most recent (latest) to least recent (earliest) asset version, making it easy to track version history over time.
+
+[[policy-visualization]]
+== Policy Visualization
+
+The policy visualization shows nodes that are protected by a Flex Gateway indicated by a shield icon. Data about applied policies comes from API Manager.
+
+You can see the details of applied policies in the details card for the selected node. 
+
+== See Also
+
+* xref:index.adoc[]
+* xref:view-and-navigate-agent-network.adoc[]
+* xref:anypoint-code-builder::af-get-started.adoc[]
+* xref:monitoring::index.adoc[]
+* xref:api-manager::index.adoc[]
+* xref:exchange::index.adoc[]
+* xref:agent-visualizer-glossary.adoc[]

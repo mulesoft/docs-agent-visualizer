@@ -1,1 +1,55 @@
-= Agent Visualizer
+= Agent Visualizer Overview
+
+Agent Visualizer provides a detailed visual graph so you can see, understand, and interact with your enterprise's evolving network of agents, Model Context Protocol (MCP) servers, and large language models (LLMs). Agent Visualizer gives you insight into hidden agent interactions, governance gaps, and performance bottlenecks. 
+
+
+Agent Visualizer is an intuitive user interface that helps you:
+
+* Gain complete situational awareness of your agentic ecosystem with a view of all connected agents in your agent network on one map, including clear relationships and direction of calls.
+* See unclear interaction patterns by showing real-time call volume for the past 24 hours. This helps you understand key pathways and identify under- or overused connections. 
+* See governance gaps with a view of which agents are protected by Flex Gateways and policies. 
+* Understand node purpose and origin.
++ 
+You gain full understanding of each asset in your agent network and any active running instances when you select a node. 
+* Easily view production and nonproduction traffic. 
+
+image::agent-visualizer.png[Agent Visualizer graph showing a network of agents, brokers, and MCP servers and the details card for a highlighted node]
+
+[[use-cases]]
+== Use Cases
+
+Use Agent Visualizer to gain clarity and control over your agent ecosystem.
+
+* Discover your agent landscape.
++
+Architects and platform teams can view a complete network graph of enterprise agents to map dependencies, plan integrations, and eliminate shadow IT.
+* Monitor real-time usage.
++
+Developers can validate adoption and consumption patterns by overlaying real-time transaction traffic, helping them optimize performance and capacity.
+* Assess security and compliance coverage.
++
+Security teams can visualize active policies across the network to verify enforcement, spot vulnerabilities, and ensure regulatory compliance.
+* Troubleshoot failures faster.
++
+Security teams can visualize active policies across the network to verify enforcement, spot vulnerabilities, and ensure regulatory compliance.
+* Troubleshoot failures faster.
++
+Operators can trace dependencies, isolate failing nodes, and deep-link into service logs for rapid incident response and root cause analysis.
+
+
+[[before-you-begin]]
+== Before You Begin
+
+include::partial$partial-agent-visualizer.adoc[tag=agent-visualizer-permissions]
+
+
+== See Also
+
+* xref:monitoring::index.adoc[Anypoint Monitoring]
+* xref:exchange::index.adoc[Anypoint Exchange]
+* xref:api-manager::index.adoc[Anypoint API Manager]
+* xref:agent-fabric::index.adoc[Agent Fabric]
+* xref:mcp-server::index.adoc[MCP Server]
+* xref:anypoint-code-builder::index.adoc[Anypoint Code Builder]
+* https://www.salesforce.com/agentforce/[Agentforce]
+* xref:agent-visualizer-glossary.adoc[Glossary]

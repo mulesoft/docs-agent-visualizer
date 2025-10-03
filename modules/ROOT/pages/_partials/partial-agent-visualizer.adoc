@@ -1,0 +1,8 @@
+tag::agent-visualizer-permissions[]
+You need these Anypoint Platform permissions to access Agent Visualizer:
+
+* Monitoring: Monitoring Viewer
+* Exchange Viewer
+* API Manager View: View API Configuration
+* API Manager View: View Policies
+end::agent-visualizer-permissions[]

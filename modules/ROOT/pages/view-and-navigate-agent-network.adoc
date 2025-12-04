@@ -103,17 +103,53 @@ Review metadata, tags, and any instance details available.
 [[search-agent-network]]
 == Search the Agent Network
 
-Use search to locate nodes in the agent network. Search is case‑insensitive and supports multiple fields:
+Use search to locate nodes in the agent network. Search is case‑insensitive and supports multiple fields. 
 
-* Display name
+. Select the search box and enter your search terms.
++
+You can search by:
++
+* Display name 
 * Type, for example, broker, agent, MCP 
-* Platform, for example, MuleSoft, Agentforce, Bedrock
-
-. Select the search box and enter a name, type, or platform.
+* Platform, for example, MuleSoft, Agentforce, Bedrock 
+* Exchange tags
++
+Smart suggestions show up to 10 results, ordered by relevance, with type and platform badges and an indicator of the field that matched. Selecting a result focuses the node and opens its details card.
 +
 Up to 10 results are shown, ordered by relevance. Each result displays a type badge and a platform badge, along with an indicator of which field matched.
 +
 Search results reflect the current base graph. Environment layer selection (Production or Sandbox) affects instance‑level metrics but not which nodes can be found by search.
+
+== Add Filters
+
+Use filters to control which parts of the network you see on the canvas. Filters help you focus large graphs by limiting the scope to specific business groups and time windows.
+
+[[filter-business-groups]]
+=== Select Business Groups
+
+Select one or more business groups to include their assets and relationships in a single, unified view.
+
+. Open the filter panel and select the Business Group filter.
+. Select one or more business groups to include.
+ +
+ By default, your current business group is selected. Only business groups for which you have Agent Visualizer permissions appear in the list.
++
+The agent network graph shows assets that belong to the selected business groups, and edges between those assets (including cross‑business group connections) are shown on the same map.
++
+Metrics on nodes and edges are aggregated based on the business groups you select. When you deselect business groups, metrics update to reflect only the remaining selection.
++
+[TIP]
+The agent network graph shows which business groups are in scope (for example, in the filter panel or as badges). If performance degrades when viewing many business groups at once, reduce the selection, use search, or zoom to areas of interest.
+
+[[filter-time-range]]
+=== Select a Time Range
+
+Adjust the time window to control which runtime edges and metrics are shown.
+
+. Open the filter panel and choose a time range.
+The agent network graph shows runtime edges that reflect traffic observed within the selected window; declared edges are unaffected. Throughput, error rates, and tool rankings also reflect the selected time range.
++
+Change the time range as needed to compare recent activity (for example, last hour) with broader trends (for example, last 3 or 7 days).
 
 == See Also
 

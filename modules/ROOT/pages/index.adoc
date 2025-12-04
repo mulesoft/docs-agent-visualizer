@@ -1,6 +1,6 @@
 = Agent Visualizer Overview
 
-Agent Visualizer provides a detailed visual graph so you can see, understand, and interact with your enterprise's evolving network of agents, Model Context Protocol (MCP) servers, and large language models (LLMs). Agent Visualizer gives you insight into hidden agent interactions, governance gaps, and performance bottlenecks. 
+Agent Visualizer provides a detailed visual graph of your agent network so you can see, understand, and interact with your enterprise's evolving network of agents, Model Context Protocol (MCP) servers, and large language models (LLMs), including agents created in external platforms like Bedrock, Gemini, Copilot, and OpenAI. Agent Visualizer gives you insight into hidden agent interactions, governance gaps, and performance bottlenecks. 
 
 
 Agent Visualizer is an intuitive user interface that helps you:

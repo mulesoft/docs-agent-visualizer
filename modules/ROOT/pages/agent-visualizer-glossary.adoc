@@ -25,7 +25,7 @@ For more information, see xref:anypoint-code-builder::af-define-your-agent-netwo
 
 [[declared-edge]]
 Declared edge::
-A design‑time relationship between two nodes (from the agent network YAML or Exchange metadata) indicating an intended connection when no runtime traffic is observed; it’s rendered as a dashed line.
+A design‑time relationship between two nodes (from the agent network YAML or Exchange metadata) indicating an intended connection. When no runtime traffic is observed, it’s rendered as a dashed line.
 +
 For more information, see xref:agent-visualizer-components.adoc#edges[Edges].
 

@@ -26,9 +26,9 @@ For more information, see xref:view-and-navigate-agent-network.adoc#viewing-node
 Edges represent the relationships and communications among your nodes:
 
 * Declared edges appear between node instances when no runtime information is available because there's no registered traffic between them. Dashed lines on the graph indicate declared edges.
-* Runtime edges appear between nodes when traffic is registered and a Flex Gateway exists. Solid lines on the graph indicate runtime edges. Clicking on a runtime edge opens the details card and shows the relevant metrics.
+* Runtime edges appear between nodes when traffic is registered and a managed Flex Gateway exists. Solid lines on the graph indicate runtime edges. Clicking on a runtime edge opens the details card and shows the relevant metrics.
 +
-Edges are drawn under specific conditions, primarily when the calling agent is protected by a managed Flex Gateway at egress. For more information, see xref:gateway::flex-gateway-managed-ingress-egress.adoc[].
+Edges are drawn under specific conditions, primarily when the calling agent is protected by a managed Flex Gateway at egress. For agent-to-MCP relationships, edges are automatically drawn when the calling agent’s egress or the MCP server’s ingress is protected by a managed Flex Gateway. You don't need to add new policies or extra configuration to make edges visible. For more information, see xref:gateway::flex-gateway-managed-ingress-egress.adoc[]
 
 * If an agent has an egress managed Flex Gateway, when it calls another agent, the edge is visible.
 * If the requesting agent doesn't have an egress Flex Gateway, no edge metric is generated and the edge isn't shown.
@@ -54,6 +54,19 @@ Agent Visualizer provides a single, consistent architectural view of all assets 
 
 For more information about switching between production and sandbox environment layers, see xref:view-and-navigate-agent-network.adoc#view-data-flow-layers[View Data Flow Layers].
 
+
+[[search]]
+== Search
+
+Use the global search to find nodes in the agent network. Search is case‑insensitive and matches multiple fields:
+
+* Display name 
+* Type, for example, broker, agent, mcp 
+* Platform, for example, MuleSoft, Agentforce, Bedrock 
+
+Smart suggestions show up to 10 results, ordered by relevance, with type and platform badges and an indicator of the field that matched. Selecting a result focuses the node and opens its details card.
+
+For more information, see xref:view-and-navigate-agent-network.adoc#search-agent-network[Search the Agent Network].
 
 [[details-card]]
 == Details Cards

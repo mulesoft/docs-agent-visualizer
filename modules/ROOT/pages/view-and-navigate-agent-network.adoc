@@ -55,6 +55,66 @@ When you select an edge, the details card displays relationship information and 
 . Select an edge to open its details card.
 . Examine the traffic throughput per hour. 
 
+[[view-external-nodes]]
+== View External Agents and MCP Servers
+
+External agents and MCP servers appear as nodes in the agent network. You can select these nodes to view metadata and, when available, instance details.
+
+. Select an external agent or MCP server node to open its details card and review the node’s metadata.
++
+If runtime edges aren't visible for calls involving external agents:
++
+.. Add telemetry by protecting the relevant path with a managed Flex Gateway. 
+.. Inject identifying headers needed for visualization (for example, source and destination identifiers).
+.. Generate traffic and refresh the view to draw the runtime edge.
++
+[NOTE]
+Depending on your configuration, edges between external agents may not draw automatically until the gateway protection and header injection are in place and traffic is observed.
+
+[[view-mcp-server-edges-tools]]
+== View MCP Server Edges and Tools
+
+When agents invoke MCP servers, Agent Visualizer shows the relationship on the graph and tool usage on the MCP node’s details card.
+
+. Select an MCP server node to focus associated edges and open its details card.
++
+Tool invocations from multiple agents are aggregated into a single list on the MCP server:
++
+** Tools are ordered by throughput (total MCP calls).
+** The top 10 tools are shown by default. 
++
+Click *Show More* to see additional tools when available.
++
+[NOTE]
+For tool visibility, the MCP server must be present in Exchange and the egress path must be protected by a managed Flex Gateway. This applies to MuleSoft‑hosted MCP servers defined in the broker network and externally hosted MCP servers defined in the broker network.
++
+. To see traffic metrics on the connection, select the edge between the agent and the MCP server and open the edge details card.
+
+[[view-standalone-agents]]
+== View Agents without Flex Gateway
+
+Agents that aren't protected by a managed Flex Gateway appear as standalone nodes with declared edges only. You can still view their metadata and understand their purpose in the network.
+
+. Select the agent node to open its details card.
++
+Review metadata, tags, and any instance details available.
+. To visualize runtime edges and performance metrics, protect the agent with a managed Flex Gateway on the relevant path (ingress or egress), then generate traffic.
+
+[[search-agent-network]]
+== Search the Agent Network
+
+Use search to locate nodes in the agent network. Search is case‑insensitive and supports multiple fields:
+
+* Display name
+* Type, for example, broker, agent, MCP 
+* Platform, for example, MuleSoft, Agentforce, Bedrock
+
+. Select the search box and enter a name, type, or platform.
++
+Up to 10 results are shown, ordered by relevance. Each result displays a type badge and a platform badge, along with an indicator of which field matched.
++
+Search results reflect the current base graph. Environment layer selection (Production or Sandbox) affects instance‑level metrics but not which nodes can be found by search.
+
 == See Also
 
 * xref:index.adoc[]

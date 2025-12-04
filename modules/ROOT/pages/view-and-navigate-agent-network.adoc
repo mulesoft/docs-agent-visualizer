@@ -122,24 +122,40 @@ Search results reflect the current base graph. Environment layer selection (Prod
 
 == Add Filters
 
-Use filters to control which parts of the network you see on the canvas. Filters help you focus large graphs by limiting the scope to specific business groups and time windows.
+Use filters to control which parts of the network you see on the canvas. Filters help you focus large graphs by limiting the scope to specific business groups and time windows. 
+
+The agent network graph shows assets that belong to the selected business groups, and edges between those assets (including cross‑business group connections) are shown on the same map.
+
+Metrics on nodes and edges are aggregated based on the business groups you select. When you deselect business groups, metrics update to reflect only the remaining selection.
 
 [[filter-business-groups]]
-=== Select Business Groups
+=== Apply Filters to the Agent Network
 
-Select one or more business groups to include their assets and relationships in a single, unified view.
-
-. Open the filter panel and select the Business Group filter.
-. Select one or more business groups to include.
- +
- By default, your current business group is selected. Only business groups for which you have Agent Visualizer permissions appear in the list.
+. Open the filter panel and select the filters to apply:
 +
-The agent network graph shows assets that belong to the selected business groups, and edges between those assets (including cross‑business group connections) are shown on the same map.
+* *Business Groups*
 +
-Metrics on nodes and edges are aggregated based on the business groups you select. When you deselect business groups, metrics update to reflect only the remaining selection.
+By default, your current business group is selected. Only business groups you have Agent Visualizer permissions for appear in the list.
++
+Select one or more business groups.
 +
 [TIP]
-The agent network graph shows which business groups are in scope (for example, in the filter panel or as badges). If performance degrades when viewing many business groups at once, reduce the selection, use search, or zoom to areas of interest.
+If performance degrades when viewing many business groups at once, reduce the selection, use search, or zoom to areas of interest.
+* *Environment*
++
+Select *Production* or *Sandbox*.
+* *Activity Period*
++
+Select the last:
+** *24 hours*
+** *3 days*
+** *5 days*
+** *7 days*
+* *Display Options*
++
+You can hide standalone nodes and edges.
+. Click *Apply Filters*.
+
 
 [[filter-time-range]]
 === Select a Time Range

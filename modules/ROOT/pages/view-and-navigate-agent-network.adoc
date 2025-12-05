@@ -58,23 +58,20 @@ When you select an edge, the details card displays relationship information and 
 [[view-external-nodes]]
 == View External Agents and MCP Servers
 
-External agents and MCP servers appear as nodes in the agent network. You can select these nodes to view metadata and, when available, instance details.
+External agents and MCP servers that are published to Exchange appear as nodes in the agent network. You can select these nodes to view metadata and, when available, instance details.
 
 . Select an external agent or MCP server node to open its details card and review the node’s metadata.
 +
-If runtime edges aren't visible for calls involving external agents:
-+
-.. Add telemetry by protecting the relevant path with a managed Flex Gateway. 
-.. Inject identifying headers needed for visualization (for example, source and destination identifiers).
-.. Generate traffic and refresh the view to draw the runtime edge.
-+
 [NOTE]
-Depending on your configuration, edges between external agents may not draw automatically until the gateway protection and header injection are in place and traffic is observed.
+====
+If runtime edges aren't visible for calls involving external agents, add telemetry by protecting the relevant path with a managed Flex Gateway and inject identifying headers needed for visualization (for example, source and destination identifiers).
+Then, generate traffic and refresh the view to draw the runtime edge.
+====
 
 [[view-mcp-server-edges-tools]]
 == View MCP Server Edges and Tools
 
-When agents invoke MCP servers, Agent Visualizer shows the relationship on the graph and tool usage on the MCP node’s details card.
+When agents invoke MCP servers, Agent Visualizer shows the relationship on the graph and lists MCP tools on the MCP server node’s details card.
 
 . Select an MCP server node to focus associated edges and open its details card.
 +
@@ -87,6 +84,8 @@ Click *Show More* to see additional tools when available.
 +
 [NOTE]
 For tool visibility, the MCP server must be present in Exchange and the egress path must be protected by a managed Flex Gateway. This applies to MuleSoft‑hosted MCP servers defined in the broker network and externally hosted MCP servers defined in the broker network.
++
+The tools list reflects the selected activity period and shows only tools that were invoked during that window. Allowlisted tools that aren't called don't appear. If the MCP server exposes a tool catalog that Agent Visualizer can query, the details panel shows the full set of available (design‑time) tools alongside runtime usage.
 +
 . To see traffic metrics on the connection, select the edge between the agent and the MCP server and open the edge details card.
 
@@ -103,7 +102,7 @@ Review metadata, tags, and any instance details available.
 [[search-agent-network]]
 == Search the Agent Network
 
-Use search to locate nodes in the agent network. Search is case‑insensitive and supports multiple fields. 
+Use search to locate nodes in the agent network. Search is case‑insensitive and supports multiple fields.  Search results reflect the current base graph. Environment layer selection (Production or Sandbox) affects instance‑level metrics but not which nodes can be found by search.
 
 . Select the search box and enter your search terms.
 +
@@ -114,15 +113,16 @@ You can search by:
 * Platform, for example, MuleSoft, Agentforce, Bedrock 
 * Exchange tags
 +
-Smart suggestions show up to 10 results, ordered by relevance, with type and platform badges and an indicator of the field that matched. Selecting a result focuses the node and opens its details card.
+Smart suggestions show up to 10 results, ordered by relevance, with type and platform badges and an indicator of the field that matched. 
 +
-Up to 10 results are shown, ordered by relevance. Each result displays a type badge and a platform badge, along with an indicator of which field matched.
+Up to 10 results are shown, ordered by relevance. Each result shows a type badge and a platform badge, along with an indicator of the matched field.
 +
-Search results reflect the current base graph. Environment layer selection (Production or Sandbox) affects instance‑level metrics but not which nodes can be found by search.
+. Select a result to zoom in on the node and open its details card.
+
 
 == Add Filters
 
-Use filters to control which parts of the network you see on the canvas. Filters help you focus large graphs by limiting the scope to specific business groups and time windows. 
+Use filters to control which parts of the network you see on the canvas. Filters help you focus on the information you need in large graphs by limiting the scope to specific business groups and time windows. 
 
 The agent network graph shows assets that belong to the selected business groups, and edges between those assets (including cross‑business group connections) are shown on the same map.
 
@@ -155,17 +155,6 @@ Select the last:
 +
 You can hide standalone nodes and edges.
 . Click *Apply Filters*.
-
-
-[[filter-time-range]]
-=== Select a Time Range
-
-Adjust the time window to control which runtime edges and metrics are shown.
-
-. Open the filter panel and choose a time range.
-The agent network graph shows runtime edges that reflect traffic observed within the selected window; declared edges are unaffected. Throughput, error rates, and tool rankings also reflect the selected time range.
-+
-Change the time range as needed to compare recent activity (for example, last hour) with broader trends (for example, last 3 or 7 days).
 
 == See Also
 

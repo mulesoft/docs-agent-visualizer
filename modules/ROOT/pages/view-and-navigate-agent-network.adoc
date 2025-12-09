@@ -128,6 +128,7 @@ Smart suggestions show up to 10 results, ordered by relevance, with type and pla
 Each result shows a type badge and a platform badge, along with an indicator of the matched field.
 +
 . Select a result to zoom in on the node and open its details card.
+. Press the escape key to clear the results and close the search box.
 
 == Add Filters
 

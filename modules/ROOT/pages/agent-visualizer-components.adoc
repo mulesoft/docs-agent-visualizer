@@ -65,7 +65,7 @@ For more information, see xref:view-and-navigate-agent-network.adoc#view-node-de
 
 === Node Metadata
 
-When you select a node, the details card shows metadata for that asset, including: 
+When you select a node, the details card shows metadata for that agentic asset, including: 
 
 [%header,cols="30a,70a"]
 |===
@@ -121,6 +121,27 @@ Each instance entry includes the asset version number, so you can easily disting
 * Descending order of asset versions
 +
 Instances are ordered from the most recent (latest) to least recent (earliest) asset version, making it easy to track version history over time.
+
+=== MCP Server Details
+
+The MCP server details card includes active MCP tools and per‑instance activity:
+
+* Active tools reflect the selected Activity Period and only include tools invoked during that window.
+* Tools are aggregated across all instances of the MCP server, ranked by throughput, with the top 10 displayed by default. Select *Show More* to view additional tools.
+ 
+[NOTE]
+Tool visibility requires the MCP asset to be published in Exchange and telemetry from a managed Flex Gateway on the relevant path. Allowlisted tools that haven't been called don't appear in runtime usage.
+
+=== Tool Details
+
+When you select a tool, the tool details card opens. It shows:
+
+* Tool name, icon, and MCP asset information at the top
+* Active instances count (instances with traffic for this tool)
+* A list of instances with per‑instance metrics (total calls and error rate) for the selected tool
+
+If more than two instances are shown, a scroller is enabled. Long tool names are truncated with an ellipsis.
+
 
 [[policy-visualization]]
 == Policy Visualization

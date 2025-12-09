@@ -115,10 +115,9 @@ You can search by:
 +
 Smart suggestions show up to 10 results, ordered by relevance, with type and platform badges and an indicator of the field that matched. 
 +
-Up to 10 results are shown, ordered by relevance. Each result shows a type badge and a platform badge, along with an indicator of the matched field.
+Each result shows a type badge and a platform badge, along with an indicator of the matched field.
 +
 . Select a result to zoom in on the node and open its details card.
-
 
 == Add Filters
 

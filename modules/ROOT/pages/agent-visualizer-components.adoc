@@ -130,18 +130,15 @@ The MCP server details card includes active MCP tools and per‑instance activit
 * Tools are aggregated across all instances of the MCP server, ranked by throughput, with the top 10 displayed by default. Select *Show More* to view additional tools.
  
 [NOTE]
-Tool visibility requires the MCP asset to be published in Exchange and telemetry from a managed Flex Gateway on the relevant path. Allowlisted tools that haven't been called don't appear in runtime usage.
+Tool visibility requires the MCP asset to be published in Exchange and telemetry from a managed Flex Gateway on the relevant path. Runtime usage shows only allowlisted tools that have been called.
 
 === Tool Details
 
 When you select a tool, the tool details card opens. It shows:
 
-* Tool name, icon, and MCP asset information at the top
-* Active instances count (instances with traffic for this tool)
-* A list of instances with per‑instance metrics (total calls and error rate) for the selected tool
-
-If more than two instances are shown, a scroller is enabled. Long tool names are truncated with an ellipsis.
-
+* Tool name, icon, and MCP asset information at the top.
+* Active instances count (instances with traffic for this tool). If more than two instances are shown, a scrollbar is enabled.
+* A list of instances with per‑instance metrics (total calls and error rate) for the selected tool.
 
 [[policy-visualization]]
 == Policy Visualization

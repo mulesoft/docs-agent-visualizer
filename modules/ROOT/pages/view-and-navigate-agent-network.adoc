@@ -62,11 +62,7 @@ External agents and MCP servers that are published to Exchange appear as nodes i
 
 . Select an external agent or MCP server node to open its details card and review the node’s metadata.
 +
-[NOTE]
-====
-If runtime edges aren't visible for calls involving external agents, add telemetry by protecting the relevant path with a managed Flex Gateway and inject identifying headers needed for visualization (for example, source and destination identifiers).
-Then, generate traffic and refresh the view to draw the runtime edge.
-====
+To visualize runtime edges for external agents, see xref:view-standalone-agents[View Agents Without Flex Gateway].
 
 [[view-mcp-server-edges-tools]]
 == View MCP Server Edges and Tools
@@ -89,10 +85,48 @@ The tools list reflects the selected activity period and shows only tools that w
 +
 . To see traffic metrics on the connection, select the edge between the agent and the MCP server and open the edge details card.
 
-[[view-standalone-agents]]
-== View Agents without Flex Gateway
+=== Example: Visualize Interactions Between External Agents and MCP Servers
 
-Agents that aren't protected by a managed Flex Gateway appear as standalone nodes with declared edges only. You can still view their metadata and understand their purpose in the network.
+To visualize runtime edges for external agents and MCP servers that aren't part of a defined agent network, you must manually register them as API assets and route their traffic through Flex Gateway. 
+
+This is an example of how to visualize the interactions between agents and MCP servers when they aren’t part of an agent network. This process manually "onboards" your external assets so they appear in the agent network graph as managed nodes with live traffic edges.
+
+. Publish your external MCP servers to Anypoint Exchange as API assets.
+. Setup a Flex Gateway in Connected Mode.
++
+This gateway acts as the "exit point" that intercepts calls going to the external servers.
+. In API Manager, create a new instance for each external MCP server.
+.. Point the Implementation URI to the actual external URL of your MCP server.
+.. Deploy these instances to your Egress Flex Gateway.
+. Enable telemetry by injecting identifying headers for visualization (for example, source and destination identifiers):
+.. In API Manager, go to the *Policies* tab for these instances.
+.. Apply the Agent Connection Telemetry policy. This allows the gateway to parse MCP-specific traffic (like list tools).
+.. Record the Consumer URL (the Flex Gateway endpoint) for each MCP server. 
+. Publish the agent asset in Anypoint Exchange with the *Agent* type.
+. Setup the Ingress Flex Gateway to handle the inbound traffic to the agent.
+. In API Manager, go to *Agent and Tools Instances* and select *Add > Agent*. 
+.. Assign the agent to the Ingress Flex Gateway.
+.. Copy the Agent Instance ID. 
++
+The external agent uses this ID to identify itself to the Ingress Flex Gateway.
+. In API Manager, apply a *Header Injection* policy to the agent instance.
+.. Add the *Header Name* as `x-agent-instance-id` and the *Header Value* as the Agent Instance ID you copied earlier.
+.. Click *Apply*.
+. On the calling agent app, inject the `x-anypoint-api-instance-id` header (on list tools or call tools operations) providing the agent Instance ID from the ingress entry in API Manager as the value of the header.
+
+
+
+
+
+
+
+
+
+
+[[view-standalone-agents]]
+== View Agents Without Flex Gateway
+
+Agents that aren't protected by a managed Flex Gateway appear as standalone nodes. You can still view their metadata and understand their purpose in the network.
 
 . Select the agent node to open its details card.
 +
@@ -123,10 +157,7 @@ You can search by:
 * Platform, for example, MuleSoft, Agentforce, Bedrock 
 * Exchange tags
 +
-Smart suggestions show up to 10 results, ordered by relevance, with type and platform badges and an indicator of the field that matched. 
-+
-Each result shows a type badge and a platform badge, along with an indicator of the matched field.
-+
+Smart suggestions show up to 10 results, ordered by relevance, with type and platform badges and an indicator of the matched field. 
 . Select a result to zoom in on the node and open its details card.
 . Press the escape key to clear the results and close the search box.
 
@@ -145,12 +176,12 @@ Metrics on nodes and edges are aggregated based on the business groups you selec
 +
 * *Business Groups*
 +
-By default, your current business group is selected. Only business groups you have Agent Visualizer permissions for appear in the list.
+By default, your current business group is selected. You can select multiple business groups to see cross-business group connections in a single view. Only business groups you have Agent Visualizer permissions for appear in the list.
 +
-Select one or more business groups.
+When multiple business groups are selected, the canvas shows assets belonging to the selected business groups and edges between those assets across all selected business groups. The metrics that are shown are aggregated across all selected business groups. When you deselect business groups, metrics update to reflect only the remaining selection.
 +
 [TIP]
-If performance degrades when viewing many business groups at once, reduce the selection, use search, or zoom to areas of interest.
+If performance degrades when viewing multiple business groups at once, reduce the selection, use search, or zoom to areas of interest.
 * *Environment*
 +
 Select *Production* or *Sandbox*.

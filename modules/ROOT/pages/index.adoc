@@ -6,7 +6,7 @@ Agent Visualizer provides a detailed visual graph of your agent network so you c
 Agent Visualizer is an intuitive user interface that helps you:
 
 * Gain complete situational awareness of your agentic ecosystem with a view of all connected agents in your agent network on one map, including clear relationships and direction of calls.
-* See unclear interaction patterns by showing real-time call volume for the past 24 hours. This helps you understand key pathways and identify under- or overused connections. 
+* See unclear interaction patterns by showing real-time call volume. This helps you understand key pathways and identify under- or overused connections. 
 * See governance gaps with a view of which agents are protected by Flex Gateways and policies. 
 * Understand node purpose and origin.
 + 

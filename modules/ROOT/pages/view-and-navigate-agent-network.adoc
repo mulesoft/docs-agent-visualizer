@@ -12,7 +12,7 @@ include::partial$partial-agent-visualizer.adoc[tag=agent-visualizer-permissions]
 +
 On the Agent Visualizer page, you see the agent network map showing all discovered agentic assets, nodes and their relationships (edges).
 
-If the page is empty, there are no discoverable agentic assets in Anypoint Exchange. For more information about creating an agent network project and publishing assets to Exchange, see xref:anypoint-code-builder::af-create-agent-network.adoc[].
+If the page is empty, there are no discoverable agentic assets in Anypoint Exchange (Exchange). For more information about creating an agent network project and publishing assets to Exchange, see xref:anypoint-code-builder::af-create-agent-network.adoc[].
 
 [[navigate-agent-network]]
 == Navigate the Agent Network
@@ -87,14 +87,18 @@ The tools list reflects the selected activity period and shows only tools that w
 
 === Example: Visualize Interactions Between External Agents and MCP Servers
 
-To visualize runtime edges for external agents and MCP servers that aren't part of a defined agent network, you must manually register them as API assets and route their traffic through Flex Gateway. 
+To visualize runtime edges for external agents and MCP servers that aren't part of a defined agent network, you must publish them to Anypoint Exchange and route their traffic through Flex Gateway. 
 
 This is an example of how to visualize the interactions between agents and MCP servers when they aren’t part of an agent network. This process manually "onboards" your external assets so they appear in the agent network graph as managed nodes with live traffic edges.
 
-. Publish your external MCP servers to Anypoint Exchange as API assets.
-. Setup a Flex Gateway in Connected Mode.
+. Publish your MCP servers to Anypoint Exchange.
++
+For more information about creating assets in Exchange, see xref:exchange::to-create-an-asset.adoc#create-mcp[].
+. Set up a Flex Gateway in Connected Mode.
 +
 This gateway acts as the "exit point" that intercepts calls going to the external servers.
++
+For more information about securing agent interaction in Flex Gateway, see xref:gateway::flex-agent-secure.adoc[].
 . In API Manager, create a new instance for each external MCP server.
 .. Point the Implementation URI to the actual external URL of your MCP server.
 .. Deploy these instances to your Egress Flex Gateway.
@@ -113,15 +117,6 @@ The external agent uses this ID to identify itself to the Ingress Flex Gateway.
 .. Add the *Header Name* as `x-agent-instance-id` and the *Header Value* as the Agent Instance ID you copied earlier.
 .. Click *Apply*.
 . On the calling agent app, inject the `x-anypoint-api-instance-id` header (on list tools or call tools operations) providing the agent Instance ID from the ingress entry in API Manager as the value of the header.
-
-
-
-
-
-
-
-
-
 
 [[view-standalone-agents]]
 == View Agents Without Flex Gateway

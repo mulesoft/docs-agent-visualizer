@@ -87,19 +87,19 @@ The tools list reflects the selected activity period and shows only tools that w
 
 === Example: Visualize Interactions Between External Agents and MCP Servers
 
-To visualize runtime edges for external agents and MCP servers that aren't part of a defined agent network, you must publish them to Anypoint Exchange and route their traffic through Flex Gateway. 
+To visualize runtime edges for external agents and MCP servers that aren't part of a defined agent network, you must publish them to Anypoint Exchange as agents or tools and route their traffic through Flex Gateway. 
 
 This is an example of how to visualize the interactions between agents and MCP servers when they aren’t part of an agent network. This process manually "onboards" your external assets so they appear in the agent network graph as managed nodes with live traffic edges.
 
-. Publish your MCP servers to Anypoint Exchange.
+. Publish your agents and MCP servers to Anypoint Exchange.
 +
 For more information about creating assets in Exchange, see xref:exchange::to-create-an-asset.adoc#create-mcp[].
 . Set up a Flex Gateway in Connected Mode.
 +
-This gateway acts as the "exit point" that intercepts calls going to the external servers.
+To enable visualization, both the calling agents and the MCP servers must be governed by Flex Gateway. By routing traffic through a gateway endpoint instead of calling the server directly, the gateway intercepts the request, injects identity headers, and reports the interaction to the Agent Visualizer.
 +
 For more information about securing agent interaction in Flex Gateway, see xref:gateway::flex-agent-secure.adoc[].
-. In API Manager, create a new instance for each external MCP server.
+. In API Manager, create a new instance for each MCP server.
 .. Point the Implementation URI to the actual external URL of your MCP server.
 .. Deploy these instances to your Egress Flex Gateway.
 . Enable telemetry by injecting identifying headers for visualization (for example, source and destination identifiers):

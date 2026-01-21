@@ -131,7 +131,7 @@ Review metadata, tags, and any instance details available.
 [[search-agent-network]]
 == Search the Agent Network
 
-Use search to locate nodes in the agent network. Search is case‑insensitive and supports multiple fields.  Search results reflect the current base graph. Environment layer selection (Production or Sandbox) affects instance‑level metrics but not which nodes can be found by search.
+Use search to locate nodes in the agent network. Search is case‑insensitive and supports multiple fields.  Search results reflect the current base graph. The environment layer you select (Production or Sandbox) affects instance‑level metrics but not which nodes you can find with search.
 
 . Open the search box.
 +

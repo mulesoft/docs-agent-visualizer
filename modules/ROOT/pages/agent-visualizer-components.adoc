@@ -26,7 +26,7 @@ For more information, see xref:view-and-navigate-agent-network.adoc#viewing-node
 Edges represent the relationships and communications among your nodes:
 
 * Declared edges appear between node instances when no runtime information is available because there's no registered traffic between them. Dashed lines on the graph indicate declared edges.
-* Runtime edges appear between nodes when traffic is registered and a managed Flex Gateway exists. Solid lines on the graph indicate runtime edges. Clicking on a runtime edge opens the details card and shows the relevant metrics.
+* Runtime edges appear between nodes when traffic is registered and a managed Flex Gateway exists. Solid lines on the graph indicate runtime edges. Click a runtime edge to open the details card and show the relevant metrics.
 +
 Edges are drawn under specific conditions, primarily when the calling agent is protected by a managed Flex Gateway at egress. For agent-to-MCP relationships, edges are automatically drawn when the calling agent’s egress or the MCP server’s ingress is protected by a managed Flex Gateway. You don't need to add new policies or extra configuration to make edges visible. For more information, see xref:gateway::flex-gateway-managed-ingress-egress.adoc[]
 

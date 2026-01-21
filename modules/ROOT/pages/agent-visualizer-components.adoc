@@ -130,7 +130,7 @@ The MCP server details card includes active MCP tools and per‑instance activit
 * Tools are aggregated across all instances of the MCP server, ranked by throughput, with the top 10 displayed by default. Select *Show More* to view additional tools.
  
 [NOTE]
-Tool visibility requires the MCP asset to be published in Exchange and telemetry from a managed Flex Gateway on the relevant path. Runtime usage shows only allowlisted tools that have been called.
+You need to publish MCP assets in Exchange before the tools are visible. Tools also require telemetry from a managed Flex Gateway on the relevant path. Runtime usage shows only allowlisted tools that have been called.
 
 === Tool Details
 

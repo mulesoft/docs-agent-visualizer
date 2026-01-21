@@ -154,7 +154,7 @@ You can search by:
 +
 Smart suggestions show up to 10 results, ordered by relevance, with type and platform badges and an indicator of the matched field. 
 .  To zoom in on the node and open its details card, select a result.
-. Press the escape key to clear the results and close the search box.
+. To clear the results and close the search box, press the escape key. 
 
 == Add Filters
 

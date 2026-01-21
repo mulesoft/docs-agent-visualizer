@@ -60,7 +60,7 @@ When you select an edge, the details card displays relationship information and 
 
 External agents and MCP servers that are published to Exchange appear as nodes in the agent network. You can select these nodes to view metadata and, when available, instance details.
 
-. Select an external agent or MCP server node to open its details card and review the node’s metadata.
+. To open its details card and review the node’s metadata, select an external agent or MCP server node.
 +
 To visualize runtime edges for external agents, see xref:view-standalone-agents[View Agents Without Flex Gateway].
 

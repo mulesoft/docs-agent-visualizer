@@ -173,7 +173,7 @@ Metrics on nodes and edges are aggregated based on the business groups you selec
 +
 By default, your current business group is selected. You can select multiple business groups to see cross-business group connections in a single view. Only business groups you have Agent Visualizer permissions for appear in the list.
 +
-When multiple business groups are selected, the canvas shows assets belonging to the selected business groups and edges between those assets across all selected business groups. The metrics that are shown are aggregated across all selected business groups. When you deselect business groups, metrics update to reflect only the remaining selection.
+When you select multiple business groups, the canvas shows assets belonging to the selected business groups and edges between those assets across all selected business groups. Metrics are aggregated across all selected business groups. When you deselect business groups, metrics update to reflect only the remaining selection.
 +
 [TIP]
 If performance degrades when viewing multiple business groups at once, reduce the selection, use search, or zoom to areas of interest.

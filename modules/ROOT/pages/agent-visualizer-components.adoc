@@ -136,7 +136,7 @@ You need to publish MCP assets in Exchange before the tools are visible. Tools a
 
 When you select a tool, the tool details card opens. It shows:
 
-* Tool name, icon, and MCP asset information at the top.
+* The tool name, icon, and MCP asset information at the top.
 * Active instances count (instances with traffic for this tool). If more than two instances are shown, a scrollbar is enabled.
 * A list of instances with per‑instance metrics (total calls and error rate) for the selected tool.
 

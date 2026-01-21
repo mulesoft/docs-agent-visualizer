@@ -71,7 +71,7 @@ When agents invoke MCP servers, Agent Visualizer shows the relationship on the g
 
 . Select an MCP server node to focus associated edges and open its details card.
 +
-Tool invocations from multiple agents are aggregated into a single list on the MCP server:
+Tool invocations from multiple agents are aggregated into a single list on the MCP server.
 +
 ** Tools are ordered by throughput (total MCP calls).
 ** The top 10 tools are shown by default. 

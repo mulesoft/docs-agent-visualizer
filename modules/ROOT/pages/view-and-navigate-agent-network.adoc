@@ -160,7 +160,7 @@ Smart suggestions show up to 10 results, ordered by relevance, with type and pla
 
 Use filters to control which parts of the network you see on the canvas. Filters help you focus on the information you need in large graphs by limiting the scope to specific business groups and time windows. 
 
-The agent network graph shows assets that belong to the selected business groups, and edges between those assets (including cross‑business group connections) are shown on the same map.
+The agent network graph shows assets that belong to the selected business groups, and the same map shows edges between those assets (including cross‑business group connections).
 
 Metrics on nodes and edges are aggregated based on the business groups you select. When you deselect business groups, metrics update to reflect only the remaining selection.
 

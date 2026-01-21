@@ -124,7 +124,7 @@ Instances are ordered from the most recent (latest) to least recent (earliest) a
 
 === MCP Server Details
 
-The MCP server details card includes active MCP tools and per‑instance activity:
+The MCP server details card includes active MCP tools and per‑instance activity.
 
 * Active tools reflect the selected Activity Period and only include tools invoked during that window.
 * Tools are aggregated across all instances of the MCP server, ranked by throughput, with the top 10 displayed by default. Select *Show More* to view additional tools.

@@ -89,7 +89,7 @@ The tools list reflects the selected activity period and shows only tools that w
 
 To visualize runtime edges for external agents and MCP servers that aren't part of a defined agent network, you must publish them to Anypoint Exchange as agents or tools and route their traffic through Flex Gateway. 
 
-This is an example of how to visualize the interactions between agents and MCP servers when they aren’t part of an agent network. This process manually "onboards" your external assets so they appear in the agent network graph as managed nodes with live traffic edges.
+This example shows how to visualize the interactions between agents and MCP servers when they aren’t part of an agent network. This process manually "onboards" your external assets so they appear in the agent network graph as managed nodes with live traffic edges.
 
 . Publish your agents and MCP servers to Anypoint Exchange.
 +

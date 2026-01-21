@@ -148,7 +148,7 @@ Use search to locate nodes in the agent network. Search is case‑insensitive an
 You can search by:
 +
 * Display name 
-* Type, for example, broker, agent, MCP 
+* Asset type, for example, broker, agent, MCP 
 * Platform, for example, MuleSoft, Agentforce, Bedrock 
 * Exchange tags
 +

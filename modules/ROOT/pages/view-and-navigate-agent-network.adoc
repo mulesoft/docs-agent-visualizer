@@ -101,13 +101,13 @@ To enable visualization, both the calling agents and the MCP servers must be gov
 For more information about securing agent interaction in Flex Gateway, see xref:gateway::flex-agent-secure.adoc[].
 . In API Manager, create a new instance for each MCP server.
 .. Point the Implementation URI to the actual external URL of your MCP server.
-.. Deploy these instances to your Egress Flex Gateway.
+.. Deploy these instances to your egress Flex Gateway.
 . Enable telemetry by injecting identifying headers for visualization (for example, source and destination identifiers):
 .. In API Manager, go to the *Policies* tab for these instances.
 .. Apply the Agent Connection Telemetry policy. This allows the gateway to parse MCP-specific traffic (like list tools).
 .. Record the Consumer URL (the Flex Gateway endpoint) for each MCP server. 
 . Publish the agent asset in Anypoint Exchange with the *Agent* type.
-. Setup the Ingress Flex Gateway to handle the inbound traffic to the agent.
+. Setup the ingress Flex Gateway to handle the inbound traffic to the agent.
 . In API Manager, go to *Agent and Tools Instances* and select *Add > Agent*. 
 .. Assign the agent to the Ingress Flex Gateway.
 .. Copy the Agent Instance ID. 
@@ -149,7 +149,7 @@ You can search by:
 +
 * Display name 
 * Asset type, for example, broker, agent, MCP 
-* Platform, for example, MuleSoft, Agentforce, Bedrock 
+* Platform, for example, MuleSoft, Agentforce, AmazonBedrock 
 * Exchange tags
 +
 Smart suggestions show up to 10 results, ordered by relevance, with type and platform badges and an indicator of the matched field. 

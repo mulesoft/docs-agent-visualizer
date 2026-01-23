@@ -40,6 +40,9 @@ For more information about the data flow layers, see xref:agent-visualizer-compo
 
 When you select a node, a details card opens to provide comprehensive information for the asset.
 
+[NOTE]
+A maximum of 500 nodes is displayed. You can only select nodes that are visible on the canvas. If you don't see a node, you can use search to locate it.
+
 . Select any node in the agent network (or press Enter or Spacebar after focusing the node with arrow keys) to show its details card.
 . Review the node details.
 
@@ -107,7 +110,7 @@ For more information about securing agent interaction in Flex Gateway, see xref:
 .. Apply the Agent Connection Telemetry policy. This allows the gateway to parse MCP-specific traffic (like list tools).
 .. Record the Consumer URL (the Flex Gateway endpoint) for each MCP server. 
 . Publish the agent asset in Anypoint Exchange with the *Agent* type.
-. Setup the ingress Flex Gateway to handle the inbound traffic to the agent.
+. Set up the ingress Flex Gateway to handle the inbound traffic to the agent.
 . In API Manager, go to *Agent and Tools Instances* and select *Add > Agent*. 
 .. Assign the agent to the Ingress Flex Gateway.
 .. Copy the Agent Instance ID. 
@@ -131,7 +134,7 @@ Review metadata, tags, and any instance details available.
 [[search-agent-network]]
 == Search the Agent Network
 
-Use search to locate nodes in the agent network. Search is case‑insensitive and supports multiple fields.  Search results reflect the current base graph. The environment layer you select (Production or Sandbox) affects instance‑level metrics but not which nodes you can find with search.
+Use search to locate nodes in the agent network. Search is case‑insensitive and supports multiple fields. Search results reflect the current base graph. The environment layer you select (Production or Sandbox) affects instance‑level metrics but not which nodes you can find with search.
 
 . Open the search box.
 +
@@ -152,7 +155,7 @@ You can search by:
 * Platform, for example, MuleSoft, Agentforce, AmazonBedrock 
 * Exchange tags
 +
-Smart suggestions show up to 10 results, ordered by relevance, with type and platform badges and an indicator of the matched field. 
+Smart suggestions show up to 10 results, ordered by relevance, with Type and Platform badges and an indicator of the matched field. 
 .  To zoom in on the node and open its details card, select a result.
 . To clear the results and close the search box, press the escape key. 
 

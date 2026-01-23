@@ -105,7 +105,7 @@ For more information about securing agent interaction in Flex Gateway, see xref:
 . In API Manager, create a new instance for each MCP server.
 .. Point the Implementation URI to the actual external URL of your MCP server.
 .. Deploy these instances to your egress Flex Gateway.
-. Enable telemetry by injecting identifying headers for visualization (for example, source and destination identifiers):
+. Enable telemetry by injecting identifying headers for visualization (for example, source and destination identifiers).
 .. In API Manager, go to the *Policies* tab for these instances.
 .. Apply the Agent Connection Telemetry policy. This allows the gateway to parse MCP-specific traffic (like list tools).
 .. Record the Consumer URL (the Flex Gateway endpoint) for each MCP server. 

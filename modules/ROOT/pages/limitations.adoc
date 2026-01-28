@@ -4,10 +4,11 @@ Learn about the limitations of using Agent Visualizer.
 
 == Limitations
 
-* A maximum of 500 nodes is displayed on the agent graph. You can only select nodes that are visible on the canvas. If you don't see a node, use search to locate it.
+* A maximum of 500 nodes are shown on the Agent Visualizer canvas. 
 * A maximum of 499 MCP tools are listed across MCP nodes.
 
 
 == See Also
 
+* xref:troubleshoot-agent-visualizer.adoc[]
 * xref:view-and-navigate-agent-network.adoc[]

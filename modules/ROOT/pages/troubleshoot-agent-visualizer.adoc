@@ -1,0 +1,14 @@
+= Troubleshooting Agent Visualizer
+
+If you encounter an error or an issue while using Agent Visualizer, you can try these solutions.
+
+== Don't See all Nodes in the Agent Network Canvas
+
+A maximum of 500 nodes and 499 MCP tools are shown on the Agent Visualizer canvas. 
+
+If you don't see a node or MCP tool, use search to locate it.
+
+== See Also
+
+* xref:view-and-navigate-agent-network.adoc[]
+* xref:limitations.adoc[]

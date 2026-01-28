@@ -7,4 +7,3 @@
 * xref:node-governance.adoc[]
 * xref:troubleshoot-agent-network.adoc[]
 * xref:troubleshoot-agent-visualizer.adoc[]
-* xref:limitations.adoc[]

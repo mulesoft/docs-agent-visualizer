@@ -43,3 +43,5 @@ Anypoint Monitoring opens and you can view the *Traces Details* page for the ass
 
 * xref:monitoring::logs.adoc[]
 * xref:monitoring::traces.adoc[]
+* xref:limitations.adoc[]
+* xref:view-and-navigate-agent-network.adoc[]

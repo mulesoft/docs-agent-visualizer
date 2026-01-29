@@ -2,7 +2,7 @@
 
 If you encounter an error or an issue while using Agent Visualizer, you can try these solutions.
 
-== Don't See all Nodes in the Agent Network Canvas
+== Don't See All Nodes in the Agent Network Canvas
 
 A maximum of 500 nodes and 499 MCP tools are shown on the Agent Visualizer canvas. 
 

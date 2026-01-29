@@ -11,4 +11,3 @@ If you don't see a node or MCP tool, use search to locate it.
 == See Also
 
 * xref:view-and-navigate-agent-network.adoc[]
-* xref:limitations.adoc[]

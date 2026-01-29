@@ -40,8 +40,7 @@ For more information about the data flow layers, see xref:agent-visualizer-compo
 
 When you select a node, a details card opens to provide comprehensive information for the asset.
 
-[NOTE]
-A maximum of 500 nodes is shown on the agent network canvas. You can only select nodes that are visible on the canvas. If you don't see a node, use search to locate it.
+include::partial$agent-visualizer/node-limit-note.adoc[]
 
 . Select any node in the agent network (or press Enter or Spacebar after focusing the node with arrow keys) to show its details card.
 . Review the node details.

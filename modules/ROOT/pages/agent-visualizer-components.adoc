@@ -20,8 +20,7 @@ Nodes in the agent network provide a visual representation of the agents and MCP
 
 For more information, see xref:view-and-navigate-agent-network.adoc#viewing-node-details[Viewing Node Details].
 
-[NOTE]
-Agent Visualizer shows a maximum of 500 nodes. If you have more than 500 nodes, you won't see all of them in the graph. You can use search to locate specific nodes.
+include::partial$agent-visualizer/node-limit-note.adoc[]
 
 [[edges]]
 == Edges

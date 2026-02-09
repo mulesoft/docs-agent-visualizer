@@ -40,15 +40,37 @@ Operators can trace dependencies, isolate failing nodes, and deep-link into serv
 [[before-you-begin]]
 == Before You Begin
 
-include::partial$partial-agent-visualizer.adoc[tag=agent-visualizer-permissions]
+Before getting started, make sure you have:
 
+* An Anypoint Platform account
+* Required <<av-permissions,Agent Visualizer permissions>>
+
+[[av-permissions]]
+== Agent Visualizer Permissions
+
+[%header,cols="30a,50a,20a"]
+|===
+|To... | Required Permission | Notes
+|include::access-management::partial$include-permissions-av.adoc[tag=permsViewMonitorAgents]
+|Anypoint Monitoring: Monitoring Viewer |
+
+|include::access-management::partial$include-permissions-av.adoc[tag=permsViewAgenticAssets] 
+|Exchange: Exchange Viewer | 
+
+|include::access-management::partial$include-permissions-av.adoc[tag=permsViewApiNodes]
+| API Manager: View APIs Configuration |
+
+|include::access-management::partial$include-permissions-av.adoc[tag=permsViewPoliciesForAssets]
+|API Manager: View Policies |
+
+|===
 
 == See Also
 
 * xref:monitoring::index.adoc[Anypoint Monitoring]
 * xref:exchange::index.adoc[Anypoint Exchange]
 * xref:api-manager::index.adoc[Anypoint API Manager]
-* xref:agent-fabric::index.adoc[Agent Fabric]
+* xref:general::learning-map-agent-fabric.adoc[Agent Fabric]
 * xref:mulesoft-mcp-server::index.adoc[MCP Server]
 * xref:anypoint-code-builder::index.adoc[Anypoint Code Builder]
 * https://www.salesforce.com/agentforce/[Agentforce]

@@ -70,7 +70,7 @@ Before getting started, make sure you have:
 * xref:monitoring::index.adoc[Anypoint Monitoring]
 * xref:exchange::index.adoc[Anypoint Exchange]
 * xref:api-manager::index.adoc[Anypoint API Manager]
-* xref:agent-fabric::index.adoc[Agent Fabric]
+* xref:general::learning-map-agent-fabric.adoc[Agent Fabric]
 * xref:mulesoft-mcp-server::index.adoc[MCP Server]
 * xref:anypoint-code-builder::index.adoc[Anypoint Code Builder]
 * https://www.salesforce.com/agentforce/[Agentforce]

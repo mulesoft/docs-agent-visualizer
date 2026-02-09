@@ -6,3 +6,8 @@ You need these Anypoint Platform permissions to access Agent Visualizer:
 * API Manager View: View API Configuration
 * API Manager View: View Policies
 end::agent-visualizer-permissions[]
+
+tag::node-limit-note[]
+[NOTE]
+Agent Visualizer shows a maximum of 500 nodes. If you have more than 500 nodes, you won't see all of them on the canvas. You can use search to locate specific nodes.
+end::node-limit-note[]

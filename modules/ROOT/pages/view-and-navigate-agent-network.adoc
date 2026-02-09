@@ -12,7 +12,7 @@ include::partial$partial-agent-visualizer.adoc[tag=agent-visualizer-permissions]
 +
 On the Agent Visualizer page, you see the agent network map showing all discovered agentic assets, nodes and their relationships (edges).
 
-If the page is empty, there are no discoverable agentic assets in Anypoint Exchange. For more information about creating an agent network project and publishing assets to Exchange, see xref:anypoint-code-builder::af-create-agent-network.adoc[].
+If the page is empty, there are no discoverable agentic assets in Anypoint Exchange (Exchange). For more information about creating an agent network project and publishing assets to Exchange, see xref:anypoint-code-builder::af-create-agent-network.adoc[].
 
 [[navigate-agent-network]]
 == Navigate the Agent Network
@@ -40,6 +40,8 @@ For more information about the data flow layers, see xref:agent-visualizer-compo
 
 When you select a node, a details card opens to provide comprehensive information for the asset.
 
+include::partial$agent-visualizer/node-limit-note.adoc[]
+
 . Select any node in the agent network (or press Enter or Spacebar after focusing the node with arrow keys) to show its details card.
 . Review the node details.
 
@@ -54,6 +56,143 @@ When you select an edge, the details card displays relationship information and 
 
 . Select an edge to open its details card.
 . Examine the traffic throughput per hour. 
+
+[[view-external-nodes]]
+== View External Agents and MCP Servers
+
+External agents and MCP servers that are published to Exchange appear as nodes in the agent network. You can select these nodes to view metadata and, when available, instance details.
+
+. To open its details card and review the node’s metadata, select an external agent or MCP server node.
++
+To visualize runtime edges for external agents, see xref:view-standalone-agents[View Agents Without Flex Gateway].
+
+[[view-mcp-server-edges-tools]]
+== View MCP Server Edges and Tools
+
+When agents invoke MCP servers, Agent Visualizer shows the relationship on the graph and lists MCP tools on the MCP server node’s details card.
+
+. Select an MCP server node to focus associated edges and open its details card.
++
+Tool invocations from multiple agents are aggregated into a single list on the MCP server.
++
+** Tools are ordered by throughput (total MCP calls).
+** The top 10 tools are shown by default. 
++
+Click *Show More* to see additional tools when available.
++
+[NOTE]
+For tool visibility, the MCP server must be present in Exchange and the egress path must be protected by a managed Flex Gateway. This applies to MuleSoft‑hosted MCP servers defined in the broker network and externally hosted MCP servers defined in the broker network.
++
+The tools list reflects the selected activity period and shows only tools that were invoked during that window. Allowlisted tools that aren't called don't appear. If the MCP server exposes a tool catalog that Agent Visualizer can query, the details panel shows the full set of available (design‑time) tools alongside runtime usage.
++
+. To see traffic metrics on the connection, select the edge between the agent and the MCP server and open the edge details card.
+
+=== Example: Visualize Interactions Between External Agents and MCP Servers
+
+To visualize runtime edges for external agents and MCP servers that aren't part of a defined agent network, you must publish them to Anypoint Exchange as agents or tools and route their traffic through Flex Gateway. 
+
+This example shows how to visualize the interactions between agents and MCP servers when they aren’t part of an agent network. This process manually "onboards" your external assets so they appear in the agent network graph as managed nodes with live traffic edges.
+
+. Publish your agents and MCP servers to Anypoint Exchange.
++
+For more information about creating assets in Exchange, see xref:exchange::to-create-an-asset.adoc#create-mcp[].
+. Set up a Flex Gateway in Connected Mode.
++
+To enable visualization, both the calling agents and the MCP servers must be governed by Flex Gateway. By routing traffic through a gateway endpoint instead of calling the server directly, the gateway intercepts the request, injects identity headers, and reports the interaction to the Agent Visualizer.
++
+For more information about securing agent interaction in Flex Gateway, see xref:gateway::flex-agent-secure.adoc[].
+. In API Manager, create a new instance for each MCP server.
+.. Point the Implementation URI to the actual external URL of your MCP server.
+.. Deploy these instances to your egress Flex Gateway.
+. Enable telemetry by injecting identifying headers for visualization (for example, source and destination identifiers).
+.. In API Manager, go to the *Policies* tab for these instances.
+.. Apply the Agent Connection Telemetry policy. This allows the gateway to parse MCP-specific traffic (like list tools).
+.. Record the Consumer URL (the Flex Gateway endpoint) for each MCP server. 
+. Publish the agent asset in Anypoint Exchange with the *Agent* type.
+. Set up the ingress Flex Gateway to handle the inbound traffic to the agent.
+. In API Manager, go to *Agent and Tools Instances* and select *Add > Agent*. 
+.. Assign the agent to the Ingress Flex Gateway.
+.. Copy the Agent Instance ID. 
++
+The external agent uses this ID to identify itself to the Ingress Flex Gateway.
+. In API Manager, apply a *Header Injection* policy to the agent instance.
+.. Add the *Header Name* as `x-agent-instance-id` and the *Header Value* as the Agent Instance ID you copied earlier.
+.. Click *Apply*.
+. On the calling agent app, inject the `x-anypoint-api-instance-id` header (on list tools or call tools operations) providing the agent Instance ID from the ingress entry in API Manager as the value of the header.
+
+[[view-standalone-agents]]
+== View Agents Without Flex Gateway
+
+Agents that aren't protected by a managed Flex Gateway appear as standalone nodes. You can still view their metadata and understand their purpose in the network.
+
+. Select the agent node to open its details card.
++
+Review metadata, tags, and any instance details available.
+. To visualize runtime edges and performance metrics, protect the agent with a managed Flex Gateway on the relevant path (ingress or egress), then generate traffic.
+
+[[search-agent-network]]
+== Search the Agent Network
+
+Use search to locate nodes in the agent network. Search is case‑insensitive and supports multiple fields. Search results reflect the current base graph. The environment layer you select (Production or Sandbox) affects instance‑level metrics but not which nodes you can find with search.
+
+. Open the search box.
++
+.Show me how
+[%collapsible]
+====
+* Click the magnifying glass icon.
+* Use the keyboard shortcuts:
+** Mac: Cmd+Shift+k
+** Windows: Ctrl+Shift+k
+====
+. Enter your search terms.
++
+You can search by:
++
+* Display name 
+* Asset type, for example, broker, agent, MCP 
+* Platform, for example, MuleSoft, Agentforce, AmazonBedrock 
+* Exchange tags
++
+Smart suggestions show up to 10 results, ordered by relevance, with Type and Platform badges and an indicator of the matched field. 
+.  To zoom in on the node and open its details card, select a result.
+. To clear the results and close the search box, press the escape key. 
+
+== Add Filters
+
+Use filters to control which parts of the network you see on the canvas. Filters help you focus on the information you need in large graphs by limiting the scope to specific business groups and time windows. 
+
+The agent network graph shows assets that belong to the selected business groups, and the same map shows edges between those assets (including cross‑business group connections).
+
+Metrics on nodes and edges are aggregated based on the business groups you select. When you deselect business groups, metrics update to reflect only the remaining selection.
+
+[[filter-business-groups]]
+=== Apply Filters to the Agent Network
+
+. Open the filter panel and select the filters to apply:
++
+* *Business Groups*
++
+By default, your current business group is selected. You can select multiple business groups to see cross-business group connections in a single view. Only business groups you have Agent Visualizer permissions for appear in the list.
++
+When you select multiple business groups, the canvas shows assets belonging to the selected business groups and edges between those assets across all selected business groups. Metrics are aggregated across all selected business groups. When you deselect business groups, metrics update to reflect only the remaining selection.
++
+[TIP]
+If performance degrades when viewing multiple business groups at once, reduce the selection, use search, or zoom to areas of interest.
+* *Environment*
++
+Select *Production* or *Sandbox*.
+* *Activity Period*
++
+Select the last:
+** *24 hours*
+** *3 days*
+** *5 days*
+** *7 days*
+* *Display Options*
++
+You can hide standalone nodes and edges.
+. Click *Apply Filters*.
 
 == See Also
 

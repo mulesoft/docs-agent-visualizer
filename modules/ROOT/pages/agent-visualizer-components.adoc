@@ -20,15 +20,17 @@ Nodes in the agent network provide a visual representation of the agents and MCP
 
 For more information, see xref:view-and-navigate-agent-network.adoc#viewing-node-details[Viewing Node Details].
 
+include::partial$agent-visualizer/node-limit-note.adoc[]
+
 [[edges]]
 == Edges
 
 Edges represent the relationships and communications among your nodes:
 
 * Declared edges appear between node instances when no runtime information is available because there's no registered traffic between them. Dashed lines on the graph indicate declared edges.
-* Runtime edges appear between nodes when traffic is registered and a Flex Gateway exists. Solid lines on the graph indicate runtime edges. Clicking on a runtime edge opens the details card and shows the relevant metrics.
+* Runtime edges appear between nodes when traffic is registered and a managed Flex Gateway exists. Solid lines on the graph indicate runtime edges. Click a runtime edge to open the details card and show the relevant metrics.
 +
-Edges are drawn under specific conditions, primarily when the calling agent is protected by a managed Flex Gateway at egress. For more information, see xref:gateway::flex-gateway-managed-ingress-egress.adoc[].
+Edges are drawn under specific conditions, primarily when the calling agent is protected by a managed Flex Gateway at egress. For agent-to-MCP relationships, edges are automatically drawn when the calling agent’s egress or the MCP server’s ingress is protected by a managed Flex Gateway. You don't need to add new policies or extra configuration to make edges visible. For more information, see xref:gateway::flex-gateway-managed-ingress-egress.adoc[]
 
 * If an agent has an egress managed Flex Gateway, when it calls another agent, the edge is visible.
 * If the requesting agent doesn't have an egress Flex Gateway, no edge metric is generated and the edge isn't shown.
@@ -54,7 +56,6 @@ Agent Visualizer provides a single, consistent architectural view of all assets 
 
 For more information about switching between production and sandbox environment layers, see xref:view-and-navigate-agent-network.adoc#view-data-flow-layers[View Data Flow Layers].
 
-
 [[details-card]]
 == Details Cards
 
@@ -66,7 +67,7 @@ For more information, see xref:view-and-navigate-agent-network.adoc#view-node-de
 
 === Node Metadata
 
-When you select a node, the details card shows metadata for that asset, including: 
+When you select a node, the details card shows metadata for that agentic asset, including: 
 
 [%header,cols="30a,70a"]
 |===
@@ -122,6 +123,24 @@ Each instance entry includes the asset version number, so you can easily disting
 * Descending order of asset versions
 +
 Instances are ordered from the most recent (latest) to least recent (earliest) asset version, making it easy to track version history over time.
+
+=== MCP Server Details
+
+The MCP server details card includes active MCP tools and per‑instance activity.
+
+* Active tools reflect the selected Activity Period and only include tools invoked during that window.
+* Tools are aggregated across all instances of the MCP server, ranked by throughput, with the top 10 displayed by default. Select *Show More* to view additional tools.
+ 
+[NOTE]
+You need to publish MCP assets in Exchange before the tools are visible. Tools also require telemetry from a managed Flex Gateway on the relevant path. Runtime usage shows only allowlisted tools that have been called.
+
+=== Tool Details
+
+When you select a tool, the tool details card opens. It shows:
+
+* The tool name, icon, and MCP asset information at the top.
+* A count of active instances (with traffic for this tool). 
+* A list of instances with per‑instance metrics (total calls and error rate) for the selected tool.
 
 [[policy-visualization]]
 == Policy Visualization

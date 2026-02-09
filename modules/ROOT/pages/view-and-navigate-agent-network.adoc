@@ -40,7 +40,7 @@ For more information about the data flow layers, see xref:agent-visualizer-compo
 
 When you select a node, a details card opens to provide comprehensive information for the asset.
 
-include::partial$agent-visualizer/node-limit-note.adoc[]
+include::partial$partial-agent-visualizer.adoc[tag=node-limit-note]
 
 . Select any node in the agent network (or press Enter or Spacebar after focusing the node with arrow keys) to show its details card.
 . Review the node details.

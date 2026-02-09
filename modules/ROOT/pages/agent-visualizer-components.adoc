@@ -20,7 +20,7 @@ Nodes in the agent network provide a visual representation of the agents and MCP
 
 For more information, see xref:view-and-navigate-agent-network.adoc#viewing-node-details[Viewing Node Details].
 
-include::partial$agent-visualizer/node-limit-note.adoc[]
+include::partial$partial-agent-visualizer.adoc[tag=node-limit-note]
 
 [[edges]]
 == Edges

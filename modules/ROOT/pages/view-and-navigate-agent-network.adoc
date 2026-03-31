@@ -2,13 +2,15 @@
 
 Explore an interactive map of agents, brokers, and Model Context Protocol (MCP) servers. Pan and zoom, filter by environment, toggle layers, and select nodes or edges to view detailed metadata, metrics, and links for deeper investigation.
 
-[[access-agent-visualizer]]
-== Access Agent Visualizer
+== Before You Begin
 
 include::partial$partial-agent-visualizer.adoc[tag=agent-visualizer-permissions]
 
+[[access-agent-visualizer]]
+== Access Agent Visualizer
+
 . Log in to Anypoint Platform.
-. Click *Get Started*.
+. Click *Agent Visualizer > Get Started*.
 +
 On the Agent Visualizer page, you see the agent network map showing all discovered agentic assets, nodes and their relationships (edges).
 
@@ -64,7 +66,8 @@ External agents and MCP servers that are published to Exchange appear as nodes i
 
 . To open its details card and review the node’s metadata, select an external agent or MCP server node.
 +
-To visualize runtime edges for external agents, see xref:view-standalone-agents[View Agents Without Flex Gateway].
+[NOTE]
+To visualize runtime edges for external agents, see <<view-standalone-agents,View Agents Without Flex Gateway>>.
 
 [[view-mcp-server-edges-tools]]
 == View MCP Server Edges and Tools
@@ -73,7 +76,7 @@ When agents invoke MCP servers, Agent Visualizer shows the relationship on the g
 
 . Select an MCP server node to focus associated edges and open its details card.
 +
-Tool invocations from multiple agents are aggregated into a single list on the MCP server.
+Tool invocations from multiple agents are aggregated into a single list on the MCP server node.
 +
 ** Tools are ordered by throughput (total MCP calls).
 ** The top 10 tools are shown by default. 
@@ -155,7 +158,7 @@ You can search by:
 * Exchange tags
 +
 Smart suggestions show up to 10 results, ordered by relevance, with Type and Platform badges and an indicator of the matched field. 
-.  To zoom in on the node and open its details card, select a result.
+. To zoom in on the node and open its details card, select a result.
 . To clear the results and close the search box, press the escape key. 
 
 == Add Filters

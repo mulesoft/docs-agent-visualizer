@@ -1,26 +1,26 @@
 = Governing Nodes
 
-See which nodes in your agent network are protected and which policies are applied. Open the asset in API Manager to review more details about its policies. If a node isn’t protected, you can add a managed Flex Gateway and create the appropriate instance to enforce policies.
+See which nodes in your agent network are protected and which policies are applied. Open the asset in API Manager to review more details about its policies. If a node isn’t protected, you can add a managed Omni Gateway and create the appropriate instance to enforce policies.
 
 [[view-node-policies]]
 == View Node Policies
 
-. Look for the shield icon on nodes to see which nodes are secured by Flex Gateways.
+. Look for the shield icon on nodes to see which nodes are secured by Omni Gateways.
 . Click the node to open the details card and see the policies that are applied to the node.
 . Click *View Policies* to view the policies for this instance in API Manager.
 +
 Policies are listed by category on the left and applied policies are listed on the right. 
 
 [[add-a-flex-gateway]]
-== Add a Flex Gateway
+== Add an Omni Gateway
 
-Add a managed Flex Gateway to the node to enforce authentication, rate limits, and other policies at ingress and egress, and to emit telemetry for monitoring and visualization.
+Add a managed Omni Gateway to the node to enforce authentication, rate limits, and other policies at ingress and egress, and to emit telemetry for monitoring and visualization.
 
 . Click the node to open the details card.
 . Click *Add Flex Gateway*. 
 . In API Manager, add an instance of the asset (MCP server or agent) to protect.
 +
-For information about adding an MCP server or agent instance, see xref:api-manager::create-instance-task-agent-tool.adoc[Add a Flex Gateway Agent or Tool Instance].
+For information about adding an MCP server or agent instance, see xref:api-manager::create-instance-task-agent-tool.adoc[Add an Omni Gateway Agent or Tool Instance].
 
 == See Also
 

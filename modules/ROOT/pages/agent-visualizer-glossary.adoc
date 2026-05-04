@@ -30,10 +30,10 @@ A design‑time relationship between two nodes (from the agent network YAML or E
 For more information, see xref:agent-visualizer-components.adoc#edges[Edges].
 
 [[managed-flex-gateway]]
-Managed Flex Gateway::
-A Flex Gateway that is managed by Anypoint Platform.
+Managed Omni Gateway::
+An Omni Gateway that is managed by Anypoint Platform.
 +
-For more information, see xref:gateway::index.adoc#managed[Managed Flex Gateway].
+For more information, see xref:gateway::index.adoc#managed[Managed Omni Gateway].
 
 [[mcp-server]]
 MCP Server::
@@ -41,7 +41,7 @@ A service that implements the Model Context Protocol (MCP) to expose tools and d
 
 [[runtime-edge]]
 Runtime edge::
-A live relationship that's drawn when actual traffic is observed between two nodes (from Flex Gateway or Monitoring telemetry). It’s rendered as a solid line in the agent network.
+A live relationship that's drawn when actual traffic is observed between two nodes (from Omni Gateway or Monitoring telemetry). It’s rendered as a solid line in the agent network.
 +
 For more information, see xref:agent-visualizer-components.adoc#edges[Edges].
 

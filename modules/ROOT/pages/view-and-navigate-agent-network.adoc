@@ -67,7 +67,7 @@ External agents and MCP servers that are published to Exchange appear as nodes i
 . To open its details card and review the node’s metadata, select an external agent or MCP server node.
 +
 [NOTE]
-To visualize runtime edges for external agents, see <<view-standalone-agents,View Agents Without Flex Gateway>>.
+To visualize runtime edges for external agents, see <<view-standalone-agents,View Agents Without Omni Gateway>>.
 
 [[view-mcp-server-edges-tools]]
 == View MCP Server Edges and Tools
@@ -84,7 +84,7 @@ Tool invocations from multiple agents are aggregated into a single list on the M
 Click *Show More* to see additional tools when available.
 +
 [NOTE]
-For tool visibility, the MCP server must be present in Exchange and the egress path must be protected by a managed Flex Gateway. This applies to MuleSoft‑hosted MCP servers defined in the broker network and externally hosted MCP servers defined in the broker network.
+For tool visibility, the MCP server must be present in Exchange and the egress path must be protected by a managed Omni Gateway. This applies to MuleSoft‑hosted MCP servers defined in the broker network and externally hosted MCP servers defined in the broker network.
 +
 The tools list reflects the selected activity period and shows only tools that were invoked during that window. Allowlisted tools that aren't called don't appear. If the MCP server exposes a tool catalog that Agent Visualizer can query, the details panel shows the full set of available (design‑time) tools alongside runtime usage.
 +
@@ -92,46 +92,46 @@ The tools list reflects the selected activity period and shows only tools that w
 
 === Example: Visualize Interactions Between External Agents and MCP Servers
 
-To visualize runtime edges for external agents and MCP servers that aren't part of a defined agent network, you must publish them to Anypoint Exchange as agents or tools and route their traffic through Flex Gateway. 
+To visualize runtime edges for external agents and MCP servers that aren't part of a defined agent network, you must publish them to Anypoint Exchange as agents or tools and route their traffic through Omni Gateway. 
 
 This example shows how to visualize the interactions between agents and MCP servers when they aren’t part of an agent network. This process manually "onboards" your external assets so they appear in the agent network graph as managed nodes with live traffic edges.
 
 . Publish your agents and MCP servers to Anypoint Exchange.
 +
 For more information about creating assets in Exchange, see xref:exchange::to-create-an-asset.adoc#create-mcp[].
-. Set up a Flex Gateway in Connected Mode.
+. Set up an Omni Gateway in Connected Mode.
 +
-To enable visualization, both the calling agents and the MCP servers must be governed by Flex Gateway. By routing traffic through a gateway endpoint instead of calling the server directly, the gateway intercepts the request, injects identity headers, and reports the interaction to the Agent Visualizer.
+To enable visualization, both the calling agents and the MCP servers must be governed by Omni Gateway. By routing traffic through a gateway endpoint instead of calling the server directly, the gateway intercepts the request, injects identity headers, and reports the interaction to the Agent Visualizer.
 +
-For more information about securing agent interaction in Flex Gateway, see xref:gateway::flex-agent-secure.adoc[].
+For more information about securing agent interaction in Omni Gateway, see xref:gateway::flex-agent-secure.adoc[].
 . In API Manager, create a new instance for each MCP server.
 .. Point the Implementation URI to the actual external URL of your MCP server.
-.. Deploy these instances to your egress Flex Gateway.
+.. Deploy these instances to your egress Omni Gateway.
 . Enable telemetry by injecting identifying headers for visualization (for example, source and destination identifiers).
 .. In API Manager, go to the *Policies* tab for these instances.
 .. Apply the Agent Connection Telemetry policy. This allows the gateway to parse MCP-specific traffic (like list tools).
-.. Record the Consumer URL (the Flex Gateway endpoint) for each MCP server. 
+.. Record the Consumer URL (the Omni Gateway endpoint) for each MCP server. 
 . Publish the agent asset in Anypoint Exchange with the *Agent* type.
-. Set up the ingress Flex Gateway to handle the inbound traffic to the agent.
+. Set up the ingress Omni Gateway to handle the inbound traffic to the agent.
 . In API Manager, go to *Agent and Tools Instances* and select *Add > Agent*. 
-.. Assign the agent to the Ingress Flex Gateway.
+.. Assign the agent to the Ingress Omni Gateway.
 .. Copy the Agent Instance ID. 
 +
-The external agent uses this ID to identify itself to the Ingress Flex Gateway.
+The external agent uses this ID to identify itself to the Ingress Omni Gateway.
 . In API Manager, apply a *Header Injection* policy to the agent instance.
 .. Add the *Header Name* as `x-agent-instance-id` and the *Header Value* as the Agent Instance ID you copied earlier.
 .. Click *Apply*.
 . On the calling agent app, inject the `x-anypoint-api-instance-id` header (on list tools or call tools operations) providing the agent Instance ID from the ingress entry in API Manager as the value of the header.
 
 [[view-standalone-agents]]
-== View Agents Without Flex Gateway
+== View Agents Without Omni Gateway
 
-Agents that aren't protected by a managed Flex Gateway appear as standalone nodes. You can still view their metadata and understand their purpose in the network.
+Agents that aren't protected by a managed Omni Gateway appear as standalone nodes. You can still view their metadata and understand their purpose in the network.
 
 . Select the agent node to open its details card.
 +
 Review metadata, tags, and any instance details available.
-. To visualize runtime edges and performance metrics, protect the agent with a managed Flex Gateway on the relevant path (ingress or egress), then generate traffic.
+. To visualize runtime edges and performance metrics, protect the agent with a managed Omni Gateway on the relevant path (ingress or egress), then generate traffic.
 
 [[search-agent-network]]
 == Search the Agent Network

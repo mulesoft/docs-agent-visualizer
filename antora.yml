@@ -3,3 +3,6 @@ title: Agent Visualizer
 version: 'master'
 nav:
 - modules/ROOT/nav.adoc
+asciidoc:
+  attributes:
+    page-component-desc: Provides visual monitoring and insights for agent networks, showing real-timegraphs of agents, MCP servers, and LLMs with search and filtering

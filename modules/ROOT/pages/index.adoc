@@ -3,7 +3,7 @@
 Agent Visualizer provides a detailed visual graph of your agent network so you can see, understand, and interact with your enterprise's evolving network of agents, Model Context Protocol (MCP) servers, and large language models (LLMs), including agents created in external platforms like Amazon Bedrock, Microsoft Copilot, and Google Vertex AI. Agent Visualizer gives you insight into hidden agent interactions, governance gaps, and performance bottlenecks. 
 
 
-Agent Visualizer is an intuitive user interface that helps you:
+With Agent Visualizer, you can:
 
 * Gain complete situational awareness of your agentic ecosystem with a view of all connected agents in your agent network on one map, including clear relationships and direction of calls.
 * See unclear interaction patterns by showing real-time call volume. This helps you understand key pathways and identify under- or overused connections. 
@@ -27,9 +27,6 @@ Architects and platform teams can view a complete network graph of enterprise ag
 +
 Developers can validate adoption and consumption patterns by overlaying real-time transaction traffic, helping them optimize performance and capacity.
 * Assess security and compliance coverage.
-+
-Security teams can visualize active policies across the network to verify enforcement, spot vulnerabilities, and ensure regulatory compliance.
-* Troubleshoot failures faster.
 +
 Security teams can visualize active policies across the network to verify enforcement, spot vulnerabilities, and ensure regulatory compliance.
 * Troubleshoot failures faster.

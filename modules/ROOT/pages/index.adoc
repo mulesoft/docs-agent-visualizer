@@ -1,22 +1,22 @@
 = Agent Visualizer Overview
+:description: Agent Visualizer maps your enterprise agent network in real time, showing connections between agents, MCP servers, LLMs, and external platforms including Amazon Bedrock, Microsoft Copilot, and Google Vertex AI.
 
-Agent Visualizer provides a detailed visual graph of your agent network so you can see, understand, and interact with your enterprise's evolving network of agents, Model Context Protocol (MCP) servers, and large language models (LLMs), including agents created in external platforms like Amazon Bedrock, Microsoft Copilot, and Google Vertex AI. Agent Visualizer gives you insight into hidden agent interactions, governance gaps, and performance bottlenecks. 
+Agent Visualizer provides a detailed visual graph of your agent network so you can see, understand, and interact with your enterprise's evolving network of agents, Model Context Protocol (MCP) servers, and large language models (LLMs). Agent Visualizer gives you insight into hidden agent interactions, governance gaps, and performance bottlenecks.
 
+Agent Visualizer supports agents created in external platforms including Amazon Bedrock, Microsoft Copilot, and Google Vertex AI.
 
 With Agent Visualizer, you can:
 
-* Gain complete situational awareness of your agentic ecosystem with a view of all connected agents in your agent network on one map, including clear relationships and direction of calls.
-* See unclear interaction patterns by showing real-time call volume. This helps you understand key pathways and identify under- or overused connections. 
-* See governance gaps with a view of which agents are protected by Omni Gateways (formerly Flex Gateways) and policies. 
-* Understand node purpose and origin.
-+ 
-You gain full understanding of each asset in your agent network and any active running instances when you select a node. 
-* Easily view production and nonproduction traffic. 
+* View all connected agents, MCP servers, and LLMs on a single map, including relationships and direction of calls.
+* View real-time call volume between agents and MCP servers to identify key pathways and under- or overused connections.
+* Identify which agents lack Omni Gateway (formerly Flex Gateway) policy coverage to spot governance gaps.
+* Select any node to view its purpose, origin, and all active running instances.
+* Filter traffic by production and nonproduction environments.
 
 image::agent-visualizer.png[Agent Visualizer graph showing a network of agents, brokers, and MCP servers and the details card for a highlighted node]
 
 [[use-cases]]
-== Use Cases
+== Agent Visualizer Use Cases
 
 Use Agent Visualizer to gain clarity and control over your agent ecosystem.
 

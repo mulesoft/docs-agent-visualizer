@@ -30,7 +30,7 @@ Edges represent the relationships and communications among your nodes:
 * Declared edges appear between node instances when no runtime information is available because there's no registered traffic between them. Dashed lines on the graph indicate declared edges.
 * Runtime edges appear between nodes when traffic is registered and a managed Omni Gateway exists. Solid lines on the graph indicate runtime edges. Click a runtime edge to open the details card and show the relevant metrics.
 +
-Edges are drawn under specific conditions, primarily when the calling agent is protected by a managed Omni Gateway at egress. For agent-to-MCP relationships, edges are automatically drawn when the calling agent’s egress or the MCP server’s ingress is protected by a managed Omni Gateway. You don't need to add new policies or extra configuration to make edges visible. For more information, see xref:gateway::flex-gateway-managed-ingress-egress.adoc[]
+Edges are drawn under specific conditions, primarily when the calling agent is protected by a managed Omni Gateway at egress. For agent-to-MCP relationships, edges are automatically drawn when the calling agent’s egress or the MCP server’s ingress is protected by a managed Omni Gateway. No new policies or extra configuration are needed to make edges visible. For more information, see xref:gateway::flex-gateway-managed-ingress-egress.adoc[]
 
 * If an agent has an egress managed Omni Gateway, when it calls another agent, the edge is visible.
 * If the requesting agent doesn't have an egress Omni Gateway, no edge metric is generated and the edge isn't shown.
@@ -132,7 +132,7 @@ The MCP server details card includes active MCP tools and per‑instance activit
 * Tools are aggregated across all instances of the MCP server, ranked by throughput, with the top 10 displayed by default. Select *Show More* to view additional tools.
  
 [NOTE]
-You need to publish MCP assets in Exchange before the tools are visible. Tools also require telemetry from a managed Omni Gateway on the relevant path. Runtime usage shows only allowlisted tools that have been called.
+Publish MCP assets in Exchange before the tools are visible. Tools also require telemetry from a managed Omni Gateway on the relevant path. Runtime usage shows only allowlisted tools that have been called.
 
 === Tool Details
 

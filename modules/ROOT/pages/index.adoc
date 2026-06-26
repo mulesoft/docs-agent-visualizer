@@ -28,7 +28,7 @@ Architects and platform teams can view a complete network graph of enterprise ag
 Developers can validate adoption and consumption patterns by overlaying real-time transaction traffic, helping them optimize performance and capacity.
 * Assess security and compliance coverage.
 +
-Security teams can visualize active policies across the network to verify enforcement, spot vulnerabilities, and ensure regulatory compliance.
+Security teams can visualize active policies across the network to verify enforcement, spot vulnerabilities, and make sure regulatory compliance.
 * Troubleshoot failures faster.
 +
 Operators can trace dependencies, isolate failing nodes, and deep-link into service logs for rapid incident response and root cause analysis.

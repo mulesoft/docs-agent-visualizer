@@ -17,7 +17,7 @@ Policies are listed by category on the left and applied policies are listed on t
 Add a managed Omni Gateway to the node to enforce authentication, rate limits, and other policies at ingress and egress, and to emit telemetry for monitoring and visualization.
 
 . Click the node to open the details card.
-. Click *Add Flex Gateway*. 
+. Click *Add Omni Gateway*. 
 . In API Manager, add an instance of the asset (MCP server or agent) to protect.
 +
 For information about adding an MCP server or agent instance, see xref:api-manager::create-instance-task-agent-tool.adoc[Add an Omni Gateway Agent or Tool Instance].

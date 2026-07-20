@@ -9,7 +9,7 @@ With Agent Visualizer, you can:
 
 * View all connected agents, MCP servers, and LLMs on a single map, including relationships and direction of calls.
 * View real-time call volume between agents and MCP servers to identify key pathways and under- or overused connections.
-* Identify which agents lack Omni Gateway policy coverage to spot governance gaps.
+* Identify which agents lack Omni Gateway (formerly Flex Gateway) policy coverage to spot governance gaps.
 * Select any node to view its purpose, origin, and all active running instances.
 * Filter traffic by production and nonproduction environments.
 

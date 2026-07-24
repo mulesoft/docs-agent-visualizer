@@ -43,3 +43,4 @@ Anypoint Monitoring opens and you can view the *Traces Details* page for the ass
 
 * xref:monitoring::logs.adoc[]
 * xref:monitoring::traces.adoc[]
+include::release-notes::partial$release-notes/rn-known-issues.adoc[tag=knownIssuesSeeAlsoLink]

@@ -22,7 +22,7 @@ You can access and view logs for an asset instance in Anypoint Monitoring or API
 +
 Instance-specific logs for the agent or MCP server are shown.
 +
-If your organization has the Anypoint Integration Advanced package or a Titanium subscription to Anypoint Platform, you can view the logs for the asset instance in Anypoint Monitoring. For more information, see xref:monitoring::logs-us-eu.adoc#search-agentic[Get Agent, Broker, and MCP Server Logs].
+If your organization has the Anypoint Integration Advanced package or a Titanium subscription to Anypoint Platform, you can view the logs for the asset instance in Anypoint Monitoring. For more information, see xref:monitoring::logs-search-hf.adoc#search-agentic[Get Logs for Agentic Assets].
 +
 If your organization doesn't have the Anypoint Integration Advanced package or a Titanium subscription to Anypoint Platform, you can view the logs for the asset instance in API Manager. For more information, see xref:gateway::flex-managed-view-logs-in-monitoring.adoc[].
 

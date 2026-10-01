@@ -1,5 +1,5 @@
 name: agent-visualizer
-title: Agent Visualizer
+title: Visualize Agent Networks
 version: 'master'
 nav:
 - modules/ROOT/nav.adoc

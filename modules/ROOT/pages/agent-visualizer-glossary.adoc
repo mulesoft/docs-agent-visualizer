@@ -9,7 +9,7 @@ An autonomous software component that uses goals, context, and available tools, 
 Agent network::
 An agent network is a collection of agents, brokers, LLMs, and MCP servers that are connected to each other.
 +
-For more information, see xref:anypoint-code-builder::af-agent-networks.adoc[].
+For more information, see xref:agent-network::agent-network-overview.adoc[].
 
 [[agentforce-agent]]
 Agentforce agent::
